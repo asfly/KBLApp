@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="kblapp">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render(
+        "~/public/libs/bootstrap/3.3.4/css/bootstrap.min.css",
+        "~/public/libs/font-awesome/4.2.0/css/font-awesome.min.css",
+        "~/public/libs/angularjs/xeditable/0.1.8/css/xeditable.css",
+        "~/Content/Site.css"
+    )
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    <div ng-controller="MainController">
+        @Html.Partial("_LoginPartial")
+    </div>
+    @RenderSection("featured", required: false)
+    @RenderBody()
+    <loading-panel></loading-panel>
+    @Scripts.Render(
+        "~/public/libs/jquery/1.11.1/js/jquery.min.js",
+        "~/public/libs/angularjs/1.2.28/js/angular.min.js",
+        "~/public/libs/angularjs/1.2.28/js/angular-route.min.js",
+        "~/public/libs/angularjs/ui/0.12.0/js/ui-bootstrap-tpls.min.js",
+        "~/public/libs/angularjs/xeditable/0.1.8/js/xeditable.min.js",
+        "~/Scripts/app.js",
+        "~/Scripts/routing.js",
+        "~/Scripts/services/ApiService.js",
+        "~/Scripts/services/CommService.js",
+        "~/Scripts/controller/MainController.js",
+        "~/Scripts/controller/CustomerController.js",
+        "~/Scripts/directive/doFinished.js",
+        "~/Scripts/directive/loading.js"
+    )
+    @RenderSection("scripts", required: false)
+</body>
+</html>

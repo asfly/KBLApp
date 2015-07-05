@@ -1,0 +1,11 @@
+e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\BLL\bin\Release\BLL.dll
+e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\BLL\bin\Release\BLL.pdb
+e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\BLL\bin\Release\LinqToEntities.dll
+e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\BLL\bin\Release\Models.dll
+e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\BLL\bin\Release\EntityFramework.dll
+e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\BLL\bin\Release\LinqToEntities.pdb
+e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\BLL\bin\Release\Models.pdb
+e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\BLL\bin\Release\EntityFramework.xml
+e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
+e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\BLL\obj\Release\BLL.dll
+e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\BLL\obj\Release\BLL.pdb

@@ -1,0 +1,119 @@
+﻿
+<div class="panel panel-primary col-sm-3">
+    <div class="panel-heading">
+        <h3 class="panel-title" id="panel-title">
+            性别
+            <a href="#panel-title" class="anchorjs-link">
+                <span class="anchorjs-icon"></span>
+            </a>
+        </h3>
+    </div>
+    <div class="panel-body">
+        <a href="" class="list-group-item" ng-click="search={ Gender: 0}">男</a>
+        <a href="" class="list-group-item" ng-click="search={ Gender: 1}">女</a>
+    </div>
+</div>
+<div class="panel panel-primary col-sm-3">
+    <div class="panel-heading">
+        <h3 class="panel-title" id="panel-title">
+            客户分类
+            <a href="#panel-title" class="anchorjs-link">
+                <span class="anchorjs-icon"></span>
+            </a>
+        </h3>
+    </div>
+    <div class="panel-body">
+        <a href="" class="list-group-item" ng-click="search={ CategoryID: 0}">普通</a>
+        <a href="" class="list-group-item" ng-click="search={ CategoryID: 1}">贵宾</a>
+    </div>
+</div>
+<div class="panel panel-primary col-sm-3">
+    <div class="panel-heading">
+        <h3 class="panel-title" id="panel-title">
+            卡分类
+            <a href="#panel-title" class="anchorjs-link">
+                <span class="anchorjs-icon"></span>
+            </a>
+        </h3>
+    </div>
+    <div class="panel-body">
+        <a href="" class="list-group-item">--</a>
+        <a href="" class="list-group-item">--</a>
+    </div>
+</div>
+<div class="panel panel-primary col-sm-3">
+    <div class="panel-heading">
+        <h3 class="panel-title" id="panel-title">
+            客户姓名
+            <a href="#panel-title" class="anchorjs-link">
+                <span class="anchorjs-icon"></span>
+            </a>
+        </h3>
+    </div>
+    <div class="panel-body">
+        <a href="" class="list-group-item" ng-click="search={ CategoryID: 0}">--</a>
+        <a href="" class="list-group-item" ng-click="search={ CategoryID: 1}">--</a>
+    </div>
+</div>
+
+<a href="" ng-click="search={}">显示全部</a>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>编号</th>
+            <th>卡类别</th>
+            <th>客户分类</th>
+            <th>营养顾问</th>
+            <th>本月VP数</th>
+            <th>累计VP数</th>
+            <th>客户姓名</th>
+            <th>地点</th>
+            <th>性别</th>
+            <th>年龄</th>
+            <th>身高CM</th>
+            <th>原始体重KG</th>
+            <th>联系方式</th>
+            <th>上次联系时间</th>
+            <th>下次联系时间</th>
+            <th>今天回访提示</th>
+            <th>减肥是否成功</th>
+            <th>服务记录</th>
+            <th>跟踪服务</th>
+            <th>备注</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="customer in customer.items | filter:search">
+            <td>
+                <a href="" ng-click="edit(customer.CID)" tooltip-placement="right" tooltip="编辑客户（{{ customer.CName}}）信息">
+                    {{ customer.CustomerNo }}
+                </a>
+            </td>
+            <td>--</td>
+            <td>{{ ["普通","贵宾"][customer.CategoryID || 0] }}</td>
+            <td>{{ customer.Dietitian }}</td>
+            <td>{{ '--' }}</td>
+            <td>{{ 0 }}</td>
+            <td>{{ customer.CName }}</td>
+            <td>{{ customer.Addr }}</td>
+            <td>{{ ["男","女"][customer.Gender || 0] }}</td>
+            <td>{{ customer.Age }}</td>
+            <td>{{ customer.Height }}</td>
+            <td>{{ customer.Weight }}</td>
+            <td>{{ customer.Contact }}</td>
+            <td>{{ '--' }}</td>
+            <td>{{ '--' }}</td>
+            <td>{{ '否' }}</td>
+            <td>{{ '是' }}</td>
+            <td><a href="" ng-click="track(customer.CID)" tooltip-placement="left" tooltip="查看客户（{{ customer.CName}}）跟踪记录">跟踪记录</a></td>
+            <td><a href="" ng-click="service(customer.CID)" tooltip-placement="left" tooltip="查看客户（{{ customer.CName}}）服务记录">服务记录</a></td>
+            <td>{{'--'}}</td>
+        </tr>
+        <tr ng-if="customer.items.data.length == 0">
+            <td colspan="21" class="text-center text-info">
+                暂无数据，请添加。
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div ui-view></div>

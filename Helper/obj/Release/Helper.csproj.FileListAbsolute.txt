@@ -1,0 +1,8 @@
+e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\Helper\bin\Release\Helper.dll
+e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\Helper\bin\Release\Helper.pdb
+e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\Helper\bin\Release\Newtonsoft.Json.dll
+e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\Helper\bin\Release\System.Web.Mvc.dll
+e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\Helper\bin\Release\Newtonsoft.Json.xml
+e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\Helper\bin\Release\System.Web.Mvc.xml
+e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\Helper\obj\Release\Helper.dll
+e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\Helper\obj\Release\Helper.pdb

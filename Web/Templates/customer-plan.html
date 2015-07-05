@@ -1,0 +1,40 @@
+﻿<table>
+    <thead>
+        <tr>
+            <td>日期</td>
+            <td>测量体重</td>
+            <td>目标体重</td>
+            <td>与上次测试值只差</td>
+            <td>与目标体重差距</td>
+            <td>体脂肪（上）</td>
+            <td>体脂肪（全）</td>
+            <td>体水分</td>
+            <td>内脏脂肪</td>
+            <td>肌肉量</td>
+            <td>骨量</td>
+            <td>身体年龄</td>
+            <td>BMI</td>
+            <td>代谢率</td>
+            <td>底数</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="" ng-repeat="plan in plans">
+            <td>{{ plan.time || getDate() | date:'yyyy.MM.dd hh:mm:ss' }}</td>
+            <td>{{ plan.Weight || 51 }}</td>
+            <td>{{ plan.TargetWeight || 56 }}</td>
+            <td>{{ 0.5 }}</td>
+            <td>{{ 0.1 }}</td>
+            <td>{{ -- }}</td>
+            <td>{{ -- }}</td>
+            <td>{{ -- }}</td>
+            <td>{{ -- }}</td>
+            <td>{{ -- }}</td>
+            <td>{{ -- }}</td>
+            <td>{{ -- }}</td>
+            <td>{{ -- }}</td>
+            <td>{{ -- }}</td>
+            <td>{{ -- }}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,10 @@
+e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\LinqToEntities\bin\Release\LinqToEntities.dll
+e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\LinqToEntities\bin\Release\LinqToEntities.pdb
+e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\LinqToEntities\bin\Release\EntityFramework.dll
+e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\LinqToEntities\bin\Release\Models.dll
+e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\LinqToEntities\bin\Release\MySql.Data.Entity.EF6.dll
+e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\LinqToEntities\bin\Release\EntityFramework.xml
+e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\LinqToEntities\bin\Release\Models.pdb
+e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\LinqToEntities\obj\Release\LinqToEntities.csprojResolveAssemblyReference.cache
+e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\LinqToEntities\obj\Release\LinqToEntities.dll
+e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\LinqToEntities\obj\Release\LinqToEntities.pdb
