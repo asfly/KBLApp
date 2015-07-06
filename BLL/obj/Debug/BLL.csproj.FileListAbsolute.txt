@@ -31,3 +31,15 @@ D:\Users\Danqing\Documents\Visual Studio 2013\Projects\com.crm.app\BLL\bin\Debug
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\com.crm.app\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\com.crm.app\BLL\obj\Debug\BLL.dll
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\com.crm.app\BLL\obj\Debug\BLL.pdb
+D:\KBLApp\BLL\bin\Debug\BLL.dll
+D:\KBLApp\BLL\bin\Debug\BLL.pdb
+D:\KBLApp\BLL\bin\Debug\LinqToEntities.dll
+D:\KBLApp\BLL\bin\Debug\Models.dll
+D:\KBLApp\BLL\bin\Debug\EntityFramework.dll
+D:\KBLApp\BLL\bin\Debug\MySql.Data.Entity.EF6.dll
+D:\KBLApp\BLL\bin\Debug\LinqToEntities.pdb
+D:\KBLApp\BLL\bin\Debug\Models.pdb
+D:\KBLApp\BLL\bin\Debug\EntityFramework.xml
+D:\KBLApp\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\KBLApp\BLL\obj\Debug\BLL.dll
+D:\KBLApp\BLL\obj\Debug\BLL.pdb

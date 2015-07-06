@@ -18,3 +18,13 @@ D:\Users\Danqing\Documents\Visual Studio 2013\Projects\com.crm.app\LinqToEntitie
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\com.crm.app\LinqToEntities\obj\Debug\LinqToEntities.csprojResolveAssemblyReference.cache
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\com.crm.app\LinqToEntities\obj\Debug\LinqToEntities.dll
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\com.crm.app\LinqToEntities\obj\Debug\LinqToEntities.pdb
+D:\KBLApp\LinqToEntities\bin\Debug\LinqToEntities.dll
+D:\KBLApp\LinqToEntities\bin\Debug\LinqToEntities.pdb
+D:\KBLApp\LinqToEntities\bin\Debug\EntityFramework.dll
+D:\KBLApp\LinqToEntities\bin\Debug\Models.dll
+D:\KBLApp\LinqToEntities\bin\Debug\MySql.Data.Entity.EF6.dll
+D:\KBLApp\LinqToEntities\bin\Debug\EntityFramework.xml
+D:\KBLApp\LinqToEntities\bin\Debug\Models.pdb
+D:\KBLApp\LinqToEntities\obj\Debug\LinqToEntities.csprojResolveAssemblyReference.cache
+D:\KBLApp\LinqToEntities\obj\Debug\LinqToEntities.dll
+D:\KBLApp\LinqToEntities\obj\Debug\LinqToEntities.pdb

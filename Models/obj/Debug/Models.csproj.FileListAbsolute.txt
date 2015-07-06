@@ -44,3 +44,24 @@ D:\Users\Danqing\Documents\Visual Studio 2013\Projects\com.crm.app\Models\bin\De
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\com.crm.app\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\com.crm.app\Models\obj\Debug\Models.dll
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\com.crm.app\Models\obj\Debug\Models.pdb
+D:\KBLApp\Models\bin\Debug\Models.dll.config
+D:\KBLApp\Models\bin\Debug\Models.dll
+D:\KBLApp\Models\bin\Debug\Models.pdb
+D:\KBLApp\Models\bin\Debug\EntityFramework.dll
+D:\KBLApp\Models\bin\Debug\EntityFramework.SqlServer.dll
+D:\KBLApp\Models\bin\Debug\Microsoft.CSharp.dll
+D:\KBLApp\Models\bin\Debug\MySql.Data.Entity.EF6.dll
+D:\KBLApp\Models\bin\Debug\MySql.Web.dll
+D:\KBLApp\Models\bin\Debug\System.ComponentModel.DataAnnotations.dll
+D:\KBLApp\Models\bin\Debug\System.Data.DataSetExtensions.dll
+D:\KBLApp\Models\bin\Debug\System.Data.dll
+D:\KBLApp\Models\bin\Debug\System.Data.Entity.dll
+D:\KBLApp\Models\bin\Debug\System.dll
+D:\KBLApp\Models\bin\Debug\System.Runtime.Serialization.dll
+D:\KBLApp\Models\bin\Debug\System.Security.dll
+D:\KBLApp\Models\bin\Debug\System.Xml.dll
+D:\KBLApp\Models\bin\Debug\System.Xml.Linq.dll
+D:\KBLApp\Models\bin\Debug\EntityFramework.xml
+D:\KBLApp\Models\bin\Debug\EntityFramework.SqlServer.xml
+D:\KBLApp\Models\obj\Debug\Models.dll
+D:\KBLApp\Models\obj\Debug\Models.pdb

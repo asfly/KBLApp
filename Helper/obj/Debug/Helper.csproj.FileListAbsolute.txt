@@ -16,3 +16,14 @@ D:\Users\Danqing\Documents\Visual Studio 2013\Projects\com.crm.app\Helper\bin\De
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\com.crm.app\Helper\obj\Debug\Helper.csprojResolveAssemblyReference.cache
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\com.crm.app\Helper\obj\Debug\Helper.dll
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\com.crm.app\Helper\obj\Debug\Helper.pdb
+D:\KBLApp\Helper\obj\Debug\Helper.csprojResolveAssemblyReference.cache
+D:\KBLApp\Helper\obj\Debug\Helper.dll
+D:\KBLApp\Helper\obj\Debug\Helper.pdb
+D:\KBLApp\Helper\bin\Debug\Helper.dll
+D:\KBLApp\Helper\bin\Debug\Helper.pdb
+D:\KBLApp\Helper\bin\Debug\Newtonsoft.Json.dll
+D:\KBLApp\Helper\bin\Debug\System.Web.Http.WebHost.dll
+D:\KBLApp\Helper\bin\Debug\System.Web.Mvc.dll
+D:\KBLApp\Helper\bin\Debug\Newtonsoft.Json.xml
+D:\KBLApp\Helper\bin\Debug\System.Web.Http.WebHost.xml
+D:\KBLApp\Helper\bin\Debug\System.Web.Mvc.xml
