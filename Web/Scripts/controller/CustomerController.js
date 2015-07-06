@@ -63,11 +63,9 @@ KBLApp.controller("CustomerController", ['$rootScope', '$scope', '$state', '$sta
     }
 
     if ($stateParams.cid && $stateParams.cid > 0) {
-        customer.init(param || $stateParams.cid);
         $scope.edit($stateParams.cid);
     } else if ($stateParams.cid) {
-        customer.init(param || $stateParams.cid);
-        $scope.customer.track(param);
+        $scope.track(param);
     } else {
         $scope.customer.list();
     }
