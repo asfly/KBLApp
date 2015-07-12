@@ -31,35 +31,44 @@ KBLApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $stateProvider
     .state('customer', {
         url: "/",
-        templateUrl: '/Templates/customer.list.html',
+        templateUrl: '/Templates/customer.list.html?' + Math.random()
     })
     .state('create', {
-        url: "customer/create",
-        templateUrl: '/Templates/customer.create.html'
+        url: "/customer/create",
+        templateUrl: '/Templates/customer.create.html?'+Math.random()
     })
     .state('edit', {
-        url: 'customer/edit/{cid:[0-9]}',
-        templateUrl: '/Templates/customer.create.html'
+        url: '/edit/{cid:[0-9]}',
+        templateUrl: '/Templates/customer.create.html?'+Math.random()
     })
     .state('track', {
         url: '/customer/track',
-        templateUrl: '/Templates/customer.track.html'
-
+        templateUrl: '/Templates/customer.track.html?' + Math.random(),
+        controller: 'CustomerTrackController'
     })
     .state('track.list', {
-        url: '/{cid:[0-9]{1,4}}',
-        templateUrl: '/Templates/customer.track.list.html'
+        url: '/list/{cid:[0-9]{1,4}}',
+        templateUrl: '/Templates/customer.list.html?' + Math.random(),
+        controller: 'CustomerTrackController'
     })
-    .state('vip.track', {
-        url: 'customer/vip/track/{cid:[0-9]{1,4}}',
-        templateUrl: '/Templates/customer.track.html'
+    .state('track.schedule', {
+        url: '/schedule/{cid:[0-9]{1,4}}',
+        templateUrl: '/Templates/customer.schedule.list.html?' + Math.random(),
+        controller: 'CustomerTrackController'
     })
-    .state('return-a-visit', {
-        url: 'customer/retuen-a-visit/{cid:[0-9]{1,4}}',
-        templateUrl: '/Templates/customer.track.html'
+    .state('track.vip', {
+        url: '/vip/{cid:[0-9]{1,4}}',
+        templateUrl: '/Templates/customer.track.list.html?' + Math.random(),
+        controller: 'CustomerTrackController'
     })
-    .state('product', {
-        url: 'customer/product/{cid:[0-9]{1,4}}',
-        templateUrl: '/Templates/customer.product.list.html'
+    .state('track.return-a-visit', {
+        url: '/retuen-a-visit/{cid:[0-9]{1,4}}',
+        templateUrl: '/Templates/customer.track.html?' + Math.random(),
+        controller: 'CustomerTrackController'
+    })
+    .state('track.product', {
+        url: '/product/{cid:[0-9]{1,4}}',
+        templateUrl: '/Templates/customer.product.list.html?' + Math.random(),
+        controller: 'CustomerTrackController'
     })
 });

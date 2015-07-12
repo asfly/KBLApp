@@ -38,5 +38,7 @@ namespace Models
         public DbSet<T_Customer> Customers { get; set; }
         public DbSet<T_Customer_Track> CustomerTracks { get; set; }
         public DbSet<T_Product> Products { get; set; }
+        public DbSet<T_Customer_Product> CustomerProducts { get; set; }
+        public DbSet<T_Customer_Schedule> CustomerSchedule { get; set; }
     }
 }

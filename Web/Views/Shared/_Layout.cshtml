@@ -20,11 +20,8 @@
 
 </head>
 <body>
-    <div class="col-md-12">
-        @Html.Partial("_LoginPartial")
-        @RenderSection("featured", required: false)
-        @RenderBody()
-    </div>
+    @RenderSection("featured", required: false)
+    @RenderBody()
     <loading-panel></loading-panel>
     @Scripts.Render(
         "~/public/libs/jquery/1.11.1/js/jquery.min.js",
@@ -38,6 +35,7 @@
         "~/Scripts/services/CommService.js",
         "~/Scripts/controller/MainController.js",
         "~/Scripts/controller/CustomerController.js",
+        "~/Scripts/controller/CustomerTrackController.js",
         "~/Scripts/directive/doFinished.js",
         "~/Scripts/directive/loadingPanel.js"
     )

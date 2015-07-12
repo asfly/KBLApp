@@ -51,6 +51,8 @@
   <ItemGroup>
     <Compile Include="T_Customer_Entities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="T_Customer_Product_Entities.cs" />
+    <Compile Include="T_Customer_Schedule_Entities.cs" />
     <Compile Include="T_Customer_Track_Entities.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

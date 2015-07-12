@@ -8,7 +8,7 @@ using System.Data.Entity;
 
 namespace LinqToEntities
 {
-    public class T_Customer_Track_Entities
+    public class T_Customer_Track_Entities:IDisposable
     {
         KBLDataContext db = null;
         public async Task<object> GetCustomerTracks(int cid)
@@ -31,6 +31,11 @@ namespace LinqToEntities
                              select t;
                 return await entity.FirstOrDefaultAsync();
             }
+        }
+
+        public void Dispose()
+        {
+            //throw new NotImplementedException();
         }
     }
 }

@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="kblapp">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="/public/libs/bootstrap/3.3.4/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/public/libs/font-awesome/4.2.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/public/libs/angularjs/xeditable/0.1.8/css/xeditable.css" />
+    <link rel="stylesheet" href="/Content/Site.css"/>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js">"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js">"></script>
+    <![endif]-->
+
+</head>
+<body>
+    <div class="col-md-12">
+        <div class="blog-masthead" style="margin-bottom:15px;">
+            <div class="container">
+                <nav class="blog-nav">
+                    <a class="blog-nav-item fa-2x" ui-sref="customer">
+                        <i class="fa fa-home"></i>主页
+                    </a>
+                    <a class="blog-nav-item" ui-sref="create">
+                        <i class="fa fa-search-plus"></i>
+                        新建客户资料
+                    </a>
+                </nav>
+                <div ui-view></div>
+            </div>
+        </div>
+    </div>
+    <loading-panel></loading-panel>
+
+    <script src="/public/libs/jquery/1.11.1/js/jquery.min.js"></script>
+    <script src="/public/libs/angularjs/1.2.28/js/angular.min.js"></script>
+    <script src="/public/libs/angularjs/ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="/public/libs/angularjs/ui/0.12.0/js/ui-bootstrap-tpls.min.js"></script>
+    <script src="/public/libs/angularjs/xeditable/0.1.8/js/xeditable.min.js"></script>
+    <script src="/Scripts/app.js"></script>
+    <script src="/Scripts/routing.js"></script>
+    <script src="/Scripts/services/ApiService.js"></script>
+    <script src="/Scripts/services/CommService.js"></script>
+    <script src="/Scripts/controller/MainController.js"></script>
+    <script src="/Scripts/controller/CustomerController.js"></script>
+    <script src="/Scripts/controller/CustomerTrackController.js"></script>
+    <script src="/Scripts/directive/doFinished.js"></script>
+    <script src="/Scripts/directive/loadingPanel.js"></script>
+</body>
+</html>

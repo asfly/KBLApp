@@ -91,6 +91,8 @@
     <Compile Include="MySqlHistoryContext.cs" />
     <Compile Include="MySqlInitializer.cs" />
     <Compile Include="T_Customer_List.cs" />
+    <Compile Include="T_Customer_Product.cs" />
+    <Compile Include="T_Customer_Schedule.cs" />
     <Compile Include="T_Customer_Track.cs" />
     <Compile Include="T_Customer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

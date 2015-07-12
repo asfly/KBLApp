@@ -309,6 +309,7 @@
     <Content Include="Content\themes\base\tooltip.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="index.html" />
     <Content Include="public\imges\2013092022533282.gif" />
     <Content Include="public\libs\angularjs\1.2.28\js\angular-animate.js" />
     <Content Include="public\libs\angularjs\1.2.28\js\angular-animate.min.js" />
@@ -538,8 +539,8 @@
     <Content Include="public\libs\select\ranks.js" />
     <Content Include="Scripts\controller\CustomerController.js" />
     <Content Include="Scripts\app.js" />
+    <Content Include="Scripts\controller\CustomerTrackController.js" />
     <Content Include="Scripts\controller\MainController.js" />
-    <Content Include="Scripts\controller\ProductController.js" />
     <Content Include="Scripts\directive\doFinished.js" />
     <Content Include="Scripts\directive\loadingPanel.js" />
     <Content Include="Scripts\directive\textContentEditable.js" />
@@ -548,6 +549,7 @@
     <Content Include="Scripts\services\CommService.js" />
     <Content Include="Templates\customer.create.html" />
     <Content Include="Templates\customer.list.html" />
+    <Content Include="Templates\customer.schedule.list.html" />
     <Content Include="Templates\customer.track.list.html" />
     <Content Include="Templates\customer.track.html" />
     <Content Include="Templates\Error.html" />
@@ -573,7 +575,6 @@
     <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config">
       <SubType>Designer</SubType>
