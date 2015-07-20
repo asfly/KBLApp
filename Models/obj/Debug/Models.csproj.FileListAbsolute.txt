@@ -50,7 +50,6 @@ D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\Models\bin\Debug\M
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\Models\bin\Debug\EntityFramework.dll
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\Models\bin\Debug\EntityFramework.SqlServer.dll
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\Models\bin\Debug\Microsoft.CSharp.dll
-D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\Models\bin\Debug\MySql.Data.dll
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\Models\bin\Debug\MySql.Data.Entity.EF6.dll
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\Models\bin\Debug\MySql.Web.dll
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\Models\bin\Debug\System.ComponentModel.DataAnnotations.dll
@@ -64,6 +63,6 @@ D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\Models\bin\Debug\S
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\Models\bin\Debug\System.Xml.Linq.dll
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\Models\bin\Debug\EntityFramework.xml
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\Models\bin\Debug\EntityFramework.SqlServer.xml
-D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\Models\obj\Debug\Models.dll
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\Models\obj\Debug\Models.pdb
+D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache

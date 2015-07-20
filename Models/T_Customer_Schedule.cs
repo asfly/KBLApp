@@ -1,13 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Models
 {
+    [Table("T_Customer_Schedule")]
     public class T_Customer_Schedule
     {
+        [Key]
         public long Id { get; set; }
         public long CustomerId { get;set;}
         public DateTime LogDate { get; set; }

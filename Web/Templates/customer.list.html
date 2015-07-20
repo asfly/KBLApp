@@ -56,7 +56,7 @@
 </div>
 
 <a href="" ng-click="search={}">显示全部</a>
-<table class="table table-bordered">
+<table class="table table-bordered table-responsive">
     <thead>
         <tr>
             <th>编号</th>
@@ -82,30 +82,30 @@
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="customer in customer.items | filter:search">
+        <tr ng-repeat="item in customer.items | filter:search">
             <td>
-                <a ui-sref="edit({cid:customer.CID})" tooltip-placement="right" tooltip="编辑客户（{{ customer.CName}}）信息">
-                    {{ customer.CustomerNo }}
+                <a ui-sref="edit({cid:item.c.Cid})" tooltip-placement="right" tooltip="编辑客户（{{ item.c.CName}}）信息">
+                    {{ item.c.CustomerNo }}
                 </a>
             </td>
             <td>--</td>
-            <td>{{ ["普通","贵宾"][customer.CategoryID || 0] }}</td>
-            <td>{{ customer.Dietitian }}</td>
+            <td>{{ ["普通","贵宾"][item.c.CategoryID || 0] }}</td>
+            <td>{{ item.c.Dietitian }}</td>
             <td>{{ '--' }}</td>
             <td>{{ 0 }}</td>
-            <td>{{ customer.CName }}</td>
-            <td>{{ customer.Addr }}</td>
-            <td>{{ ["男","女"][customer.Gender || 0] }}</td>
-            <td>{{ customer.Age }}</td>
-            <td>{{ customer.Height }}</td>
-            <td>{{ customer.Weight }}</td>
-            <td>{{ customer.Contact }}</td>
-            <td>{{ '--' }}</td>
-            <td>{{ '--' }}</td>
-            <td>{{ '否' }}</td>
+            <td>{{ item.c.CName }}</td>
+            <td>{{ item.c.Addr }}</td>
+            <td>{{ ["男","女"][item.c.Gender || 0] }}</td>
+            <td>{{ item.c.Age }}</td>
+            <td>{{ item.c.Height }}</td>
+            <td>{{ item.c.Weight }}</td>
+            <td>{{ item.c.Contact }}</td>
+            <td ng-class="{danger:!item.t.Prev.ReviewStatus,success:item.t.Prev.ReviewStatus}">{{ item.t.Prev.StartDate || '--' | date:'yyyy-MM-dd' }}</td> <!--item.t.Prev ? (item.t.Prev.ReviewStatus?'是'：'否'):'-'-->
+            <td ng-class="{danger:!item.t.Next.ReviewStatus,success:item.t.Next.ReviewStatus}">{{ item.t.Next.StartDate || '--' | date:'yyyy-MM-dd' }}</td> <!--item.t.Next ? (item.t.Next.ReviewStatus?'是'：'否'):'-'-->
+            <td ng-class="{danger:!item.t.Today.ReviewStatus,success:item.t.Today.ReviewStatus}">{{ item.t.Today.StartDate || '--' | date:'yyyy-MM-dd' }}</td> <!--item.t.Today ? (item.t.Today.ReviewStatus?'是'：'否'):'-'-->
             <td>{{ '是' }}</td>
-            <td><a ui-sref="track.list({cid:customer.CID})" tooltip-placement="left" tooltip="查看客户（{{ customer.CName}}）跟踪记录">跟踪记录</a></td>
-            <td><a ui-sref="track.service({cid:customer.CID})" tooltip-placement="left" tooltip="查看客户（{{ customer.CName}}）服务记录">服务记录</a></td>
+            <td><a ui-sref="track.task({cid:item.c.Cid})" tooltip-placement="left" tooltip="查看客户（{{ item.c.CName}}）跟踪记录">跟踪记录</a></td>
+            <td><a ui-sref="track.service({cid:item.c.Cid})" tooltip-placement="left" tooltip="查看客户（{{ item.c.CName}}）服务记录">服务记录</a></td>
             <td>{{'--'}}</td>
         </tr>
         <tr ng-if="customer.items.data.length == 0">

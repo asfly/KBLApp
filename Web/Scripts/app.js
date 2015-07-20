@@ -1,5 +1,5 @@
 ﻿'use strict';
-var KBLApp = angular.module('kblapp', ['ui.router', 'ui.bootstrap', 'xeditable']);
+var KBLApp = angular.module('kblapp', ['ui.router','datePicker']);
 
 KBLApp.run(['$rootScope', '$state', '$stateParams', function ($rootScope, $state, $stateParams) {
     // It's very handy to add references to $state and $stateParams to the $rootScope

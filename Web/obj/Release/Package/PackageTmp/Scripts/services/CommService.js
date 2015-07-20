@@ -6,6 +6,7 @@
 */
 KBLApp.service('CommService', ["$rootScope", function ($rootScope) {
     var service = {};
+    service.customerId = 0,
     service.prepbroadcast = function (command, msg) {
         $rootScope.$broadcast(command, msg);
     }

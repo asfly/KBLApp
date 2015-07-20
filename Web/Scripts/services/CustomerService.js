@@ -1,21 +1,22 @@
-﻿KBLApp.service('CustomerService', ["$rootScope", 'ApiService', 'CommService', function ($rootScope, ApiService, CommService) {
+﻿KBLApp.service('CustomerService', ["$rootScope", '$q','ApiService', 'CommService', function ($rootScope,$q, ApiService, CommService) {
     var customer = {
+        model:{},
         utils: {
             "categories": [{ "id": 0, "name": "普通" }, { "id": 1, "name": "贵宾" }],
             "gender": [{ "id": 0, "name": "男" }, { "id": 1, "name": "女" }],
             "names": [],
             "list": []
         },
-        list: function (callback) {
-            ApiService.post(ApiService.getApiUrl().getCustomers, {}, {}, callback);
+        list: function () {
+            return ApiService.post(ApiService.getApiUrl().getCustomers, {}, {});
         },
 
-        init: function (cid, callback) {
-            ApiService.post(ApiService.getApiUrl().getCustomer, {}, { CID: cid }, callback );
+        init: function (cid) {
+            return ApiService.post(ApiService.getApiUrl().getCustomer, {}, { cid: cid });
         },
 
-        save: function (param,success,error) {            
-            ApiService.post(ApiService.getApiUrl().register, {}, param,success, error);
+        save: function (param) {            
+            return ApiService.post(ApiService.getApiUrl().register, {}, param);
         }
     }
     var service = { biz: customer };

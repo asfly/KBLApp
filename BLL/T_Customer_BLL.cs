@@ -16,7 +16,7 @@ namespace BLL
         {
             using (T_Customer_Entities entity = new T_Customer_Entities())
             {
-                return await entity.Get(cid);
+                return await entity.Find(cid);
             }
         }
 
@@ -28,14 +28,40 @@ namespace BLL
             }
         }
 
-        public static async Task<object> SaveOrEdit(T_Customer model)
+        public static async Task<object> SaveCustomer(T_Customer model)
         {
             using (T_Customer_Entities entity = new T_Customer_Entities())
             {
-                return await entity.SaveOrEdit(model);
+                return await entity.Save(model);
             }
         }
-#endregion
+        #endregion
+
+        #region  客户任务追踪
+        public static async Task<object> GetCustomerTask(long taskId)
+        {
+            using (T_Customer_Task_Entities entity = new T_Customer_Task_Entities())
+            {
+                return await entity.Find(taskId);
+            }
+        }
+
+        public static async Task<object> GetCustomerTasks(long cid)
+        {
+            using (T_Customer_Task_Entities entity = new T_Customer_Task_Entities())
+            {
+                return await entity.List(cid);
+            }
+        }
+
+        public static async Task<object> SaveCustomerTask(T_Customer_Task model)
+        {
+            using (T_Customer_Task_Entities entity = new T_Customer_Task_Entities())
+            {
+                return await entity.Save(model);
+            }
+        }
+        #endregion
 
         #region 客户产品管理
         /// <summary>
@@ -90,7 +116,7 @@ namespace BLL
         /// <returns></returns>
         public static async Task<object> GetCustomerSchedule(long id)
         {
-            using (T_Customer_Product_Entities dao = new T_Customer_Product_Entities())
+            using (T_Customer_Schedule_Entities dao = new T_Customer_Schedule_Entities())
             {
                 return await dao.Find(id);
             }

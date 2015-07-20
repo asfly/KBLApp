@@ -393,9 +393,7 @@ D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\Web\bin\Microsoft.
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\Web\bin\Microsoft.Web.Infrastructure.dll
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\Web\bin\Microsoft.Web.WebPages.OAuth.dll
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\Web\bin\Models.dll
-D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\Web\bin\MySql.Data.dll
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\Web\bin\MySql.Data.Entity.EF6.dll
-D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\Web\bin\MySql.Web.dll
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\Web\bin\Newtonsoft.Json.dll
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\Web\bin\Owin.dll
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\Web\bin\System.ComponentModel.DataAnnotations.dll

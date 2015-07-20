@@ -1,5 +1,17 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "首页|康宝莱客户跟踪系统";
 }
-<div ng-view></div>
+<div class="blog-masthead" style="margin-bottom:15px;">
+    <nav class="blog-nav">
+        <a class="blog-nav-item fa-2x" ui-sref="customer">
+            <i class="fa fa-home"></i>主页
+        </a>
+        <a class="blog-nav-item" ui-sref="create">
+            <i class="fa fa-search-plus"></i>
+            新建客户资料
+        </a>
+    </nav>
+</div>
+<div>
+    <div ui-view></div>
+</div>

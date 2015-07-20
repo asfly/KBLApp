@@ -8,13 +8,21 @@ KBLApp.controller("Customer.ListController", ['$rootScope', '$scope', '$state', 
         $scope.customer = { items: [] };
         var customer = CustomerService.biz;
 
-        function callback(response) {
+        CommService.prepbroadcast('showLoading', {});
+
+        var promise = customer.list(); // 同步调用，获得承诺接口  
+        promise.then(function (response) {  // 调用承诺API获取数据 .resolve  
             $scope.customer.items = response.data;
             angular.forEach(response.data, function (model, i) {
                 customer.utils.names.push(model.CName);
             });
             CommService.prepbroadcast('hideLoading', {});
-        }    
-        CommService.prepbroadcast('showLoading', {});
-        customer.list(callback);
+        }, function(data) {  // 处理错误 .reject  
+            console.log(data);
+        });
+
+        $scope.redirect = function (cid) {
+            CommService.customerId = cid;
+            $state.go('track.task', { cid: cid });
+        }
 }]);

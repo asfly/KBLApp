@@ -19,6 +19,19 @@
     text-align:center;
 }
 
+.nav {
+    margin-bottom:15px;
+}
+
+
+.loading > p {
+    margin:20% auto;
+    width:181px;
+}
+
+.loading > p > img{
+    width:100%;
+}
 
 
 
@@ -27,7 +40,6 @@
  */
 
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
   color: #555;
 }
 

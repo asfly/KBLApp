@@ -23,10 +23,15 @@
     margin-bottom:15px;
 }
 
-.modal-body > img{
-    width:100%;
+
+.loading > p {
+    margin:20% auto;
+    width:181px;
 }
 
+.loading > p > img{
+    width:100%;
+}
 
 
 
@@ -35,7 +40,6 @@
  */
 
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
   color: #555;
 }
 

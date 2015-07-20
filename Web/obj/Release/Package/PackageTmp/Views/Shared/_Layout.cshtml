@@ -9,6 +9,7 @@
         "~/public/libs/bootstrap/3.3.4/css/bootstrap.min.css",
         "~/public/libs/font-awesome/4.2.0/css/font-awesome.min.css",
         "~/public/libs/angularjs/xeditable/0.1.8/css/xeditable.css",
+        "~/public/libs/angular-datepicker/styles/datePicker.css",
         "~/Content/Site.css"
     )
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -20,26 +21,38 @@
 
 </head>
 <body>
-    <div ng-controller="MainController">
-        @Html.Partial("_LoginPartial")
-    </div>
     @RenderSection("featured", required: false)
     @RenderBody()
     <loading-panel></loading-panel>
     @Scripts.Render(
+    
         "~/public/libs/jquery/1.11.1/js/jquery.min.js",
         "~/public/libs/angularjs/1.2.28/js/angular.min.js",
-        "~/public/libs/angularjs/1.2.28/js/angular-route.min.js",
+        "~/public/libs/angularjs/ui-router/0.2.15/angular-ui-router.min.js",
         "~/public/libs/angularjs/ui/0.12.0/js/ui-bootstrap-tpls.min.js",
-        "~/public/libs/angularjs/xeditable/0.1.8/js/xeditable.min.js",
+
+        "~/public/libs/angular-datepicker/scripts/datePicker.js",
+        "~/public/libs/angular-datepicker/scripts/datePickerUtils.js",
+        "~/public/libs/angular-datepicker/scripts/dateRange.js",
+        "~/public/libs/angular-datepicker/scripts/input.js",
+        
         "~/Scripts/app.js",
-        "~/Scripts/routing.js",
         "~/Scripts/services/ApiService.js",
         "~/Scripts/services/CommService.js",
-        "~/Scripts/controller/MainController.js",
-        "~/Scripts/controller/CustomerController.js",
+        "~/Scripts/services/CustomerService.js",
+        "~/Scripts/services/CustomerTaskService.js",       
+                
+                
+        "~/Scripts/controller/customer/CreateController.js",
+        "~/Scripts/controller/customer/EditController.js",
+        "~/Scripts/controller/customer/ListController.js",
+        "~/Scripts/controller/customer.task/TaskController.js",
+        "~/Scripts/controller/customer.task/CreateController.js",
+        "~/Scripts/controller/customer.task/EditController.js",
+        "~/Scripts/controller/customer.task/ListController.js",
         "~/Scripts/directive/doFinished.js",
-        "~/Scripts/directive/loading.js"
+        "~/Scripts/directive/loadingPanel.js",
+        "~/Scripts/routing.js"
     )
     @RenderSection("scripts", required: false)
 </body>

@@ -17,9 +17,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{F
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{1777799A-EE18-4B09-BC28-91EEBA41A3A6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C9C8CB42-D51B-4CF4-BF53-5012A6E20312} = {C9C8CB42-D51B-4CF4-BF53-5012A6E20312}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqToEntities", "LinqToEntities\LinqToEntities.csproj", "{2B246D67-F471-4F49-B349-96FC8F83C502}"
 	ProjectSection(ProjectDependencies) = postProject
+		{C9C8CB42-D51B-4CF4-BF53-5012A6E20312} = {C9C8CB42-D51B-4CF4-BF53-5012A6E20312}
 		{1777799A-EE18-4B09-BC28-91EEBA41A3A6} = {1777799A-EE18-4B09-BC28-91EEBA41A3A6}
 	EndProjectSection
 EndProject

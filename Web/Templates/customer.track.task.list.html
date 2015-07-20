@@ -32,6 +32,7 @@
         </tr>
     </tbody>
 </table>
+<p><a ui-sref="track.task-create({ cid:customer.model.Cid })">任务创建</a></p>
 <table class="table table-bordered table-hover table-condensed">
     <thead>
         <tr>
@@ -41,16 +42,18 @@
             <th>回访倒计日</th>
             <th>是否已回访</th>
             <th>回访信息记录</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="t in track.list.data">
-            <td>{{t.StartDate}}</td>
+        <tr ng-repeat="t in task.items">
+            <td>{{t.StartDate | date:'yyyy-MM-dd'}}</td>
             <td>{{t.Other}}</td>
             <td>{{t.During}}</td>
-            <td>{{t.CallBack}}</td>
-            <td ng-class="{danger:!t.CallBackStatus,success:t.CallBackStatus}">{{t.CallBackStatus?'是':'否'}}</td>
+            <td>{{t.Review}}</td>
+            <td ng-class="{danger:!t.ReviewStatus,success:t.ReviewStatus}">{{t.ReviewStatus?'是':'否'}}</td>
             <td>{{t.Describe}}</td>
+            <td><a ui-sref="track.task-edit({taskId:t.TaskId})">修改</a></td>
         </tr>
     </tbody>
 </table>

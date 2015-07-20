@@ -1,0 +1,63 @@
+﻿<div class="container">
+    <h2 class="text-center">客户任务新建</h2>
+    <form class="form-horizontal">
+        <div class="form-group" ng-hide="true">
+            <label for="TaskId" class="col-xs-2 control-label">序号</label>
+            <div class="col-xs-10">
+                <input type="text" id="TaskId" class="form-control" ng-model="task.model.TaskId" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="CustomerNo" class="col-xs-2 control-label">客户编号</label>
+            <div class="col-xs-10">
+                <input type="text" id="CustomerNo" class="form-control" ng-model="customer.model.CustomerNo" ng-disabled="true" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="StartDate" class="col-xs-2 control-label">邀约开始日期</label>
+            <div class="col-xs-10">
+                <input type="text" class="form-control" date-time auto-close="true" ng-model="task.model.StartDate" required="" min-view="date" max-view="date" placeholder="请输入日期时间" format="yyyy-MM-dd">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Other" class="col-xs-2 control-label">备注</label>
+            <div class="col-xs-10">
+                <input type="text" id="Other" class="form-control" ng-model="task.model.Other" placeholder="请输入备注"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="During" class="col-xs-2 control-label">回访间隔</label>
+            <div class="col-xs-10">
+                <input type="text" id="During" class="form-control" ng-model="task.model.During" placeholder="回访间隔: eg:2" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Review" class="col-xs-2 control-label">回访倒计日</label>
+            <div class="col-xs-10">
+                <input type="text" id="Review" class="form-control" ng-model="task.model.Review" placeholder="回访倒计日" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="ReviewStatus" class="col-xs-2 control-label">是否回访</label>
+            <div class="col-xs-10">
+                <select class="form-control"
+                        ng-model="task.model.ReviewStatus"
+                        ng-options="status.name for status in task.sections">
+                    <option value="">--选择是否--</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Describe" class="col-xs-2 control-label">回访信息记录</label>
+            <div class="col-xs-10">
+                <textarea id="Describe" rows="5" class="form-control" ng-model="task.model.Describe" placeholder="请回访记录" />
+            </div>
+        </div>        
+        <div class="form-group">
+            <div class="col-xs-offset-2 col-xs-9">
+                <a href="javascript:;" class="btn btn-primary col-xs-6" ng-click="save()">保存</a>
+                <a ui-sref="track.task({cid:customer.model.Cid})" class="btn btn-default col-xs-6">取消</a>
+            </div>
+        </div>
+    </form>
+</div>

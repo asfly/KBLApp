@@ -37,36 +37,47 @@ KBLApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('create', {
         url: "/customer/create",
         templateUrl: '/Templates/customer.create.html?' + Math.random(),
-        controller: 'Customer.editController'
+        controller: 'Customer.CreateController'
     })
     .state('edit', {
-        url: '/edit/{cid:[0-9]}',
+        url: '/customer/edit/{cid:[0-9]{1,4}}',
         templateUrl: '/Templates/customer.create.html?' + Math.random(),
-        controller: 'Customer.editController'
+        controller: 'Customer.EditController'
     })
     .state('track', {
-        url: '/customer/track',
-        templateUrl: '/Templates/customer.track.html?' + Math.random()
+        url: '/customer/{cid:[0-9]{1,6}}',
+        templateUrl: '/Templates/customer.track.html?' + Math.random(),
+        controller: 'Customer.TaskController'
     })
-    .state('track.list', {
-        url: '/list/{cid:[0-9]{1,4}}',
-        templateUrl: '/Templates/customer.track.list.html?' + Math.random(),
-        controller: 'Customer.track.listController'
+    .state('track.task', {
+        url: '/task/list',
+        templateUrl: '/Templates/customer.track.task.list.html?' + Math.random(),
+        controller: 'Customer.Task.ListController'
+    })
+    .state('track.task-create', {
+        url: '/task/create',
+        templateUrl: '/Templates/customer.track.task.create.html?' + Math.random(),
+        controller: 'Customer.Task.CreateController'
+    })
+    .state('track.task-edit', {
+        url: '/task/edit/{taskId:[1-9]{1,5}}',
+        templateUrl: '/Templates/customer.track.task.create.html?' + Math.random(),
+        controller: 'Customer.Task.EditController'
     })
     .state('track.schedule', {
-        url: '/schedule/{cid:[0-9]{1,4}}',
+        url: '/schedule',
         templateUrl: '/Templates/customer.schedule.list.html?' + Math.random()
     })
     .state('track.vip', {
-        url: '/vip/{cid:[0-9]{1,4}}',
-        templateUrl: '/Templates/customer.track.list.html?' + Math.random()
+        url: '/vip',
+        templateUrl: '/Templates/customer.track.task.list.html?' + Math.random()
     })
     .state('track.return-a-visit', {
-        url: '/retuen-a-visit/{cid:[0-9]{1,4}}',
-        templateUrl: '/Templates/customer.track.html?' + Math.random()
+        url: '/retuen-a-visit',
+        templateUrl: '/Templates/customer.track.task.list.html?' + Math.random()
     })
     .state('track.product', {
-        url: '/product/{cid:[0-9]{1,4}}',
-        templateUrl: '/Templates/customer.product.list.html?' + Math.random()
+        url: '/product',
+        templateUrl: '/Templates/customer.track.product.list.html?' + Math.random()
     })
 });

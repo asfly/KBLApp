@@ -14,7 +14,7 @@ namespace LinqToEntities
             using (db = new KBLDataContext())
             {
                 var entities = from t in db.CustomerProducts
-                               where t.CustomerID == customerId
+                               where t.Cid == customerId
                                select t;
                 return await entities.ToListAsync();
             }
@@ -25,7 +25,7 @@ namespace LinqToEntities
             using (db = new KBLDataContext())
             {
                 var entity = from t in db.CustomerProducts
-                               where t.Id == id
+                               where t.Pid == id
                                select t;
                 return await entity.FirstOrDefaultAsync();
             }
@@ -36,7 +36,7 @@ namespace LinqToEntities
             using (db = new KBLDataContext())
             {
                 var entity = from t in db.CustomerProducts
-                             where t.Id == model.Id
+                             where t.Pid == model.Pid
                              select t;
                 T_Customer_Product _prodcut = await entity.FirstOrDefaultAsync();
 
@@ -64,7 +64,7 @@ namespace LinqToEntities
             using (db = new KBLDataContext())
             {
                 var entity = from t in db.CustomerProducts
-                             where t.Id == id
+                             where t.Pid == id
                              select t;
                 T_Customer_Product _prodcut = await entity.FirstOrDefaultAsync();
                 if (_prodcut != null)

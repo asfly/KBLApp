@@ -2,7 +2,7 @@
 * Create by daniel.zuo on 4/19/2015
 */
 
-KBLApp.controller("Customer.ListController", ['$rootScope', '$scope', '$state', '$stateParams', '$location', 'ApiService', 'CommService',
+KBLApp.controller("Customer.RemoveController", ['$rootScope', '$scope', '$state', '$stateParams', '$location', 'ApiService', 'CommService',
     function ($rootScope, $scope, $state, $stateParams, $location, ApiService, CommService) {
 
         var customer = {

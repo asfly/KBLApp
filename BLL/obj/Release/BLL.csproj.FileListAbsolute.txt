@@ -9,3 +9,14 @@ e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\BLL\bin\Relea
 e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
 e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\BLL\obj\Release\BLL.dll
 e:\users\danqing\documents\visual studio 2013\Projects\com.crm.app\BLL\obj\Release\BLL.pdb
+D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\BLL\bin\Release\BLL.dll
+D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\BLL\bin\Release\BLL.pdb
+D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\BLL\bin\Release\LinqToEntities.dll
+D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\BLL\bin\Release\Models.dll
+D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\BLL\bin\Release\EntityFramework.dll
+D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\BLL\bin\Release\LinqToEntities.pdb
+D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\BLL\bin\Release\Models.pdb
+D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\BLL\bin\Release\EntityFramework.xml
+D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
+D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\BLL\obj\Release\BLL.dll
+D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\BLL\obj\Release\BLL.pdb

@@ -11,7 +11,7 @@ namespace Models
     public partial class T_Customer
     {
         [Key]
-        public long CID { get; set; }
+        public long Cid { get; set; }
         //客户编号
         public string CustomerNo { get; set; }
         //客户分类

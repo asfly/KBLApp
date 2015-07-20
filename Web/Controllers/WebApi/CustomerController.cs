@@ -13,11 +13,11 @@ using Newtonsoft.Json;
 
 namespace Web.Controllers.WebApi
 {
-    [RoutePrefix("api/customer")]
+    [RoutePrefix("api")]
     public class CustomerController : ApiController
     {
         // GET api/<controller>
-        [Route("gets")]
+        [Route("customer/gets")]
         [HttpPost]
         [HttpGet]
         public async Task<object> GetCustomers()
@@ -30,20 +30,19 @@ namespace Web.Controllers.WebApi
             });
         }
 
-        [Route("get")]
+        [Route("customer/get")]
         [HttpPost]
         [HttpGet]
         public async Task<object> GetCustomer(T_Customer model)
         {
-            //T_Customer customer = new T_Customer();
             object o = new { };
             //if (model.Input0 != null)
-            {
+            //{
                 string s = string.Empty;
                 //s = POSTJson.ResolveTJSON(model);
                 //customer = JsonConvert.DeserializeObject<T_Customer>(s);
-                o = await T_Customer_BLL.GetCustomer(model.CID);                
-            }
+                o = await T_Customer_BLL.GetCustomer(model.Cid);                
+            //}
             return Ok(new
             {
                 statusCode = 200,
@@ -51,10 +50,10 @@ namespace Web.Controllers.WebApi
             });
         }
 
-        [Route("register")]
+        [Route("customer/register")]
         [HttpGet]
         [HttpPost]
-        [HttpPut]        
+        [HttpPut]
         public async Task<object> Register(T_JSON model)
         {
             T_Customer customer = new T_Customer();
@@ -64,7 +63,7 @@ namespace Web.Controllers.WebApi
                 string s = string.Empty;
                 s = POSTJson.ResolveTJSON(model);
                 customer = JsonConvert.DeserializeObject<T_Customer>(s);
-                effects = await T_Customer_BLL.SaveOrEdit(customer);
+                effects = await T_Customer_BLL.SaveCustomer(customer);
             }
             return Ok(new
             {
