@@ -1,7 +1,8 @@
 ﻿<ul class="nav nav-tabs">
-    <li ng-class="{ active: $state.includes('track.list') }"><a ui-sref="track.list({cid:customer.model.CID})">准客户跟踪访问</a></li>
-    <li ng-class="{ active: $state.includes('track.vip') }"><a ui-sref="track.vip({cid:customer.model.CID})">贵宾客户资料</a></li>
-    <li ng-class="{ active: $state.includes('track.schedule') }"><a ui-sref="track.schedule({cid:customer.model.CID})">营养奶昔健康塑身计划</a></li>
-    <li ng-class="{ active: $state.includes('track.product') }"><a ui-sref="track.product({cid:customer.model.CID})">产品</a></li>
-    <li ng-class="{ active: $state.includes('track.return-a-visitor') }"><a ui-sref="track.return-a-visitor({cid:customer.model.CID})">归档客户回访</a></li>
+    <li ng-class="{ active: $state.includes('track.list') }"><a ui-sref="track.list({cid:$stateParams.cid})">准客户跟踪访问</a></li>
+    <li ng-class="{ active: $state.includes('track.vip') }"><a ui-sref="track.vip({cid:$stateParams.cid})">贵宾客户资料</a></li>
+    <li ng-class="{ active: $state.includes('track.schedule') }"><a ui-sref="track.schedule({cid:$stateParams.cid})">营养奶昔健康塑身计划</a></li>
+    <li ng-class="{ active: $state.includes('track.product') }"><a ui-sref="track.product({cid:$stateParams.cid})">产品</a></li>
+    <li ng-class="{ active: $state.includes('track.return-a-visitor') }"><a ui-sref="track.return-a-visitor({cid:$stateParams.cid})">归档客户回访</a></li>
 </ul>
+<div ui-view></div>

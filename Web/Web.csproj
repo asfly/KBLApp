@@ -537,9 +537,11 @@
     <Content Include="public\libs\select\js\standalone\selectize.min.js" />
     <Content Include="public\libs\select\js\utils.js" />
     <Content Include="public\libs\select\ranks.js" />
-    <Content Include="Scripts\controller\CustomerController.js" />
+    <Content Include="Scripts\controller\customer\editController.js" />
+    <Content Include="Scripts\controller\customer\listController.js" />
     <Content Include="Scripts\app.js" />
-    <Content Include="Scripts\controller\CustomerTrackController.js" />
+    <Content Include="Scripts\controller\customer.track\listController.js" />
+    <Content Include="Scripts\controller\customer\removeController.js" />
     <Content Include="Scripts\controller\MainController.js" />
     <Content Include="Scripts\directive\doFinished.js" />
     <Content Include="Scripts\directive\loadingPanel.js" />
@@ -547,6 +549,7 @@
     <Content Include="Scripts\routing.js" />
     <Content Include="Scripts\services\ApiService.js" />
     <Content Include="Scripts\services\CommService.js" />
+    <Content Include="Scripts\services\CustomerService.js" />
     <Content Include="Templates\customer.create.html" />
     <Content Include="Templates\customer.list.html" />
     <Content Include="Templates\customer.schedule.list.html" />

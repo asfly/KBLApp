@@ -27,7 +27,6 @@ KBLApp.factory('ApiService', ["$location", "$window", "$http", "CommService", fu
 
     //调用Get方法
     service.get = function (apiKey, apiParams, success, error) {
-        CommService.prepbroadcast("showLoading", "");
         $http.get(makeApiUrl(apiKey, apiParams)).success(function (response, status) {
             //成功直接回调成功函数
             if (response.statusCode == 200) {
@@ -45,17 +44,14 @@ KBLApp.factory('ApiService', ["$location", "$window", "$http", "CommService", fu
                     error(response);
                 }
             }
-            CommService.prepbroadcast("hideLoading", "");
         }).error(function (response, status) {
             //调用API时出错,统一到错误页面
             $location.path('/error');
-            CommService.prepbroadcast("hideLoading", "");
         });
     };
 
     //调用Post方法
     service.post = function (apiKey, apiParams, data, success, error) {
-        CommService.prepbroadcast("showLoading", "");
         $http.post(makeApiUrl(apiKey, apiParams), data).success(function (response, status) {
             //成功直接回调成功函数
             if (response.statusCode == 200) {
@@ -74,11 +70,9 @@ KBLApp.factory('ApiService', ["$location", "$window", "$http", "CommService", fu
                     error(response);
                 }
             }
-            CommService.prepbroadcast("hideLoading", "");
         }).error(function (response, status) {
             //调用API时出错,统一到错误页面
             $location.path('/error');
-            CommService.prepbroadcast("hideLoading", "");
         });
     };
     

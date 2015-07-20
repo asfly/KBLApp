@@ -27,9 +27,15 @@ KBLApp.directive('loadingPanel', function ($timeout) {
                 element.find(".modal,.modal-backdrop").show();
             });
 
-            scope.$on("hideLoading", function () {
+            function hideLoading() {
                 element.find(".modal,.modal-backdrop").hide('slow');
+            }
+
+            scope.$on("hideLoading", function () {
+                hideLoading();
             });
+
+            hideLoading();
         }
     };
 });

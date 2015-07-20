@@ -44,13 +44,13 @@
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="track in tracks.data">
-            <td>{{track.StartDate}}</td>
-            <td>{{track.Other}}</td>
-            <td>{{track.During}}</td>
-            <td>{{track.CallBack}}</td>
-            <td ng-class="{danger:!track.CallBackStatus,success:track.CallBackStatus}">{{track.CallBackStatus?'是':'否'}}</td>
-            <td>{{track.Describe}}</td>
+        <tr ng-repeat="t in track.list.data">
+            <td>{{t.StartDate}}</td>
+            <td>{{t.Other}}</td>
+            <td>{{t.During}}</td>
+            <td>{{t.CallBack}}</td>
+            <td ng-class="{danger:!t.CallBackStatus,success:t.CallBackStatus}">{{t.CallBackStatus?'是':'否'}}</td>
+            <td>{{t.Describe}}</td>
         </tr>
     </tbody>
 </table>
