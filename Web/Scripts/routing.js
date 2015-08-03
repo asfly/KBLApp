@@ -7,24 +7,6 @@ KBLApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     // Redirects and Otherwise //
     /////////////////////////////
 
-    // Use $urlRouterProvider to configure any redirects (when) and invalid urls (otherwise).
-    //$urlRouterProvider
-
-    // The `when` method says if the url is ever the 1st param, then redirect to the 2nd param
-    // Here we are just setting up some convenience urls.
-    //.when('/customer/edit/{cid:[0-9]{1，4}}', 'edit')
-        //.when('/customer/edit/:cid', '/customer/edit/:cid')
-        //.when('/customer/edit/:cid', '/customer/edit/:cid')
-        //.when('/customer/edit/:cid', '/customer/edit/:cid')
-
-    // If the url is ever invalid, e.g. '/asdf', then redirect to '/' aka the home state
-    //.otherwise('/');
-
-
-    //////////////////////////
-    // State Configurations //
-    //////////////////////////
-
     // Use $stateProvider to configure your states.
     $urlRouterProvider.otherwise("/");
 

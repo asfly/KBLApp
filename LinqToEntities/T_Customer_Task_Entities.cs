@@ -17,6 +17,7 @@ namespace LinqToEntities
             {
                 var entities = from t in db.CustomerTasks
                              where t.CId == cid
+                             orderby t.StartDate ascending
                              select t;
                 return await entities.ToListAsync();
             }
@@ -38,10 +39,21 @@ namespace LinqToEntities
             using (db = new KBLDataContext())
             {
                 var entity = await( from t in db.CustomerTasks
-                             where t.TaskId == model.TaskId
-                             select t).FirstOrDefaultAsync();
+                             where t.TaskId == model.TaskId && t.StartDate != model.StartDate
+                                    select t).FirstOrDefaultAsync();
                 if (entity == null)
                 {
+                    entity = await (from t in db.CustomerTasks
+                           where t.CId == model.CId
+                           orderby t.StartDate descending
+                           select t).FirstOrDefaultAsync();
+                    if(entity != null)
+                    {
+                        model.Describe = entity.Describe;
+                        model.Other = entity.Other;
+                        model.During = (model.StartDate - entity.StartDate).Value.Days + "";
+                        model.Review = (model.StartDate - entity.StartDate).Value.Days + "";
+                    }
                     db.CustomerTasks.Add(model);
                 }
                 else

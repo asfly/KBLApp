@@ -28,3 +28,14 @@ D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\LinqToEntities\bin
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\LinqToEntities\obj\Debug\LinqToEntities.csprojResolveAssemblyReference.cache
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\LinqToEntities\obj\Debug\LinqToEntities.dll
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\LinqToEntities\obj\Debug\LinqToEntities.pdb
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\LinqToEntities\bin\Debug\LinqToEntities.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\LinqToEntities\bin\Debug\LinqToEntities.pdb
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\LinqToEntities\bin\Debug\EntityFramework.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\LinqToEntities\bin\Debug\Models.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\LinqToEntities\bin\Debug\MySql.Data.Entity.EF6.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\LinqToEntities\bin\Debug\MySql.Data.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\LinqToEntities\bin\Debug\EntityFramework.xml
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\LinqToEntities\bin\Debug\Models.pdb
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\LinqToEntities\obj\Debug\LinqToEntities.csprojResolveAssemblyReference.cache
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\LinqToEntities\obj\Debug\LinqToEntities.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\LinqToEntities\obj\Debug\LinqToEntities.pdb

@@ -42,3 +42,16 @@ D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\BLL\bin\Debug\Enti
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\BLL\obj\Debug\BLL.dll
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\BLL\obj\Debug\BLL.pdb
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\bin\Debug\BLL.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\bin\Debug\BLL.pdb
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\bin\Debug\LinqToEntities.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\bin\Debug\Models.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\bin\Debug\EntityFramework.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\bin\Debug\MySql.Data.Entity.EF6.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\bin\Debug\MySql.Data.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\bin\Debug\LinqToEntities.pdb
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\bin\Debug\Models.pdb
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\bin\Debug\EntityFramework.xml
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\obj\Debug\BLL.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\obj\Debug\BLL.pdb

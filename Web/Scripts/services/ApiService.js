@@ -30,6 +30,9 @@ KBLApp.factory('ApiService', ["$location", "$q","$window", "$http", "CommService
         // 获取任务
         getTask: "api/customer/{cid}/task/{taskId}/get",
 
+    	// 删除任务
+        removeTask: "api/customer/{cid}/task/{taskId}/remove",
+
         // 任务列表
         getTaskList: "api/customer/{cid}/task/list",
 

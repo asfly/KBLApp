@@ -20,3 +20,16 @@ D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\BLL\bin\Release\En
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\BLL\obj\Release\BLL.dll
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\BLL\obj\Release\BLL.pdb
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\bin\Release\BLL.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\bin\Release\BLL.pdb
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\bin\Release\LinqToEntities.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\bin\Release\Models.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\bin\Release\EntityFramework.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\bin\Release\MySql.Data.Entity.EF6.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\bin\Release\MySql.Data.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\bin\Release\LinqToEntities.pdb
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\bin\Release\Models.pdb
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\bin\Release\EntityFramework.xml
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\obj\Release\BLL.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\obj\Release\BLL.pdb

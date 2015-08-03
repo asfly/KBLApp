@@ -24,3 +24,13 @@ D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\Helper\bin\Debug\N
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\Helper\bin\Debug\System.Web.Mvc.xml
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\Helper\obj\Debug\Helper.dll
 D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\Helper\obj\Debug\Helper.pdb
+D:\Users\Danqing\Documents\Visual Studio 2013\Projects\kblapp\Helper\obj\Debug\Helper.csprojResolveAssemblyReference.cache
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Helper\obj\Debug\Helper.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Helper\obj\Debug\Helper.pdb
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Helper\bin\Debug\Helper.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Helper\bin\Debug\Helper.pdb
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Helper\bin\Debug\Newtonsoft.Json.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Helper\bin\Debug\System.Web.Mvc.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Helper\bin\Debug\Newtonsoft.Json.xml
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Helper\bin\Debug\System.Web.Mvc.xml
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Helper\obj\Debug\Helper.csprojResolveAssemblyReference.cache

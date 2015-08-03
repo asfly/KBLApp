@@ -61,6 +61,14 @@ namespace BLL
                 return await entity.Save(model);
             }
         }
+
+        public static async Task<object> RemoveCustomerTask(long taskId)
+        {
+            using (T_Customer_Task_Entities entity = new T_Customer_Task_Entities())
+            {
+                return await entity.Remove(taskId);
+            }
+        }
         #endregion
 
         #region 客户产品管理

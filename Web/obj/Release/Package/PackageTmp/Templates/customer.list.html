@@ -1,0 +1,117 @@
+﻿<div class="panel panel-primary col-sm-3">
+    <div class="panel-heading">
+        <h3 class="panel-title" id="panel-title">
+            性别
+            <a href="#panel-title" class="anchorjs-link">
+                <span class="anchorjs-icon"></span>
+            </a>
+        </h3>
+    </div>
+    <div class="panel-body">
+        <a href="" class="list-group-item" ng-click="search={ Gender: 0}">男</a>
+        <a href="" class="list-group-item" ng-click="search={ Gender: 1}">女</a>
+    </div>
+</div>
+<div class="panel panel-primary col-sm-3">
+    <div class="panel-heading">
+        <h3 class="panel-title" id="panel-title">
+            客户分类
+            <a href="#panel-title" class="anchorjs-link">
+                <span class="anchorjs-icon"></span>
+            </a>
+        </h3>
+    </div>
+    <div class="panel-body">
+        <a href="" class="list-group-item" ng-click="search={ CategoryID: 0}">普通</a>
+        <a href="" class="list-group-item" ng-click="search={ CategoryID: 1}">贵宾</a>
+    </div>
+</div>
+<div class="panel panel-primary col-sm-3">
+    <div class="panel-heading">
+        <h3 class="panel-title" id="panel-title">
+            卡分类
+            <a href="#panel-title" class="anchorjs-link">
+                <span class="anchorjs-icon"></span>
+            </a>
+        </h3>
+    </div>
+    <div class="panel-body">
+        <a href="" class="list-group-item">--</a>
+        <a href="" class="list-group-item">--</a>
+    </div>
+</div>
+<div class="panel panel-primary col-sm-3">
+    <div class="panel-heading">
+        <h3 class="panel-title" id="panel-title">
+            客户姓名
+            <a href="#panel-title" class="anchorjs-link">
+                <span class="anchorjs-icon"></span>
+            </a>
+        </h3>
+    </div>
+    <div class="panel-body">
+        <a href="" class="list-group-item" ng-click="search={ CategoryID: 0}">--</a>
+        <a href="" class="list-group-item" ng-click="search={ CategoryID: 1}">--</a>
+    </div>
+</div>
+
+<a href="" ng-click="search={}">显示全部</a>
+<table class="table table-bordered table-responsive">
+    <thead>
+        <tr>
+            <th>编号</th>
+            <th>卡类别</th>
+            <th>客户分类</th>
+            <th>营养顾问</th>
+            <th>本月VP数</th>
+            <th>累计VP数</th>
+            <th>客户姓名</th>
+            <th>地点</th>
+            <th>性别</th>
+            <th>年龄</th>
+            <th>身高CM</th>
+            <th>原始体重KG</th>
+            <th>联系方式</th>
+            <th>上次联系时间</th>
+            <th>下次联系时间</th>
+            <th>今天回访提示</th>
+            <th>减肥是否成功</th>
+            <th>服务记录</th>
+            <th>跟踪服务</th>
+            <th>备注</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="item in customer.items | filter:search">
+            <td>
+                <a ui-sref="edit({cid:item.c.Cid})" tooltip-placement="right" tooltip="编辑客户（{{ item.c.CName}}）信息">
+                    {{ item.c.CustomerNo }}
+                </a>
+            </td>
+            <td>--</td>
+            <td>{{ ["普通","贵宾"][item.c.CategoryID || 0] }}</td>
+            <td>{{ item.c.Dietitian }}</td>
+            <td>{{ '--' }}</td>
+            <td>{{ 0 }}</td>
+            <td>{{ item.c.CName }}</td>
+            <td>{{ item.c.Addr }}</td>
+            <td>{{ ["男","女"][item.c.Gender || 0] }}</td>
+            <td>{{ item.c.Age }}</td>
+            <td>{{ item.c.Height }}</td>
+            <td>{{ item.c.Weight }}</td>
+            <td>{{ item.c.Contact }}</td>
+            <td ng-class="{danger:!item.t.Prev.ReviewStatus,success:item.t.Prev.ReviewStatus}">{{ item.t.Prev.StartDate || '--' | date:'yyyy-MM-dd' }}</td> <!--item.t.Prev ? (item.t.Prev.ReviewStatus?'是'：'否'):'-'-->
+            <td ng-class="{danger:!item.t.Next.ReviewStatus,success:item.t.Next.ReviewStatus}">{{ item.t.Next.StartDate || '--' | date:'yyyy-MM-dd' }}</td> <!--item.t.Next ? (item.t.Next.ReviewStatus?'是'：'否'):'-'-->
+            <td ng-class="{danger:!item.t.Today.ReviewStatus,success:item.t.Today.ReviewStatus}">{{ item.t.Today.StartDate || '--' | date:'yyyy-MM-dd' }}</td> <!--item.t.Today ? (item.t.Today.ReviewStatus?'是'：'否'):'-'-->
+            <td>{{ '是' }}</td>
+            <td><a ui-sref="track.task({cid:item.c.Cid})" tooltip-placement="left" tooltip="查看客户（{{ item.c.CName}}）跟踪记录">跟踪记录</a></td>
+            <td><a ui-sref="track.service({cid:item.c.Cid})" tooltip-placement="left" tooltip="查看客户（{{ item.c.CName}}）服务记录">服务记录</a></td>
+            <td>{{'--'}}</td>
+        </tr>
+        <tr ng-if="customer.items.data.length == 0">
+            <td colspan="21" class="text-center text-info">
+                暂无数据，请添加。
+            </td>
+        </tr>
+    </tbody>
+</table>
