@@ -2,10 +2,10 @@
 * Create by daniel.zuo on 4/19/2015
 */
 
-KBLApp.controller("Customer.Task.EditController", ['$rootScope', '$scope', '$state', '$stateParams', 'ApiService', 'CommService', 'CustomerTrackService',
-function ($rootScope, $scope, $state, $stateParams, ApiService, CommService, CustomerTrackService) {
+KBLApp.controller("Customer.Task.EditController", ['$rootScope', '$scope', '$state', '$stateParams', 'ApiService', 'CommService', 'CustomerTaskService',
+function ($rootScope, $scope, $state, $stateParams, ApiService, CommService, CustomerTaskService) {
     $scope.route = { 'action': '编辑' };
-    var track = CustomerTrackService.biz;
+    var track = CustomerTaskService.biz;
     track.task = { model: {}, sections: track.utils.ReviewStatus };
 
     track.init($stateParams.cid, $stateParams.taskId).then(function (data) {

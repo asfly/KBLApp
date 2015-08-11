@@ -4,6 +4,8 @@
 KBLApp.controller("Customer.CreateController", ['$rootScope', '$scope', '$state', '$stateParams', 'ApiService', 'CommService', 'CustomerService',
     function ($rootScope, $scope, $state, $stateParams, ApiService, CommService, CustomerService) {
 
+        $scope.actionName = '新建';
+
         var customer = CustomerService.biz;
 
         $scope.customer = { model: {} ,sections:customer.utils };

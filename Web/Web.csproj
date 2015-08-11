@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -265,8 +266,10 @@
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Auth\AuthApiController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\WebApi\CustomerController.cs" />
+    <Compile Include="Controllers\WebApi\CustomerRoleController.cs" />
     <Compile Include="Controllers\WebApi\CustomerTaskController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -564,11 +567,14 @@
     <Content Include="Scripts\routing.js" />
     <Content Include="Scripts\services\ApiService.js" />
     <Content Include="Scripts\services\CommService.js" />
+    <Content Include="Scripts\services\CustomerRoleService.js" />
     <Content Include="Scripts\services\CustomerService.js" />
     <Content Include="Scripts\services\CustomerTaskService.js" />
     <Content Include="Templates\customer.create.html" />
     <Content Include="Templates\customer.list.html" />
+    <Content Include="Templates\customer.register.html" />
     <Content Include="Templates\customer.schedule.list.html" />
+    <Content Include="Templates\customer.signin.html" />
     <Content Include="Templates\customer.track.product.create.html" />
     <Content Include="Templates\customer.track.task.list.html" />
     <Content Include="Templates\customer.track.html" />

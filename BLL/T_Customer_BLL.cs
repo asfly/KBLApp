@@ -37,6 +37,48 @@ namespace BLL
         }
         #endregion
 
+        #region 客户登录信息管理
+        public static async Task<T_Customer_Role> GetCustomerRole(long cid)
+        {
+            using (T_Customer_Role_Entities dao = new T_Customer_Role_Entities())
+            {
+                return await dao.Find(cid);
+            }
+        }
+        public static async Task<IEnumerable<T_Customer_Role>> GetCustomerRoles()
+        {
+            using (T_Customer_Role_Entities dao = new T_Customer_Role_Entities())
+            {
+                return await dao.List();
+            }
+        }
+
+        public static async Task<T_Customer_Role> CheckUserName(string userName)
+        {
+            using (T_Customer_Role_Entities dao = new T_Customer_Role_Entities())
+            {
+                return await dao.Check(userName);
+            }
+        }
+
+        public static async Task<int> SaveCustomerRole(T_Customer_Role model)
+        {
+            using (T_Customer_Role_Entities dao = new T_Customer_Role_Entities())
+            {
+                return await dao.Save(model);
+            }
+        }
+
+        public static async Task<int> RemoveCustomerRole(long cid)
+        {
+            using (T_Customer_Role_Entities dao = new T_Customer_Role_Entities())
+            {
+                return await dao.remove(cid);
+            }
+        }
+
+        #endregion
+
         #region  客户任务追踪
         public static async Task<object> GetCustomerTask(long taskId)
         {

@@ -33,3 +33,4 @@ D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Helper\bin\Debu
 D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Helper\bin\Debug\System.Web.Mvc.dll
 D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Helper\bin\Debug\Newtonsoft.Json.xml
 D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Helper\bin\Debug\System.Web.Mvc.xml
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Helper\obj\Debug\Helper.csprojResolveAssemblyReference.cache

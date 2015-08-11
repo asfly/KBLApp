@@ -33,6 +33,9 @@
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="Helper">
+      <HintPath>..\Helper\bin\Debug\Helper.dll</HintPath>
+    </Reference>
     <Reference Include="Models">
       <HintPath>..\Models\bin\Debug\Models.dll</HintPath>
     </Reference>
@@ -52,6 +55,7 @@
     <Compile Include="T_Customer_Entities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="T_Customer_Product_Entities.cs" />
+    <Compile Include="T_Customer_Role_Entities.cs" />
     <Compile Include="T_Customer_Schedule_Entities.cs" />
     <Compile Include="T_Customer_Task_Entities.cs" />
   </ItemGroup>

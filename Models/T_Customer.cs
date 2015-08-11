@@ -22,6 +22,8 @@ namespace Models
         public string CName { get; set; }
         //地址
         public string Addr { get; set; }
+        //生日
+        public DateTime? Birthday { get; set; }
         //性别
         public string Gender { get; set; }
         //年龄

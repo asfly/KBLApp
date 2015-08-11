@@ -43,7 +43,16 @@ KBLApp.factory('ApiService', ["$location", "$q","$window", "$http", "CommService
         getSchedule: "api/customer/{cid}/schedule/get",
 
         // 获取客户减肥计划列表
-        getScheduleList: "api/customer/{cid}/schedule/list"
+        getScheduleList: "api/customer/{cid}/schedule/list",
+
+        // 客户登录设置
+        getRole: "api/customer/role/get",
+
+        // 客户登录名检查
+        checkRole: "api/customer/role/check",
+
+        // 客户登录信息更新
+        saveRole: "api/customer/role/submit"
     };
 
     //调用Get方法

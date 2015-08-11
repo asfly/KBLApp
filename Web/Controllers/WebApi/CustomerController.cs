@@ -1,20 +1,16 @@
 ﻿using BLL;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using Helper.T;
 using Models;
 using Helper;
 using Newtonsoft.Json;
+using Web.Controllers.Auth;
 
 namespace Web.Controllers.WebApi
 {
     [RoutePrefix("api")]
-    public class CustomerController : ApiController
+    public class CustomerController : AuthApiController
     {
         // GET api/<controller>
         [Route("customer/gets")]

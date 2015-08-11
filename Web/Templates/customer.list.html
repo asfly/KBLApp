@@ -85,7 +85,7 @@
     <tbody>
         <tr ng-repeat="item in customer.items | filter:search">
             <td>
-                <a ui-sref="edit({cid:item.c.Cid})" tooltip-placement="right" tooltip="编辑客户（{{ item.c.CName}}）信息">
+                <a ui-sref="edit.auth({cid:item.c.Cid})" tooltip-placement="right" tooltip="编辑客户（{{ item.c.CName}}）信息">
                     {{ item.c.CustomerNo }}
                 </a>
             </td>

@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using System.Web.Http;
 using BLL;
 using Helper;
 using Helper.T;
 using Models;
 using Newtonsoft.Json;
+using Web.Controllers.Auth;
 
 namespace Web.Controllers.WebApi
 {
     [RoutePrefix("api/customer")]
-    public class CustomerTaskController : ApiController
+    public class CustomerTaskController : AuthApiController
     {
         // post api/<controller>
         [Route("{cid:long}/task/list")]

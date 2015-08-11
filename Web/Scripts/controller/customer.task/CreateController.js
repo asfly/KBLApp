@@ -2,9 +2,9 @@
 * Create by daniel.zuo on 4/19/2015
 */
 
-KBLApp.controller("Customer.Task.CreateController", ['$rootScope', '$scope', '$state', '$stateParams', 'ApiService', 'CommService', 'CustomerTrackService',
-function ($rootScope, $scope, $state, $stateParams, ApiService, CommService, CustomerTrackService) {
-    var track = CustomerTrackService.biz;
+KBLApp.controller("Customer.Task.CreateController", ['$rootScope', '$scope', '$state', '$stateParams', 'ApiService', 'CommService', 'CustomerTaskService',
+function ($rootScope, $scope, $state, $stateParams, ApiService, CommService, CustomerTaskService) {
+    var track = CustomerTaskService.biz;
     track.task = { model: {}, sections: track.utils.ReviewStatus };
     $scope.route = { 'action':'新建'};
     $scope.save = function () {

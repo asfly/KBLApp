@@ -3,7 +3,7 @@
 */
 KBLApp.controller("Customer.EditController", ['$rootScope', '$scope', '$state', '$stateParams', '$location', 'ApiService', 'CommService','CustomerService',
     function ($rootScope, $scope, $state, $stateParams, $location, ApiService, CommService, CustomerService) {
-
+        $scope.actionName = '编辑';
         var cid = $stateParams.cid;
         $scope.customer = { model: {} ,sections:[]};        
         var customer = CustomerService.biz;
