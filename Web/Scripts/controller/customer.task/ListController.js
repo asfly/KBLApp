@@ -25,6 +25,9 @@ function ($rootScope, $scope, $state, $stateParams, ApiService, CommService,Cust
     		};
 
     		var param = JSON.stringify(model);
+    		if (!$scope.date) {
+    			return;
+    		}
     		track.save($stateParams.cid, param).then(function (data) {
     			if (data.result > 0) {
     				init();

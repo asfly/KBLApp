@@ -25,4 +25,19 @@ KBLApp.controller("Customer.ListController", ['$rootScope', '$scope', '$state', 
             CommService.customerId = cid;
             $state.go('track.task', { cid: cid });
         }
+		
+        $scope.filter = function (key, col, value) {
+        	switch (col) {
+        		case 'CategoryID':
+        			$scope.search = { c: { CategoryID: value } };
+        			break;
+        		case 'Gender':
+        			$scope.search = { c: { Gender: value } };
+        			break;
+        		default:
+        			$scope.search = {};
+        			break;
+			}        	
+        	$scope.searchText = '[筛选：' + customer.utils.split[key] + '>' + customer.utils[key][value].name + '】';
+        }
 }]);

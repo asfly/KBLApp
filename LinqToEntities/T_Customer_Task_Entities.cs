@@ -8,7 +8,7 @@ using System.Data.Entity;
 
 namespace LinqToEntities
 {
-    public class T_Customer_Task_Entities:IDisposable
+    public class T_Customer_Task_Entities : IDisposable
     {
         KBLDataContext db = null;
         public async Task<object> List(long cid)
@@ -16,9 +16,9 @@ namespace LinqToEntities
             using (db = new KBLDataContext())
             {
                 var entities = from t in db.CustomerTasks
-                             where t.CId == cid
-                             orderby t.StartDate ascending
-                             select t;
+                               where t.CId == cid
+                               orderby t.StartDate ascending
+                               select t;
                 return await entities.ToListAsync();
             }
         }
@@ -38,16 +38,16 @@ namespace LinqToEntities
         {
             using (db = new KBLDataContext())
             {
-                var entity = await( from t in db.CustomerTasks
-                             where t.TaskId == model.TaskId && t.StartDate != model.StartDate
+                var entity = await (from t in db.CustomerTasks
+                                    where t.TaskId == model.TaskId
                                     select t).FirstOrDefaultAsync();
                 if (entity == null)
                 {
                     entity = await (from t in db.CustomerTasks
-                           where t.CId == model.CId
-                           orderby t.StartDate descending
-                           select t).FirstOrDefaultAsync();
-                    if(entity != null)
+                                    where t.CId == model.CId
+                                    orderby t.StartDate descending
+                                    select t).FirstOrDefaultAsync();
+                    if (entity != null)
                     {
                         model.Describe = entity.Describe;
                         model.Other = entity.Other;

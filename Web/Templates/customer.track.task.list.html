@@ -57,14 +57,15 @@
     </tbody>
     <tfoot>
         <tr>
-            <td colspan="7">                
+            <td colspan="7">
+                <div class="dropdown" style="width:auto" ng-init="show=false">
+                    <a href="" ng-click="show=!show"><i class="fa {{ show?'fa-minus-circle':'fa-plus-circle' }}"></i>新增跟踪记录(将延续上一任务内容)</a>
+                    <div ng-click="$event.preventDefault();$event.stopPropagation();task.add();show=false" ng-show="show">
+                        <div date-picker="date" min-view="date" max-view="date" format="yyy-MM-dd"></div>
+                    </div>
+                </div>
             </td>
         </tr>
     </tfoot>
 </table>
-<div class="dropdown">
-    <a href="" ng-click="add(date)"><i class="fa fa-minus-circle"></i>新增跟踪记录(将延续上一任务内容){{ date | date:'yyyy-MM-dd'}}</a>
-    <div ng-click="$event.preventDefault();$event.stopPropagation();task.add()" style="display:block;">
-        <div date-picker="date" min-view="date" max-view="date" format="yyy-MM-dd"></div>
-    </div>
-</div>
+

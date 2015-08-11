@@ -1,4 +1,5 @@
-﻿<div class="panel panel-primary col-sm-3">
+﻿<h4>{{'客户筛选'}}</h4>
+<div class="panel panel-primary col-xs-3">
     <div class="panel-heading">
         <h3 class="panel-title" id="panel-title">
             性别
@@ -8,11 +9,11 @@
         </h3>
     </div>
     <div class="panel-body">
-        <a href="" class="list-group-item" ng-click="search={ Gender: 0}">男</a>
-        <a href="" class="list-group-item" ng-click="search={ Gender: 1}">女</a>
+        <a href="" class="list-group-item" ng-click="filter('gender','Gender', 0)">男</a>
+        <a href="" class="list-group-item" ng-click="filter('gender','Gender', 1)">女</a>
     </div>
 </div>
-<div class="panel panel-primary col-sm-3">
+<div class="panel panel-primary col-xs-3">
     <div class="panel-heading">
         <h3 class="panel-title" id="panel-title">
             客户分类
@@ -22,11 +23,11 @@
         </h3>
     </div>
     <div class="panel-body">
-        <a href="" class="list-group-item" ng-click="search={ CategoryID: 0}">普通</a>
-        <a href="" class="list-group-item" ng-click="search={ CategoryID: 1}">贵宾</a>
+        <a href="" class="list-group-item" ng-click="filter('categories','CategoryID',0)">普通</a>
+        <a href="" class="list-group-item" ng-click="filter('categories','CategoryID',1)">贵宾</a>
     </div>
 </div>
-<div class="panel panel-primary col-sm-3">
+<div class="panel panel-primary col-xs-3">
     <div class="panel-heading">
         <h3 class="panel-title" id="panel-title">
             卡分类
@@ -40,7 +41,7 @@
         <a href="" class="list-group-item">--</a>
     </div>
 </div>
-<div class="panel panel-primary col-sm-3">
+<div class="panel panel-primary col-xs-3">
     <div class="panel-heading">
         <h3 class="panel-title" id="panel-title">
             客户姓名
@@ -50,12 +51,12 @@
         </h3>
     </div>
     <div class="panel-body">
-        <a href="" class="list-group-item" ng-click="search={ CategoryID: 0}">--</a>
-        <a href="" class="list-group-item" ng-click="search={ CategoryID: 1}">--</a>
+        <a href="" class="list-group-item" ng-click="search={ item.c.CategoryID: 0}">--</a>
+        <a href="" class="list-group-item" ng-click="search={ item.c.CategoryID: 1}">--</a>
     </div>
 </div>
 
-<a href="" ng-click="search={}">显示全部</a>
+<h4><a href="" ng-click="search={};searchText='';">显示全部</a>{{ searchText }}</h4>
 <table class="table table-bordered table-responsive">
     <thead>
         <tr>
