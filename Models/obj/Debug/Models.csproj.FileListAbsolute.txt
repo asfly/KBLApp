@@ -88,4 +88,3 @@ D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Models\bin\Debu
 D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Models\bin\Debug\EntityFramework.SqlServer.xml
 D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Models\obj\Debug\Models.dll
 D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Models\obj\Debug\Models.pdb
-D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache

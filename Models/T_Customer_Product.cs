@@ -26,5 +26,8 @@ namespace Models
         public DateTime PurchasingDate { get; set; }
         // 生产Vp的月数
         public DateTime GeneratintVpDate { get; set; }
+
+        [NotMapped]
+        public T_Customer_Role Role { get; set; }
     }
 }

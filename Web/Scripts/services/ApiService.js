@@ -52,7 +52,10 @@ KBLApp.factory('ApiService', ["$location", "$q","$window", "$http", "CommService
         checkRole: "api/customer/role/check",
 
         // 客户登录信息更新
-        saveRole: "api/customer/role/submit"
+        saveRole: "api/customer/role/submit",
+
+        // 用户登录
+        signIn: "api/account/signin"
     };
 
     //调用Get方法

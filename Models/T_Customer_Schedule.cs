@@ -24,5 +24,8 @@ namespace Models
         public decimal? BMI { get; set; }
         public decimal? MetabolicRate { get; set; }
         public decimal? Counting { get; set; }
+
+        [NotMapped]
+        public T_Customer_Role Role { get; set; }
     }
 }

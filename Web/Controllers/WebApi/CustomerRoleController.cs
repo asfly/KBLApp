@@ -5,12 +5,13 @@ using Helper.T;
 using BLL;
 using Helper;
 using Newtonsoft.Json;
-using Web.Controllers.Auth;
+using Web.Controllers.WebApi;
 
 namespace Web.Controllers.WebApi
 {
+    [FormAuth]
     [RoutePrefix("api/cutomer/role")]
-    public class CustomerRoleController : AuthApiController
+    public class CustomerRoleController : ApiController
     {
         // GET api/<controller>
         [Route("gets")]

@@ -61,6 +61,14 @@ namespace BLL
             }
         }
 
+        public static async Task<T_Customer_Role> CheckUserName(string usr,string pwd)
+        {
+            using (T_Customer_Role_Entities dao = new T_Customer_Role_Entities())
+            {
+                return await dao.SignIn(usr,pwd);
+            }
+        }
+
         public static async Task<int> SaveCustomerRole(T_Customer_Role model)
         {
             using (T_Customer_Role_Entities dao = new T_Customer_Role_Entities())

@@ -24,6 +24,9 @@ namespace Models
         //回访信息记录
         public string Describe { get; set; }
 
+        [NotMapped]
+        public T_Customer_Role Role { get; set; }
+
     }
 }
  

@@ -11,8 +11,13 @@ KBLApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider.otherwise("/");
 
     $stateProvider
-    .state('customer', {
+    .state('signin', {
         url: "/",
+        templateUrl: '/Templates/customer.signin.html?' + Math.random(),
+        controller: 'UserController'
+    })
+    .state('customer', {
+        url: "/customer",
         templateUrl: '/Templates/customer.list.html?' + Math.random(),
         controller: 'Customer.ListController'
     })

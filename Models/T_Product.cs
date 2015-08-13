@@ -20,5 +20,8 @@ namespace Models
         public string Price { get; set; }
         // vp点数
         public decimal? VP { get; set; }
+
+        [NotMapped]
+        public T_Customer_Role Role { get; set; }
     }
 }

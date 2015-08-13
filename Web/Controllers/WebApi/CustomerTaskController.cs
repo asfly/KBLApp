@@ -5,12 +5,13 @@ using Helper;
 using Helper.T;
 using Models;
 using Newtonsoft.Json;
-using Web.Controllers.Auth;
+using Web.Controllers.WebApi;
 
 namespace Web.Controllers.WebApi
 {
+    [FormAuth]
     [RoutePrefix("api/customer")]
-    public class CustomerTaskController : AuthApiController
+    public class CustomerTaskController : ApiController
     {
         // post api/<controller>
         [Route("{cid:long}/task/list")]

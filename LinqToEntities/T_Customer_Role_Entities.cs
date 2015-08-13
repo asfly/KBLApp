@@ -26,6 +26,18 @@ namespace LinqToEntities
                 return await entity.FirstOrDefaultAsync();
             }
         }
+
+        public async Task<T_Customer_Role> SignIn(string userName,string password)
+        {
+            using (db = new KBLDataContext())
+            {
+                var entity = from r in db.CustomerRoles
+                             where r.UserName == userName && r.Password == password
+                             select r;
+                return await entity.FirstOrDefaultAsync();
+            }
+        }
+
         /// <summary>
         /// 用户名检查
         /// </summary>

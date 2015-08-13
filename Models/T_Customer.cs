@@ -34,5 +34,8 @@ namespace Models
         public decimal? Weight { get; set; }
         //联系方式
         public string Contact { get; set; }
+
+        [NotMapped]
+        public T_Customer_Role Role { get; set; }
     }
 }
