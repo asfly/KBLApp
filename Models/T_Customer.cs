@@ -12,6 +12,8 @@ namespace Models
     {
         [Key]
         public long Cid { get; set; }
+        // 卡类别
+        public int CardType { get; set; }
         //客户编号
         public string CustomerNo { get; set; }
         //客户分类
@@ -34,6 +36,8 @@ namespace Models
         public decimal? Weight { get; set; }
         //联系方式
         public string Contact { get; set; }
+        //婚否
+        public int Married { get; set; }
 
         [NotMapped]
         public T_Customer_Role Role { get; set; }

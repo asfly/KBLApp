@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,8 +40,11 @@ namespace Models
         /// </summary>
         public long UpdateAccountDate { get; set; }
         /// <summary>
-        /// 用户权限级别{0，admin,4,营养师：8:贵宾客户}
+        /// 用户权限
         /// </summary>
-        public int Role { get; set; }
+        public int Rid { get; set; }
+
+        [NotMapped]
+        public virtual List<T_Customer_Role_Setting> settings { get; set; }
     }
 }

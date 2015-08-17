@@ -273,6 +273,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\Auth\RoleAuth.cs" />
     <Compile Include="Controllers\WebApi\AccountController.cs" />
     <Compile Include="Controllers\Auth\FormAuth.cs" />
     <Compile Include="Controllers\Auth\BaseAuth.cs" />
@@ -571,7 +572,7 @@
     <Content Include="Scripts\app.js" />
     <Content Include="Scripts\controller\customer.task\ListController.js" />
     <Content Include="Scripts\controller\customer\RemoveController.js" />
-    <Content Include="Scripts\controller\customer\UserController.js" />
+    <Content Include="Templates\users\register\RegisterController.js" />
     <Content Include="Scripts\directive\doFinished.js" />
     <Content Include="Scripts\directive\loadingPanel.js" />
     <Content Include="Scripts\directive\textContentEditable.js" />
@@ -584,14 +585,15 @@
     <Content Include="Scripts\services\UserService.js" />
     <Content Include="Templates\customer.create.html" />
     <Content Include="Templates\customer.list.html" />
-    <Content Include="Templates\customer.register.html" />
+    <Content Include="Templates\users\register\register.html" />
     <Content Include="Templates\customer.schedule.list.html" />
-    <Content Include="Templates\customer.signin.html" />
+    <Content Include="Templates\users\signin\signin.html" />
     <Content Include="Templates\customer.track.product.create.html" />
     <Content Include="Templates\customer.track.task.list.html" />
     <Content Include="Templates\customer.track.html" />
     <Content Include="Templates\Error.html" />
     <Content Include="Templates\customer.track.product.list.html" />
+    <Content Include="Templates\users\signin\SignInController.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

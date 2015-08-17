@@ -18,14 +18,25 @@
         </div>
     </div>
     <div class="form-group">
-        <label for="role.level" class="col-sm-2 control-label">权限</label>
-        <div class="col-sm-10">
-            <select class="form-control" id="role.level" name="role.level" ng-model="role.level"></select>
+        <label for="role.level" class="col-sm-2 control-label">邀请人</label>
+        <div class="col-sm-10 dropdown">
+            <input class="form-control" id="role.parentCid" name="role.ParentCid" ng-model="role.ParentCid">
+            <ul class="dropdown-menu" ng-show="role.userList.length > 0">
+                <li ng-repeat="item in role.userList"><a href="" ng-click="selectItem(item)">{{item.CName}}</a></li>
+            </ul>
         </div>
     </div>
     <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-default">提交</button>
+        <label for="role.level" class="col-sm-2 control-label">类型</label>
+        <div class="col-sm-10">
+            <select class="form-control" id="role.level" name="role.RoleType" ng-model="role.RoleType" ng-options="option for option in role.types"></select>
         </div>
     </div>
+    <div class="form-group">
+        <label for="role.level" class="col-sm-2 control-label">优先级</label>
+        <div class="col-sm-10">
+            <select class="form-control" id="role.level" name="role.RoleLevel" ng-model="role.RoleLevel" ng-options="option for option in role.levels"></select>
+        </div>
+    </div>
+
 </form>

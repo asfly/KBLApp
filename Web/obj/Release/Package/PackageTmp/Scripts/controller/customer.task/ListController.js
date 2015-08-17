@@ -2,9 +2,9 @@
 * Create by daniel.zuo on 4/19/2015
 */
 
-KBLApp.controller("Customer.Task.ListController", ['$rootScope', '$scope', '$state', '$stateParams', 'ApiService', 'CommService', 'CustomerTrackService',
-function ($rootScope, $scope, $state, $stateParams, ApiService, CommService,CustomerTrackService) {
-    var track = CustomerTrackService.biz;
+KBLApp.controller("Customer.Task.ListController", ['$rootScope', '$scope', '$state', '$stateParams', 'ApiService', 'CommService', 'CustomerTaskService',
+function ($rootScope, $scope, $state, $stateParams, ApiService, CommService,CustomerTaskService) {
+    var track = CustomerTaskService.biz;
 
     track.task = {
     	items: [],
@@ -25,6 +25,9 @@ function ($rootScope, $scope, $state, $stateParams, ApiService, CommService,Cust
     		};
 
     		var param = JSON.stringify(model);
+    		if (!$scope.date) {
+    			return;
+    		}
     		track.save($stateParams.cid, param).then(function (data) {
     			if (data.result > 0) {
     				init();

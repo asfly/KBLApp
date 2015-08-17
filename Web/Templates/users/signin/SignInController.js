@@ -1,13 +1,13 @@
 ﻿/*
 * Create by daniel.zuo on 4/19/2015
 */
-KBLApp.controller("UserController", ['$rootScope', '$scope', '$state', '$stateParams', 'ApiService', 'CommService', 'UserService',
+KBLApp.controller("User.SignInController", ['$rootScope', '$scope', '$state', '$stateParams', 'ApiService', 'CommService', 'UserService',
     function ($rootScope, $scope, $state, $stateParams, ApiService, CommService, UserService) {
 
         var customer = {
             "UserName": "18620305716",
             "Password": "1314521",
-            "RemerberMe":true
+            "RemerberMe": true
         };
 
         $scope.customer = customer;

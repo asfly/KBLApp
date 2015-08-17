@@ -398,3 +398,6 @@ D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Web\obj\Release
 D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Web\obj\Release\Web.csprojResolveAssemblyReference.cache
 D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Web\obj\Release\Web.dll
 D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Web\obj\Release\Web.pdb
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Web\bin\System.Web.Cors.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Web\bin\System.Web.Http.Cors.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Web\bin\System.Web.Http.Cors.xml

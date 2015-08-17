@@ -29,3 +29,10 @@ D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\LinqToEntities\
 D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\LinqToEntities\obj\Release\LinqToEntities.csprojResolveAssemblyReference.cache
 D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\LinqToEntities\obj\Release\LinqToEntities.dll
 D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\LinqToEntities\obj\Release\LinqToEntities.pdb
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\LinqToEntities\bin\Release\Helper.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\LinqToEntities\bin\Release\System.Web.Mvc.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\LinqToEntities\bin\Release\System.Web.Http.WebHost.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\LinqToEntities\bin\Release\Newtonsoft.Json.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\LinqToEntities\bin\Release\Helper.pdb
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\LinqToEntities\bin\Release\System.Web.Mvc.xml
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\LinqToEntities\bin\Release\Newtonsoft.Json.xml

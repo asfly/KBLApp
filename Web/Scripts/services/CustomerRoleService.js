@@ -1,8 +1,9 @@
 ﻿KBLApp.service('CustomerRoleService', ["$rootScope", '$q', 'ApiService', 'CommService', function ($rootScope, $q, ApiService, CommService) {
     var role = {
         model: {},
-        utils: {
-            "roles": [{ "name": '管理员', "level": "0" }, { "name": '营养师', "level": "4" }, { "name": '贵宾客户', "level": "8" }, {"name":"普通","level":"12"}]
+        roles: {
+            "types": [{ "name": '管理员', "level": "0" }, { "name": '营养师', "level": "4" }, { "name": '贵宾客户', "level": "8" }, { "name": "普通", "level": "12" }],
+            "levels": [{ "name": "3级", "level": "3" }, { "name": "4级", "level": "3" }, { "name": "5级", "level": "5" }]
         },
         list: function () {
             return ApiService.post(ApiService.getApiUrl().roleList, {}, {});

@@ -19,14 +19,20 @@ KBLApp.controller("Customer.CreateController", ['$rootScope', '$scope', '$state'
             };
             data.Input0.Customer.CategoryID = data.Input0.Customer.CategoryID.id;
             data.Input0.Customer.Gender = data.Input0.Customer.Gender.id;
-            var promise = customer.save(data);
-            promise.then(
-                function (response) {
-                    $state.go('customer');
-                },
-                function (error) {
-                    console.log(error);
-                }
-            );
+            data.Input0.Customer.Married = data.Input0.Customer.Married.id;
+            data.Input0.Customer.CardType = data.Input0.Customer.CardType.id;
+            if (data.Input0.Customer) {
+                console.log(data.Input0.Customer);
+                var promise = customer.save(data);
+                promise.then(
+                    function (response) {
+                        $state.go('customer');
+                    },
+                    function (error) {
+                        console.log(error);
+                    }
+                );
+            }
+            
         }
     }]);

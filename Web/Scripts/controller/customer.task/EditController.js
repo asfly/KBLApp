@@ -2,8 +2,8 @@
 * Create by daniel.zuo on 4/19/2015
 */
 
-KBLApp.controller("Customer.Task.EditController", ['$rootScope', '$scope', '$state', '$stateParams', 'ApiService', 'CommService', 'CustomerTaskService',
-function ($rootScope, $scope, $state, $stateParams, ApiService, CommService, CustomerTaskService) {
+KBLApp.controller("Customer.Task.EditController", ['$rootScope', '$scope', '$state', '$stateParams', 'ApiService', 'CommService', 'CustomerTaskService','UserService',
+function ($rootScope, $scope, $state, $stateParams, ApiService, CommService, CustomerTaskService,UserService) {
     $scope.route = { 'action': '编辑' };
     var track = CustomerTaskService.biz;
     track.task = { model: {}, sections: track.utils.ReviewStatus };
@@ -13,7 +13,7 @@ function ($rootScope, $scope, $state, $stateParams, ApiService, CommService, Cus
         var statusIdx = data.result.ReviewStatus ? 1 : 0;
         track.task.model.ReviewStatus = track.task.sections[statusIdx];
 
-    }, function (response) {
+    }, function (response,status,headers,configs) {
         console.log(response);
     });
 
@@ -33,11 +33,28 @@ function ($rootScope, $scope, $state, $stateParams, ApiService, CommService, Cus
 
         var param = JSON.stringify(model);
         track.save($stateParams.cid, param).then(function (data) {
-            if (data.statusCode == 200) {
+            if (data.statusCode == 200) {                
+                //if(isAddUser){
+                //    var model = {
+                //        Input0: {
+                //        Task: $scope.task.model
+                //    },
+                //        S: Math.random()
+                //    };
+
+                //    track.save($stateParams.cid, param).then(function (data) {
+                //        if (data.statusCode == 200) {
+                //            $state.go('track.task', { cid: $stateParams.cid });
+                //            return;
+                //        }
+                //    }, function (error) {
+                //        console.log(error);
+                //    });
+                //}
                 $state.go('track.task', { cid: $stateParams.cid });
             }
         }, function (error) {
             console.log(error);
-        });
+        });        
     }
 }]);

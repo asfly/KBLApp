@@ -93,6 +93,7 @@
     <Compile Include="T_Customer_List.cs" />
     <Compile Include="T_Customer_Product.cs" />
     <Compile Include="T_Customer_Role.cs" />
+    <Compile Include="T_Customer_Role_Setting.cs" />
     <Compile Include="T_Customer_Schedule.cs" />
     <Compile Include="T_Customer_Task.cs" />
     <Compile Include="T_Customer.cs" />

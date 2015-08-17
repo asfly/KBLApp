@@ -33,3 +33,10 @@ D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\bin\Release
 D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
 D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\obj\Release\BLL.dll
 D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\obj\Release\BLL.pdb
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\bin\Release\Helper.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\bin\Release\System.Web.Mvc.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\bin\Release\System.Web.Http.WebHost.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\bin\Release\Newtonsoft.Json.dll
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\bin\Release\Helper.pdb
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\bin\Release\System.Web.Mvc.xml
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\bin\Release\Newtonsoft.Json.xml

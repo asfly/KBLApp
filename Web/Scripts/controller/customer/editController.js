@@ -5,17 +5,17 @@ KBLApp.controller("Customer.EditController", ['$rootScope', '$scope', '$state', 
     function ($rootScope, $scope, $state, $stateParams, $location, ApiService, CommService, CustomerService) {
         $scope.actionName = '编辑';
         var cid = $stateParams.cid;
-        $scope.customer = { model: {} ,sections:[]};        
+        $scope.customer = { model: {}, sections: [] };
         var customer = CustomerService.biz;
         $scope.customer.sections = customer.utils;
         if (cid) {
-            CommService.prepbroadcast('showLoading', {});
             var promise = customer.init(cid); // 同步调用，获得承诺接口  
             promise.then(function (data) {  // 调用承诺API获取数据 .resolve  
                 $scope.customer.model = data.customer;
                 $scope.customer.model.CategoryID = customer.utils.categories[data.customer.CategoryID];
                 $scope.customer.model.Gender = customer.utils.gender[data.customer.Gender];
-                CommService.prepbroadcast('hideLoading', {});
+                $scope.customer.model.Married = customer.utils.married[data.customer.Married];
+                $scope.customer.model.CardType = customer.utils.cards[data.customer.CardType];
             }, function (error) {  // 处理错误 .reject  
                 console.log(error);
             });
@@ -33,6 +33,8 @@ KBLApp.controller("Customer.EditController", ['$rootScope', '$scope', '$state', 
             };
             data.Input0.Customer.CategoryID = data.Input0.Customer.CategoryID.id;
             data.Input0.Customer.Gender = data.Input0.Customer.Gender.id;
+            data.Input0.Customer.Married = data.Input0.Customer.Married.id;
+            data.Input0.Customer.CardType = data.Input0.Customer.CardType.id;
             var promise = customer.save(data);
             promise.then(
                 function (response) {

@@ -13,8 +13,8 @@ KBLApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $stateProvider
     .state('signin', {
         url: "/",
-        templateUrl: '/Templates/customer.signin.html?' + Math.random(),
-        controller: 'UserController'
+        templateUrl: '/Templates/users/signin/signin.html?' + Math.random(),
+        controller: 'User.SignInController'
     })
     .state('customer', {
         url: "/customer",
@@ -29,8 +29,8 @@ KBLApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
     .state('create.auth', {
         url: "/@auth",
-        templateUrl: '/Templates/customer.register.html?' + Math.random(),
-        controller: 'Customer.CreateController'
+        templateUrl: '/Templates/users/register/register.html?' + Math.random(),
+        controller: 'User.RegisterController'
     })
     .state('edit', {
         url: '/customer/edit/{cid:[0-9]{1,4}}',

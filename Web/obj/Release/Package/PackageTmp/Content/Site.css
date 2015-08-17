@@ -11,16 +11,29 @@
 }
 .table > thead > tr > td.danger, .table > tbody > tr > td.danger, .table > tfoot > tr > td.danger, .table > thead > tr > th.danger, .table > tbody > tr > th.danger, .table > tfoot > tr > th.danger, .table > thead > tr.danger > td, .table > tbody > tr.danger > td, .table > tfoot > tr.danger > td, .table > thead > tr.danger > th, .table > tbody > tr.danger > th, .table > tfoot > tr.danger > th{
     background-color:#FF3300;
+	color:#fff;
 }
 .table > thead > tr > td.success, .table > tbody > tr > td.success, .table > tfoot > tr > td.success, .table > thead > tr > th.success, .table > tbody > tr > th.success, .table > tfoot > tr > th.success, .table > thead > tr.success > td, .table > tbody > tr.success > td, .table > tfoot > tr.success > td, .table > thead > tr.success > th, .table > tbody > tr.success > th, .table > tfoot > tr.success > th{
     background-color:#00CC00;
+	color:#fff;
 }
 .table > thead > tr,.table > tbody > tr,th{
     text-align:center;
 }
 
+.panel[class*=col-]{
+	padding-left:0;
+	padding-right:0;
+}
+
 .nav {
     margin-bottom:15px;
+}
+
+.addr{
+    width:20px !important;
+    max-width:20px;
+    overflow:hidden;
 }
 
 

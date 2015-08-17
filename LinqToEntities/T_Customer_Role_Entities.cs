@@ -88,7 +88,7 @@ namespace LinqToEntities
                 else
                 {
                     role.Password = model.Password;
-                    role.Role = model.Role;
+                    role.Rid = model.Rid;
                     role.UpdateAccountDate = DateTime.Now.Ticks;
                     db.Entry(role).State = EntityState.Modified;
                 }
@@ -115,7 +115,28 @@ namespace LinqToEntities
                 }
                 return 0;
             }
-        }
+        }       
+
+        //public async Task<string[]> GetRole(long cid)
+        //{
+        //    using (db = new KBLDataContext())
+        //    {
+        //        ///获取登录权限
+        //        var role = await (from r in db.CustomerRoles
+        //                          where r.CId == cid
+        //                          select r).FirstOrDefaultAsync();
+
+            //        ///获取权限列表
+            //        var settings = await(from s in db.CustomerRoleSettings
+            //                             join ss in db.CustomerRoleSettings on s.ChildCid equals ss.ParentCid into
+            //                             into sss
+            //                             select sss
+
+            //                             )
+
+
+            //    }
+            //}
 
         public void Dispose()
         {

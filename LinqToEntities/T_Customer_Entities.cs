@@ -3,17 +3,18 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Data.Entity;
+using System.Collections.Generic;
 
 namespace LinqToEntities
 {
     public class T_Customer_Entities : IDisposable
     {
         KBLDataContext db = null;
-        public async Task<object> List(string select)
+        public async Task<object> List(string[] cids)
         {
             using (db = new KBLDataContext())
             {
-                var entities = from c in db.Customers
+                var entities = from c in db.Customers  
                                join t in db.CustomerTasks on c.Cid equals t.CId into ct
                                from lct in ct.DefaultIfEmpty()
                                group lct by c into gct
@@ -26,16 +27,38 @@ namespace LinqToEntities
                                c = gct.Key,
                                t = new
                                {
+                                   Unfinished = gct.Any(a => a != null) ? gct.Where(w => w.StartDate.Value.Date < DateTime.Now.Date && w.ReviewStatus == false).Select(s => new {
+                                       s.StartDate,
+                                       s.ReviewStatus
+                                   }) : new object { },
                                    //Prev = gct!=null ? gct.Any(a=>a !=null)? gct.Where(w => w.StartDate.Value.Date < DateTime.Now.Date).OrderBy(o => o.StartDate).Take(1):null : null,
                                    Prev = gct.Any(a => a != null) ? gct.Where(w => w.StartDate.Value.Date < DateTime.Now.Date).OrderBy(o => o.StartDate).LastOrDefault() : null,
                                    //Next = gct != null ? gct.Any(a => a != null) ? gct.Where(w => w.StartDate.Value.Date > DateTime.Now.Date).OrderByDescending(o => o.StartDate).Take(1) : null : null,
-                                   Next = gct.Any(a => a != null) ? gct.Where(w => w.StartDate.Value.Date > DateTime.Now.Date).OrderBy(o => o.StartDate).LastOrDefault() : null,
+                                   Next = gct.Any(a => a != null) ? gct.Where(w => w.StartDate.Value.Date > DateTime.Now.Date).OrderBy(o => o.StartDate).FirstOrDefault() : null,
                                    //Today = gct != null ? gct.Any(a => a != null) ? gct.Where(w => w.StartDate.Value.Date == DateTime.Now.Date).OrderByDescending(o => o.StartDate).Take(1) : null : null
-                                   Today = gct.Any(a => a != null) ? gct.Where(w => w.StartDate.Value.Date == DateTime.Now.Date).OrderByDescending(o => o.StartDate).LastOrDefault() : null
+                                   Today = gct.Any(a => a != null) ? gct.Where(w => w.StartDate.Value.Date == DateTime.Now.Date).OrderByDescending(o => o.StartDate).LastOrDefault() : null,
+
+                                   Finishing = gct.Any(a => a != null) ? gct.Where(w => w.StartDate.Value.Date > DateTime.Now.Date && w.ReviewStatus == false).Select(s=>new {
+                                       s.StartDate,
+                                       s.ReviewStatus
+                                   }) : new object{ },
+
                                }
                            };
 
                 return json;
+            }
+        }
+
+        public async Task<List<T_Customer>> CheckCustomerCName(string cname)
+        {
+            using (db = new KBLDataContext())
+            {
+                ///获取登录权限
+                var customers = await (from c in db.Customers
+                                      where c.CName.IndexOf(cname) > -1
+                                      select c).ToListAsync();
+                return customers;
             }
         }
 
@@ -74,6 +97,8 @@ namespace LinqToEntities
                     exist.Height = model.Height;
                     exist.Gender = model.Gender;
                     exist.Contact = model.Contact;
+                    exist.CardType = model.CardType;
+                    exist.Married = model.Married;
                     db.Entry(exist).State = EntityState.Modified;
                 }
                 int effects = await db.SaveChangesAsync();

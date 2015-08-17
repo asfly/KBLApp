@@ -19,7 +19,8 @@ namespace Web.Controllers.WebApi
         [HttpGet]
         public async Task<object> GetRoles()
         {
-            var data = await T_Customer_BLL.GetCustomers("");
+            string[] cids = new string[] { };
+            var data = await T_Customer_BLL.GetCustomers(cids);
             return Ok(new
             {
                 statusCode = 200,

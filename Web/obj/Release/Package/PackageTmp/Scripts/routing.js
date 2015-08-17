@@ -11,8 +11,13 @@ KBLApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider.otherwise("/");
 
     $stateProvider
-    .state('customer', {
+    .state('signin', {
         url: "/",
+        templateUrl: '/Templates/user/signin/signin.html?' + Math.random(),
+        controller: 'User.SignInController'
+    })
+    .state('customer', {
+        url: "/customer",
         templateUrl: '/Templates/customer.list.html?' + Math.random(),
         controller: 'Customer.ListController'
     })
@@ -21,9 +26,19 @@ KBLApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
         templateUrl: '/Templates/customer.create.html?' + Math.random(),
         controller: 'Customer.CreateController'
     })
+
+    .state('create.auth', {
+        url: "/@auth",
+        templateUrl: '/Templates/users/register/register.html?' + Math.random(),
+        controller: 'User.RegisterController'
+    })
     .state('edit', {
         url: '/customer/edit/{cid:[0-9]{1,4}}',
         templateUrl: '/Templates/customer.create.html?' + Math.random(),
+        controller: 'Customer.EditController'
+    }).state('edit.auth', {
+        url: '/customer/edit/{cid:[0-9]{1,4}}/@auth',
+        templateUrl: '/Templates/customer.register.html?' + Math.random(),
         controller: 'Customer.EditController'
     })
     .state('track', {

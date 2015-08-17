@@ -14,6 +14,16 @@
             </div>
         </div>
         <div class="form-group">
+            <label for="CategoryID" class="col-sm-2 control-label">卡分类</label>
+            <div class="col-sm-10">
+                <select class="form-control"
+                        ng-model="customer.model.CardType"
+                        ng-options="cardtype.name for cardtype in customer.sections.cards">
+                    <option value="">--请选择卡分类--</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
             <label for="CategoryID" class="col-sm-2 control-label">客户分类</label>
             <div class="col-sm-10">
                 <select class="form-control"
@@ -53,9 +63,25 @@
             </div>
         </div>
         <div class="form-group">
+            <label for="CategoryID" class="col-sm-2 control-label">婚否</label>
+            <div class="col-sm-10">
+                <select class="form-control"
+                        ng-model="customer.model.Married"
+                        ng-options="merried.name for merried in customer.sections.married">
+                    <option value="">--请选择婚否--</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
             <label for="Age" class="col-sm-2 control-label">年龄</label>
             <div class="col-sm-10">
                 <input type="text" id="Age" class="form-control" ng-model="customer.model.Age" placeholder="请输入年龄，例如：30" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Birthday" class="col-sm-2 control-label">生日</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" date-time auto-close="true" ng-model="customer.model.Birthday" required="" min-view="date" max-view="year" placeholder="请输入生日，例如：1980-08-08" format="yyyy-MM-dd">
             </div>
         </div>
         <div class="form-group">
@@ -76,12 +102,12 @@
                 <input type="text" id="Contact" class="form-control" ng-model="customer.model.Contact" placeholder="请输入联系方式，电话号码" />
             </div>
         </div>
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-9">
-                <a href="javascript:;" class="btn btn-primary col-sm-6" ng-click="save()">保存</a>
-                <a href="#/" class="btn btn-default col-sm-6">取消</a>
-            </div>
-        </div>
     </form>
     <div ui-view></div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-9">
+            <a href="javascript:;" class="btn btn-primary col-sm-6" ng-click="save()">保存</a>
+            <a href="#/" class="btn btn-default col-sm-6">取消</a>
+        </div>
+    </div>
 </div>

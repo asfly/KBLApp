@@ -50,5 +50,28 @@ namespace Web.Controllers.WebApi
                 user = new { }
             });
         }
+
+        [Route("cname")]
+        [HttpPost]
+        public async Task<object> GetCNames(string cname)
+        {
+            var users = BLL.T_Customer_BLL.CheckCustomerCName(cname);
+            return Ok(new {
+                statusCode = 200,
+                result = users
+            });
+        }
+
+        [Route("username")]
+        [HttpPost]
+        public async Task<object> GetUserName(string username)
+        {
+            var users = await BLL.T_Customer_BLL.CheckCustomerCName(username);
+            return Ok(new
+            {
+                statusCode = 200,
+                result = users
+            });
+        }
     }
 }

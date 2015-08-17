@@ -1,4 +1,5 @@
-﻿<div class="panel panel-primary col-sm-3">
+﻿<h4>{{'客户筛选'}}</h4>
+<div class="panel panel-primary col-xs-3">
     <div class="panel-heading">
         <h3 class="panel-title" id="panel-title">
             性别
@@ -8,11 +9,11 @@
         </h3>
     </div>
     <div class="panel-body">
-        <a href="" class="list-group-item" ng-click="search={ Gender: 0}">男</a>
-        <a href="" class="list-group-item" ng-click="search={ Gender: 1}">女</a>
+        <a href="" class="list-group-item" ng-click="filter('gender','Gender', 0)">男</a>
+        <a href="" class="list-group-item" ng-click="filter('gender','Gender', 1)">女</a>
     </div>
 </div>
-<div class="panel panel-primary col-sm-3">
+<div class="panel panel-primary col-xs-3">
     <div class="panel-heading">
         <h3 class="panel-title" id="panel-title">
             客户分类
@@ -22,11 +23,11 @@
         </h3>
     </div>
     <div class="panel-body">
-        <a href="" class="list-group-item" ng-click="search={ CategoryID: 0}">普通</a>
-        <a href="" class="list-group-item" ng-click="search={ CategoryID: 1}">贵宾</a>
+        <a href="" class="list-group-item" ng-click="filter('categories','CategoryID',0)">普通</a>
+        <a href="" class="list-group-item" ng-click="filter('categories','CategoryID',1)">贵宾</a>
     </div>
 </div>
-<div class="panel panel-primary col-sm-3">
+<div class="panel panel-primary col-xs-3">
     <div class="panel-heading">
         <h3 class="panel-title" id="panel-title">
             卡分类
@@ -40,7 +41,7 @@
         <a href="" class="list-group-item">--</a>
     </div>
 </div>
-<div class="panel panel-primary col-sm-3">
+<div class="panel panel-primary col-xs-3">
     <div class="panel-heading">
         <h3 class="panel-title" id="panel-title">
             客户姓名
@@ -50,12 +51,12 @@
         </h3>
     </div>
     <div class="panel-body">
-        <a href="" class="list-group-item" ng-click="search={ CategoryID: 0}">--</a>
-        <a href="" class="list-group-item" ng-click="search={ CategoryID: 1}">--</a>
+        <a href="" class="list-group-item" ng-click="search={ item.c.CategoryID: 0}">--</a>
+        <a href="" class="list-group-item" ng-click="search={ item.c.CategoryID: 1}">--</a>
     </div>
 </div>
 
-<a href="" ng-click="search={}">显示全部</a>
+<h4><a href="" ng-click="search={};searchText='';">显示全部</a>{{ searchText }}</h4>
 <table class="table table-bordered table-responsive">
     <thead>
         <tr>
@@ -66,19 +67,20 @@
             <th>本月VP数</th>
             <th>累计VP数</th>
             <th>客户姓名</th>
+            <th>生日</th>
             <th>地点</th>
             <th>性别</th>
             <th>年龄</th>
             <th>身高CM</th>
-            <th>原始体重KG</th>
+            <th>体重KG</th>
             <th>联系方式</th>
             <th>上次联系时间</th>
             <th>下次联系时间</th>
             <th>今天回访提示</th>
-            <th>减肥是否成功</th>
-            <th>服务记录</th>
+            <th>减肥是否成功</th>            
             <th>跟踪服务</th>
-            <th>备注</th>
+            <th class="hide">服务记录</th>
+            <th class="hide">备注</th>
         </tr>
     </thead>
     <tbody>
@@ -88,28 +90,29 @@
                     {{ item.c.CustomerNo }}
                 </a>
             </td>
-            <td>--</td>
+            <td>{{ ['无','PC','SR'][item.c.CardType || 0] }}</td>
             <td>{{ ["普通","贵宾"][item.c.CategoryID || 0] }}</td>
             <td>{{ item.c.Dietitian }}</td>
-            <td>{{ '--' }}</td>
-            <td>{{ 0 }}</td>
+            <td>--</td>
+            <td>--</td>
             <td>{{ item.c.CName }}</td>
-            <td>{{ item.c.Addr }}</td>
+            <td>{{ item.c.Birthday | date:'yyyy.MM.dd' }}</td>
+            <td class="addr" title="{{item.c.Addr}}">{{ item.c.Addr.length > 2 ?item.c.Addr.substring(0,2):item.c.Addr }}</td>
             <td>{{ ["男","女"][item.c.Gender || 0] }}</td>
             <td>{{ item.c.Age }}</td>
             <td>{{ item.c.Height }}</td>
             <td>{{ item.c.Weight }}</td>
             <td>{{ item.c.Contact }}</td>
-            <td ng-class="{danger:!item.t.Prev.ReviewStatus,success:item.t.Prev.ReviewStatus}">{{ item.t.Prev.StartDate || '--' | date:'yyyy-MM-dd' }}</td> <!--item.t.Prev ? (item.t.Prev.ReviewStatus?'是'：'否'):'-'-->
-            <td ng-class="{danger:!item.t.Next.ReviewStatus,success:item.t.Next.ReviewStatus}">{{ item.t.Next.StartDate || '--' | date:'yyyy-MM-dd' }}</td> <!--item.t.Next ? (item.t.Next.ReviewStatus?'是'：'否'):'-'-->
-            <td ng-class="{danger:!item.t.Today.ReviewStatus,success:item.t.Today.ReviewStatus}">{{ item.t.Today.StartDate || '--' | date:'yyyy-MM-dd' }}</td> <!--item.t.Today ? (item.t.Today.ReviewStatus?'是'：'否'):'-'-->
-            <td>{{ '是' }}</td>
+            <td ng-class="{danger:item.t.Prev!=null && !item.t.Prev.ReviewStatus ,success:item.t.Prev.ReviewStatus}">{{ item.t.Prev.StartDate || '--' | date:'yyyy-MM-dd' }}</td> <!--item.t.Prev ? (item.t.Prev.ReviewStatus?'是'：'否'):'-'-->
+            <td ng-class="{danger:item.t.Prev!=null && !item.t.Next.ReviewStatus,success:item.t.Next.ReviewStatus}">{{ item.t.Next.StartDate || '--' | date:'yyyy-MM-dd' }}</td> <!--item.t.Next ? (item.t.Next.ReviewStatus?'是'：'否'):'-'-->
+            <td ng-class="{danger:item.t.Prev!=null && !item.t.Today.ReviewStatus,success:item.t.Today.ReviewStatus}">{{ item.t.Today.StartDate || '--' | date:'yyyy-MM-dd' }}</td> <!--item.t.Today ? (item.t.Today.ReviewStatus?'是'：'否'):'-'-->
+            <td>{{ '--' }}</td>
             <td><a ui-sref="track.task({cid:item.c.Cid})" tooltip-placement="left" tooltip="查看客户（{{ item.c.CName}}）跟踪记录">跟踪记录</a></td>
-            <td><a ui-sref="track.service({cid:item.c.Cid})" tooltip-placement="left" tooltip="查看客户（{{ item.c.CName}}）服务记录">服务记录</a></td>
-            <td>{{'--'}}</td>
+            <td class="hide"><a ui-sref="track.service({cid:item.c.Cid})" tooltip-placement="left" tooltip="查看客户（{{ item.c.CName}}）服务记录">服务记录</a></td>
+            <td class="hide">{{'--'}}</td>
         </tr>
         <tr ng-if="customer.items.data.length == 0">
-            <td colspan="21" class="text-center text-info">
+            <td colspan="22" class="text-center text-info">
                 暂无数据，请添加。
             </td>
         </tr>

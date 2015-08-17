@@ -38,6 +38,7 @@ namespace Models
         public DbSet<T_Product> Products { get; set; }
         public DbSet<T_Customer> Customers { get; set; }
         public DbSet<T_Customer_Role> CustomerRoles { get; set; }
+        public DbSet<T_Customer_Role_Setting> CustomerRoleSettings { get; set; }
         public DbSet<T_Customer_Task> CustomerTasks { get; set; }        
         public DbSet<T_Customer_Product> CustomerProducts { get; set; }
         public DbSet<T_Customer_Schedule> CustomerSchedule { get; set; }

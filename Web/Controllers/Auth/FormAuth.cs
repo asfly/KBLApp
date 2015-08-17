@@ -9,6 +9,7 @@ using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Filters;
 using System.Web.Security;
+using System.Web;
 
 namespace Web.Controllers.WebApi
 {
@@ -48,6 +49,8 @@ namespace Web.Controllers.WebApi
                     actionContext.Response = new HttpResponseMessage(HttpStatusCode.Forbidden);
                     return;
                 }
+
+                
 
                 // TODO: 添加其它验证方法
 

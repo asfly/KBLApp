@@ -2,7 +2,7 @@
 * Api统一调用入口
 * create by daniel.zuo on 2015.4.19
 */
-KBLApp.factory('ApiService', ["$location", "$q","$window", "$http", "CommService", function ($location, $q,$window, $http, CommService) {
+KBLApp.factory('ApiService', ['$rootScope', "$location", "$q", "$window", "$http", "CommService", function ($rootScope,$location, $q, $window, $http, CommService) {
 
     var service = {};
 
@@ -43,7 +43,19 @@ KBLApp.factory('ApiService', ["$location", "$q","$window", "$http", "CommService
         getSchedule: "api/customer/{cid}/schedule/get",
 
         // 获取客户减肥计划列表
-        getScheduleList: "api/customer/{cid}/schedule/list"
+        getScheduleList: "api/customer/{cid}/schedule/list",
+
+        // 客户登录设置
+        getRole: "api/customer/role/get",
+
+        // 客户登录名检查
+        checkRole: "api/customer/role/check",
+
+        // 客户登录信息更新
+        saveRole: "api/customer/role/submit",
+
+        // 用户登录
+        signIn: "api/account/signin"
     };
 
     //调用Get方法
@@ -74,22 +86,27 @@ KBLApp.factory('ApiService', ["$location", "$q","$window", "$http", "CommService
     // get 延迟
     service.get = function (apiKey, apiParams) {
         var deferred = $q.defer();
-        $http.get(makeApiUrl(apiKey, apiParams)).success(function (response, status) {
+        $rootScope.$emit('showLoading');
+        $http.get(makeApiUrl(apiKey, apiParams)).success(function (response, status, headers, config) {
             //成功直接回调成功函数
             if (response.statusCode == 200) {
-                deferred.resolve(response);
-            } else {
-                //统一错误处理
-                if (response.statusCode == 500 || response.statusCode == 404 || response.statusCode == 403) {
-                    //TODO:修改成统一的弹出提示信息
-                    deferred.resolve(response);
-                }
+                $rootScope.$emit('hideLoading');
+                deferred.resolve(data, status, headers, config);
             }
-        }).error(function (response, status) {
+        }).error(function (data, status, headers, config) {
+            $rootScope.$emit('hideLoading');
             //调用API时出错,统一到错误页面
-            //$location.path('/error');
-
-            deferred.reject(response);
+            if (status == 404) {
+                alert('Page Not Found！');
+                $location.path('/');
+            } if(status == 500) {
+                console.log(data, status, headers, config);
+                $location.path('/');
+            }if(status == 403){
+                $location.path('/');
+            } else {
+                deferred.reject(data, status, headers, config);
+            }
         });
         return deferred.promise;
     };
@@ -119,50 +136,30 @@ KBLApp.factory('ApiService', ["$location", "$q","$window", "$http", "CommService
             $location.path('/error');
         });
     };
-    
-    // post延迟
-    service.post = function (apiKey, apiParams, data) {
-        var deferred = $q.defer();
-        $http.post(makeApiUrl(apiKey, apiParams), data).success(function (response, status) {
-            //成功直接回调成功函数            
-            if (response.statusCode == 200) {
-                deferred.resolve(response);
-            } else {
-
-                //统一错误处理
-                if (response.statusCode == 500 || response.statusCode == 404 || response.statusCode == 403) {
-                    //TODO:修改成统一的弹出提示信息
-                    alert(response.message)
-                }
-            }
-        }).error(function (response, status) {
-            //调用API时出错,统一到错误页面
-            //$location.path('/error');
-            deferred.reject(response);
-        });
-        return deferred.promise;
-    };
 
     // post延迟
     service.post = function (apiKey, apiParams, data) {
         var deferred = $q.defer();
-        $http.post(makeApiUrl(apiKey, apiParams), data).success(function (response, status) {
+        $rootScope.$emit('showLoading');
+        $http.post(makeApiUrl(apiKey, apiParams), data).success(function (response, status, headers, config) {
             //成功直接回调成功函数            
             if (response.statusCode == 200) {
-                deferred.resolve(response);
-            } else {
-
-                //统一错误处理
-                if (response.statusCode == 500 || response.statusCode == 404 || response.statusCode == 403) {
-                    //TODO:修改成统一的弹出提示信息
-                    alert(response.message)
-                }
+                $rootScope.$emit('hideLoading');
                 deferred.resolve(response);
             }
-        }).error(function (response, status) {
+        }).error(function (data, status, headers, config) {
             //调用API时出错,统一到错误页面
-            //$location.path('/error');
-            deferred.reject(response);
+            if (status == 404) {
+                alert('Page Not Found！');
+            } if (status == 500) {
+                console.log(data, status, headers, config);
+            } if (status == 403) {
+                $rootScope.$emit();
+                $location.path('/');
+            } else {
+                deferred.reject(data, status, headers, config);
+            }
+            $rootScope.$emit('hideLoading');
         });
         return deferred.promise;
     };

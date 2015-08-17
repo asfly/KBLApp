@@ -1,5 +1,5 @@
-﻿KBLApp.service('CustomerTrackService', ["$rootScope", '$q', 'ApiService', 'CommService', function ($rootScope, $q, ApiService, CommService) {
-    var track = {
+﻿KBLApp.service('CustomerTaskService', ["$rootScope", '$q', 'ApiService', 'CommService', function ($rootScope, $q, ApiService, CommService) {
+    var task = {
         utils: {
             "ReviewStatus": [{ "id": 0, "name": "否" }, { "id": 1, "name": "是" }]
         },
@@ -20,6 +20,6 @@
     		return ApiService.post(ApiService.getApiUrl().removeTask, { cid: cid, taskId: taskId }, {});
 		}
     }
-    var service = { biz: track };
+    var service = { biz: task };
     return service;
 }]);
