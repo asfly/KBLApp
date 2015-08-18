@@ -99,6 +99,7 @@ namespace LinqToEntities
                     exist.Contact = model.Contact;
                     exist.CardType = model.CardType;
                     exist.Married = model.Married;
+                    exist.Address = model.Address;
                     db.Entry(exist).State = EntityState.Modified;
                 }
                 int effects = await db.SaveChangesAsync();

@@ -38,6 +38,8 @@ namespace Models
         public string Contact { get; set; }
         //婚否
         public int Married { get; set; }
+        //详细地址
+        public string Address { get; set; }
 
         [NotMapped]
         public T_Customer_Role Role { get; set; }
