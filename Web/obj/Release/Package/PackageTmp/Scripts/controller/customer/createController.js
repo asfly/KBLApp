@@ -8,7 +8,18 @@ KBLApp.controller("Customer.CreateController", ['$rootScope', '$scope', '$state'
 
         var customer = CustomerService.biz;
 
-        $scope.customer = { model: {} ,sections:customer.utils };
+        $scope.customer = {
+            model:
+                {
+                    "CardType":customer.utils.cards[0],
+                    "CategoryID": customer.utils.categories[0],
+                    "Gender":customer.utils.gender[0],
+                    "Age":0,
+                    "Height":0,
+                    "Weight":0,
+                    "Married": customer.utils.married[0]
+                }, sections: customer.utils
+        };
 
         $scope.save = function () {
             var data = {

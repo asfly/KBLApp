@@ -2,7 +2,7 @@
 * Api统一调用入口
 * create by daniel.zuo on 2015.4.19
 */
-KBLApp.factory('ApiService', ['$rootScope', "$location", "$q", "$window", "$http", "CommService", function ($rootScope,$location, $q, $window, $http, CommService) {
+KBLApp.factory('ApiService', ['$rootScope', "$state", "$q", "$window", "$http", "CommService", function ($rootScope,$state, $q, $window, $http, CommService) {
 
     var service = {};
 
@@ -98,12 +98,12 @@ KBLApp.factory('ApiService', ['$rootScope', "$location", "$q", "$window", "$http
             //调用API时出错,统一到错误页面
             if (status == 404) {
                 alert('Page Not Found！');
-                $location.path('/');
+                $state.go('signin',{});
             } if(status == 500) {
                 console.log(data, status, headers, config);
-                $location.path('/');
+                $state.go('signin',{});
             }if(status == 403){
-                $location.path('/');
+                $state.go('signin',{});
             } else {
                 deferred.reject(data, status, headers, config);
             }
@@ -148,18 +148,17 @@ KBLApp.factory('ApiService', ['$rootScope', "$location", "$q", "$window", "$http
                 deferred.resolve(response);
             }
         }).error(function (data, status, headers, config) {
+            $rootScope.$emit('hideLoading');
             //调用API时出错,统一到错误页面
             if (status == 404) {
                 alert('Page Not Found！');
             } if (status == 500) {
                 console.log(data, status, headers, config);
             } if (status == 403) {
-                $rootScope.$emit();
-                $location.path('/');
+                $state.go('signin',{});
             } else {
                 deferred.reject(data, status, headers, config);
-            }
-            $rootScope.$emit('hideLoading');
+            }            
         });
         return deferred.promise;
     };

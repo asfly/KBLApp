@@ -55,7 +55,7 @@ namespace Web.Controllers.WebApi
         [HttpPost]
         public async Task<object> GetCNames(string cname)
         {
-            var users = BLL.T_Customer_BLL.CheckCustomerCName(cname);
+            var users = await BLL.T_Customer_BLL.CheckCustomerCName(cname);
             return Ok(new {
                 statusCode = 200,
                 result = users

@@ -37,7 +37,7 @@ namespace Web.Controllers.WebApi
             return Ok(new
             {
                 statusCode = 200,
-                data = data
+                result = data
             });
         }
 
@@ -50,7 +50,7 @@ namespace Web.Controllers.WebApi
             return Ok(new
             {
                 statusCode = 200,
-                customer = o
+                result = o
             });
         }
 
@@ -72,7 +72,7 @@ namespace Web.Controllers.WebApi
             return Ok(new
             {
                 statusCode = 200,
-                effects = effects
+                result = effects
             });
         }
     }

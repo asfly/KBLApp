@@ -12,7 +12,10 @@ KBLApp.service('UserService', ["$rootScope", "ApiService", function ($rootScope,
         },
         checkUserName: function (username) {
             return ApiService.post(ApiService.getApiUrl().checkUserName, {}, { 'username': username });
+        },
+        submit: function (param) {
+            return ApiService.post(ApiService.getApiUrl().saveRole, {}, param)
         }
     }
-    return service;
+    return { biz: service };
 }]);

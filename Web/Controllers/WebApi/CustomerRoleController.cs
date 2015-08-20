@@ -10,7 +10,7 @@ using Web.Controllers.WebApi;
 namespace Web.Controllers.WebApi
 {
     [FormAuth]
-    [RoutePrefix("api/cutomer/role")]
+    [RoutePrefix("api/customer/role")]
     public class CustomerRoleController : ApiController
     {
         // GET api/<controller>
@@ -24,7 +24,7 @@ namespace Web.Controllers.WebApi
             return Ok(new
             {
                 statusCode = 200,
-                data = data
+                result = data
             });
         }
 
@@ -43,7 +43,7 @@ namespace Web.Controllers.WebApi
             return Ok(new
             {
                 statusCode = 200,
-                customer = o
+                result = o
             });
         }
 
@@ -55,7 +55,7 @@ namespace Web.Controllers.WebApi
             return Ok(new
             {
                 statusCode = 200,
-                role = o
+                result = o
             });
         }
 
@@ -75,7 +75,7 @@ namespace Web.Controllers.WebApi
             return Ok(new
             {
                 statusCode = 200,
-                effects = effects
+                result = effects
             });
         }
 
@@ -87,7 +87,7 @@ namespace Web.Controllers.WebApi
             return Ok(new
             {
                 statusCode = 200,
-                effects = effects
+                result = effects
             });
         }
     }
