@@ -1,8 +1,8 @@
 ﻿.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td{
-    white-space:nowrap;overflow:hidden;
-}
-.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td{
     padding:2px 4px !important;
+	white-space:nowrap;
+	overflow:hidden;
+	vertical-align: middle;
 }
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th{
     font-size: 0.9em;
@@ -62,10 +62,8 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  margin-top: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
-  color: #333;
 }
 
 
