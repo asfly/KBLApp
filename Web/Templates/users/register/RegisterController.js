@@ -8,38 +8,32 @@ KBLApp.controller("User.RegisterController", ['$rootScope', '$scope', '$state', 
             
         //});
 
-        var user = UserService.biz;
-        $scope.role = {
-            "UserName": "",
-            "Password": "",
-            "CreateDate": new Date().getTime(),
-            "LastSigninDate": new Date().getTime(),
-            "SignInCount": 1,
-            "UpdateAccountDate": new Date().getTime(),
-            "Rid":1
+        if (!$scope.customer.model.Cid && !$stateParams.cid) {
+            //window.location.href = "#/customer/create";
+            $state.go('create');
         }
-
-        var roleSetting = {
-            "Rid": "",
-            "ParentCid": 0,
-            "ParentCName": "",
-            "ChildCid": 0,
-            "ChildCName": 0,
-            "RoleLevel": 0,
-            "RoleType": 16
+        //var role = UserService.role;
+        //role.Cid = $scope.customer.model.Cid;
+        //var roleSetting = UserService.roleSetting;
+        console.log($scope.role);
+        if(!$scope.role){
+            $scope.role = {
+                Cid:$scope.customer.model.Cid
+            }
         }
-        $scope.isShowSaveAction = true;
-        $scope.save = function () {
+       
+        $scope.isShowRoleSaveAction = false;
+        $scope.save = function () {            
             var model ={
                 Input0 : {
                     CustomerRole: $scope.role
                 },
                 S: Math.random()
-            }
+            }            
             var param = JSON.stringify(model);
-            user.submit(param).then(function (response) {
+            UserService.submit(param).then(function (response) {
                 if (response.result > 0) {
-                    $scope.isShowSaveAction = false;
+                    $scope.isShowRoleSaveAction = false;
                     $state.go('customer', {});
                 } else {
                     alert("收录失败！！请联系开发人员");
@@ -48,7 +42,4 @@ KBLApp.controller("User.RegisterController", ['$rootScope', '$scope', '$state', 
                 console.log(data, status, header, configs);
             });
         }
-
-        
-        
     }]);

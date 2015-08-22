@@ -4,16 +4,16 @@
 KBLApp.controller("User.SignInController", ['$rootScope', '$scope', '$state', '$stateParams', 'ApiService', 'CommService', 'UserService',
     function ($rootScope, $scope, $state, $stateParams, ApiService, CommService, UserService) {
 
-        var customer = {
+        var loginModel = {
             "UserName": "18620305716",
             "Password": "1314521",
             "RemerberMe": true
         };
 
-        $scope.customer = customer;
-
+        $scope.loginModel = loginModel;
         $scope.signIn = function () {
-            var promise = UserService.signIn(customer);
+            console.log($scope.loginModel);
+            var promise = UserService.signIn($scope.loginModel);
             promise.then(
                 function (response) {
                     $state.go('customer');

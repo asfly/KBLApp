@@ -2,7 +2,7 @@
     var customer = {
         model:{},
         utils: {
-            "categories": [{ "id": 0, "name": "普通" }, { "id": 1, "name": "贵宾" }],
+            "categories": [{ "id": 0, "name": "准客户" }, { "id": 1, "name": "贵宾" }, { "id": 2, "name": "归档客户" }],
             "gender": [{ "id": 0, "name": "男" }, { "id": 1, "name": "女" }],
             "names": [],
             "list": [],

@@ -12,7 +12,7 @@ namespace Models
     public class T_Customer_Role_Setting
     {
         [Key]
-        public long Rid { get; set; }
+        public long Rsid { get; set; }
         public long ParentCid { get; set; }
         public string ParentCName { get; set; }
         public long ChildCid { get; set; }

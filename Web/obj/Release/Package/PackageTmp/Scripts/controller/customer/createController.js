@@ -20,7 +20,9 @@ KBLApp.controller("Customer.CreateController", ['$rootScope', '$scope', '$state'
                     "Married": customer.utils.married[0]
                 }, sections: customer.utils
         };
-
+        console.log($state);
+        $scope.isShowSaveAction = $state.current.name != "create.auth";
+        $scope.isShowSaveCustomer = $state.current.name != "create.auth";
         $scope.save = function () {
             var data = {
                 Input0: {
@@ -28,16 +30,28 @@ KBLApp.controller("Customer.CreateController", ['$rootScope', '$scope', '$state'
                 },
                 S: Math.random()
             };
+            var model = {};
             data.Input0.Customer.CategoryID = data.Input0.Customer.CategoryID.id;
             data.Input0.Customer.Gender = data.Input0.Customer.Gender.id;
             data.Input0.Customer.Married = data.Input0.Customer.Married.id;
             data.Input0.Customer.CardType = data.Input0.Customer.CardType.id;
             if (data.Input0.Customer) {
-                console.log(data.Input0.Customer);
                 var promise = customer.save(data);
                 promise.then(
                     function (response) {
-                        $state.go('customer');
+                        if (confirm("是否收录客户的登录名和密码信息？")) {
+                            $scope.isShowSaveCustomer = false;
+                            model = response.result.model;
+                            $scope.customer.model = model;
+                            $scope.customer.model.Gender = customer.utils.gender[model.Gender];
+                            $scope.customer.model.CategoryID = customer.utils.categories[model.CategoryID];
+                            $scope.customer.model.CardType = customer.utils.cards[model.CardType];
+                            $scope.customer.model.Married = customer.utils.married[model.Married]
+                            $state.go('create.auth');
+                        }
+                        else {
+                            $state.go('customer')
+                        }
                     },
                     function (error) {
                         console.log(error);

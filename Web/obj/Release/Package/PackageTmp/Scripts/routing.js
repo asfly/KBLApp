@@ -33,16 +33,17 @@ KBLApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
         controller: 'User.RegisterController'
     })
     .state('edit', {
-        url: '/customer/edit/{cid:[0-9]{1,4}}',
+        url: '/customer/edit/:cid',
         templateUrl: '/Templates/customer.create.html?' + Math.random(),
         controller: 'Customer.EditController'
-    }).state('edit.auth', {
-        url: '/customer/edit/{cid:[0-9]{1,4}}/@auth',
-        templateUrl: '/Templates/customer.register.html?' + Math.random(),
-        controller: 'Customer.EditController'
+    })
+    .state('edit.auth', {
+        url: '/@auth',
+        templateUrl: '/Templates/users/register/register.html?' + Math.random(),
+        controller: 'User.RegisterController'
     })
     .state('track', {
-        url: '/customer/{cid:[0-9]{1,6}}',
+        url: '/customer/:cid',
         templateUrl: '/Templates/customer.track.html?' + Math.random(),
         controller: 'Customer.TaskController'
     })
@@ -57,7 +58,7 @@ KBLApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
         controller: 'Customer.Task.CreateController'
     })
     .state('track.task-edit', {
-        url: '/task/edit/{taskId:[1-9]{1,5}}',
+        url: '/task/edit/:taskId',
         templateUrl: '/Templates/customer.track.task.create.html?' + Math.random(),
         controller: 'Customer.Task.EditController'
     })

@@ -83,6 +83,12 @@ namespace LinqToEntities
                 if (exist == null)
                 {
                     db.Customers.Add(model);
+                    int effects = await db.SaveChangesAsync();
+                    return new
+                    {
+                        effects = effects,
+                        model = model
+                    };
                 }
                 else
                 {
@@ -100,10 +106,15 @@ namespace LinqToEntities
                     exist.CardType = model.CardType;
                     exist.Married = model.Married;
                     exist.Address = model.Address;
+                    exist.Remark = model.Remark;
                     db.Entry(exist).State = EntityState.Modified;
+                    int effects = await db.SaveChangesAsync();
+                    return new
+                    {
+                        effects = effects
+                    };
                 }
-                int effects = await db.SaveChangesAsync();
-                return effects;
+                
             }
         }
 

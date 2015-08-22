@@ -18,7 +18,7 @@
         <tr>
             <td>{{customer.model.CustomerNo}}</td>
             <td>{{ ['无','PC','SR'][item.c.CardType || 0] }}</td>
-            <td>{{["普通","贵宾"][customer.model.CategoryID.id || 0]}}</td>
+            <td>{{["普通","贵宾"][customer.model.CategoryID || 0]}}</td>
             <td>{{customer.model.Dietitian}}</td>
             <td>{{customer.model.CName}}</td>
             <td>{{customer.model.Addr}}</td>

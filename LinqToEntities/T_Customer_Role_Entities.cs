@@ -83,13 +83,15 @@ namespace LinqToEntities
                 if (role == null)
                 {
                     model.CreateDate = Helper.Comm.GetIntFromTime(DateTime.Now);
+                    model.UpdateAccountDate = Helper.Comm.GetIntFromTime(DateTime.Now);
                     db.CustomerRoles.Add(model);
                 }
                 else
                 {
+                    role.UserName = model.UserName;
                     role.Password = model.Password;
                     role.Rid = model.Rid;
-                    role.UpdateAccountDate = DateTime.Now.Ticks;
+                    role.UpdateAccountDate = Helper.Comm.GetIntFromTime(DateTime.Now);
                     db.Entry(role).State = EntityState.Modified;
                 }
                 return await db.SaveChangesAsync();

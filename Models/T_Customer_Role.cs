@@ -11,6 +11,7 @@ namespace Models
     public class T_Customer_Role
     {
         [Key]
+        public long Rid { get; set; }
         /// <summary>
         /// 用户表示
         /// </summary>
@@ -39,10 +40,6 @@ namespace Models
         /// 账户信息更改日期
         /// </summary>
         public long UpdateAccountDate { get; set; }
-        /// <summary>
-        /// 用户权限
-        /// </summary>
-        public int Rid { get; set; }
 
         [NotMapped]
         public virtual List<T_Customer_Role_Setting> settings { get; set; }

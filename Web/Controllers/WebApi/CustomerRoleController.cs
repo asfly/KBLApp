@@ -30,7 +30,8 @@ namespace Web.Controllers.WebApi
 
         [Route("get")]
         [HttpPost]
-        public async Task<object> GetRole(long cid)
+        [HttpGet]
+        public async Task<object> GetRole(T_Customer_Role model)
         {
             object o = new { };
             //if (model.Input0 != null)
@@ -38,7 +39,7 @@ namespace Web.Controllers.WebApi
             string s = string.Empty;
             //s = POSTJson.ResolveTJSON(model);
             //customer = JsonConvert.DeserializeObject<T_Customer>(s);
-            o = await T_Customer_BLL.GetCustomer(cid);
+            o = await T_Customer_BLL.GetCustomerRole(model.CId);
             //}
             return Ok(new
             {

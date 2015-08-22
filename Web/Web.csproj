@@ -563,15 +563,18 @@
     <Content Include="public\libs\select\js\standalone\selectize.min.js" />
     <Content Include="public\libs\select\js\utils.js" />
     <Content Include="public\libs\select\ranks.js" />
-    <Content Include="Scripts\controller\customer.task\CreateController.js" />
-    <Content Include="Scripts\controller\customer.task\EditController.js" />
-    <Content Include="Scripts\controller\customer.task\TaskController.js" />
-    <Content Include="Scripts\controller\customer\CreateController.js" />
-    <Content Include="Scripts\controller\customer\EditController.js" />
-    <Content Include="Scripts\controller\customer\ListController.js" />
+    <Content Include="Templates\track\task\create\CreateController.js" />
+    <Content Include="Templates\track\task\edit\EditController.js" />
+    <Content Include="Templates\track\task\main\TaskController.js" />
+    <Content Include="Templates\customer\create\CreateController.js" />
+    <Content Include="Templates\customer\edit\EditController.js" />
+    <Content Include="Templates\customer\list\ListController.js" />
     <Content Include="Scripts\app.js" />
-    <Content Include="Scripts\controller\customer.task\ListController.js" />
-    <Content Include="Scripts\controller\customer\RemoveController.js" />
+    <Content Include="Templates\track\task\list\ListController.js" />
+    <Content Include="Templates\customer\edit\RemoveController.js" />
+    <Content Include="Templates\track\product\customer.track.product.create.html" />
+    <Content Include="Templates\track\product\customer.track.product.list.html" />
+    <Content Include="Templates\users\register\register.html" />
     <Content Include="Templates\users\register\RegisterController.js" />
     <Content Include="Scripts\directive\doFinished.js" />
     <Content Include="Scripts\directive\loadingPanel.js" />
@@ -583,16 +586,14 @@
     <Content Include="Scripts\services\CustomerService.js" />
     <Content Include="Scripts\services\CustomerTaskService.js" />
     <Content Include="Scripts\services\UserService.js" />
-    <Content Include="Templates\customer.create.html" />
-    <Content Include="Templates\customer.list.html" />
-    <Content Include="Templates\users\register\register.html" />
-    <Content Include="Templates\customer.schedule.list.html" />
+    <Content Include="Templates\customer\create\customer.create.html" />
+    <Content Include="Templates\customer\list\customer.list.html" />
+    <Content Include="Templates\users\register\register.role.html" />
+    <Content Include="Templates\track\schedule\list\customer.schedule.list.html" />
     <Content Include="Templates\users\signin\signin.html" />
-    <Content Include="Templates\customer.track.product.create.html" />
-    <Content Include="Templates\customer.track.task.list.html" />
-    <Content Include="Templates\customer.track.html" />
-    <Content Include="Templates\Error.html" />
-    <Content Include="Templates\customer.track.product.list.html" />
+    <Content Include="Templates\track\task\list\customer.track.task.list.html" />
+    <Content Include="Templates\track\task\main\customer.track.html" />
+    <Content Include="Templates\error.html" />
     <Content Include="Templates\users\signin\SignInController.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -716,7 +717,7 @@
     <Content Include="public\libs\select\less\selectize.legacy.less" />
     <Content Include="public\libs\select\less\selectize.less" />
     <Content Include="Views\Customer\Index.cshtml" />
-    <Content Include="Templates\customer.track.task.create.html" />
+    <Content Include="Templates\track\task\create\customer.track.task.create.html" />
     <Content Include="Views\Customer\View.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -727,6 +728,7 @@
     <Folder Include="public\libs\angularjs\upload\codemirror\js\" />
     <Folder Include="public\libs\highcharts\4.0.4\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\" />
     <Folder Include="public\libs\tablesorter\" />
+    <Folder Include="Scripts\controller\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

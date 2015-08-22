@@ -8,7 +8,7 @@ KBLApp.controller("Customer.TaskController", ['$rootScope', '$scope', '$state', 
         var customer = CustomerService.biz;
 
         customer.init($stateParams.cid).then(function (data) {  // 调用承诺API获取数据 .resolve 
-            $scope.customer = { model: data.customer };
+            $scope.customer = { model: data.result };
         }, function (data) {  // 处理错误 .reject  
             console.log(data);
         });

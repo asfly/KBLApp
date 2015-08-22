@@ -40,6 +40,8 @@ namespace Models
         public int Married { get; set; }
         //详细地址
         public string Address { get; set; }
+        //备注
+        public string Remark { get; set; }
 
         [NotMapped]
         public T_Customer_Role Role { get; set; }

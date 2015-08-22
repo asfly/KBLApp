@@ -33,7 +33,7 @@ namespace Web.Controllers.WebApi
             {
                 return Ok(new
                 {
-                    statusCose = HttpStatusCode.NotFound,
+                    statusCode = HttpStatusCode.Forbidden,
                     result = "错误的用户名或密码."
                 });
             }

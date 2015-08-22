@@ -10,8 +10,8 @@ KBLApp.controller("Customer.ListController", ['$rootScope', '$scope', '$state', 
 
         var promise = customer.list(); // 同步调用，获得承诺接口
         promise.then(function (response) {  // 调用承诺API获取数据 .resolve  
-            $scope.customer.items = response.data;
-            angular.forEach(response.data, function (model, i) {
+            $scope.customer.items = response.result;
+            angular.forEach(response.result, function (model, i) {
                 customer.utils.names.push(model.CName);
             });
         }, function(data) {  // 处理错误 .reject  

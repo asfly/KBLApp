@@ -103,9 +103,14 @@
             <td>{{ item.c.Height }}</td>
             <td>{{ item.c.Weight }}</td>
             <td>{{ item.c.Contact }}</td>
-            <td ng-class="{danger:item.t.Prev!=null && !item.t.Prev.ReviewStatus ,success:item.t.Prev.ReviewStatus}">{{ item.t.Prev.StartDate || '--' | date:'yyyy-MM-dd' }}</td> <!--item.t.Prev ? (item.t.Prev.ReviewStatus?'是'：'否'):'-'-->
+            <td class="text-right" ng-class="{danger:item.t.Prev!=null && !item.t.Prev.ReviewStatus ,success:item.t.Prev.ReviewStatus}">
+				<h4>{{ item.t.Prev.StartDate || '--' | date:'yyyy-MM-dd' }}</h4>
+				<h6 ng-repeat="o in item.t.Unfinished">待处理:{{ o.StartDate | date:'yyyy-MM-dd' }}</h6>				
+			</td> <!--item.t.Prev ? (item.t.Prev.ReviewStatus?'是'：'否'):'-'-->
             <td ng-class="{danger:item.t.Prev!=null && !item.t.Next.ReviewStatus,success:item.t.Next.ReviewStatus}">{{ item.t.Next.StartDate || '--' | date:'yyyy-MM-dd' }}</td> <!--item.t.Next ? (item.t.Next.ReviewStatus?'是'：'否'):'-'-->
-            <td ng-class="{danger:item.t.Prev!=null && !item.t.Today.ReviewStatus,success:item.t.Today.ReviewStatus}">{{ item.t.Today.StartDate || '--' | date:'yyyy-MM-dd' }}</td> <!--item.t.Today ? (item.t.Today.ReviewStatus?'是'：'否'):'-'-->
+            <td class="text-right" ng-class="{danger:item.t.Prev!=null && !item.t.Today.ReviewStatus,success:item.t.Today.ReviewStatus}">
+				<h4>{{ item.t.Today.StartDate || '--' | date:'yyyy-MM-dd' }}</h4>
+				<h6 ng-repeat="o in item.t.Finishing">待完成:{{ o.StartDate | date:'yyyy-MM-dd' }}</h6>
             <td>{{ '--' }}</td>
             <td><a ui-sref="track.task({cid:item.c.Cid})" tooltip-placement="left" tooltip="查看客户（{{ item.c.CName}}）跟踪记录">跟踪记录</a></td>
             <td class="hide"><a ui-sref="track.service({cid:item.c.Cid})" tooltip-placement="left" tooltip="查看客户（{{ item.c.CName}}）服务记录">服务记录</a></td>

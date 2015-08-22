@@ -3,9 +3,32 @@
 */
 KBLApp.service('UserService', ["$rootScope", "ApiService", function ($rootScope, ApiService) {
     var service = {
+        //role:{
+        //    "Cid": 0,
+        //    "UserName": "",
+        //    "Password": "",
+        //    "CreateDate": new Date().getTime(),
+        //    "LastSigninDate": new Date().getTime(),
+        //    "SignInCount": 1,
+        //    "UpdateAccountDate": new Date().getTime(),
+        //    "Rid":0
+        //},
+        roleSetting:{
+            "Rid": "",
+            "ParentCid": 0,
+            "ParentCName": "",
+            "ChildCid": 0,
+            "ChildCName": 0,
+            "RoleLevel": 0,
+            "RoleType": 16
+        },
+
         signIn: function (loginModel) {
             var loginModel = JSON.stringify(loginModel);
             return ApiService.post(ApiService.getApiUrl().signIn, {}, loginModel);
+        },
+        init: function (cid) {
+            return ApiService.post(ApiService.getApiUrl().getRole, {}, { "cid":cid})
         },
         checkCustomerCName: function (cname) {
             return ApiService.post(ApiService.getApiUrl().checkCustomerCName, {}, { 'cname': cname });
@@ -17,5 +40,5 @@ KBLApp.service('UserService', ["$rootScope", "ApiService", function ($rootScope,
             return ApiService.post(ApiService.getApiUrl().saveRole, {}, param)
         }
     }
-    return { biz: service };
+    return service;
 }]);

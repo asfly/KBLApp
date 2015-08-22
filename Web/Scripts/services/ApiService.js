@@ -142,10 +142,12 @@ KBLApp.factory('ApiService', ['$rootScope', "$state", "$q", "$window", "$http", 
         var deferred = $q.defer();
         $rootScope.$emit('showLoading');
         $http.post(makeApiUrl(apiKey, apiParams), data).success(function (response, status, headers, config) {
-            //成功直接回调成功函数            
-            if (response.statusCode == 200) {
-                $rootScope.$emit('hideLoading');
+            //成功直接回调成功函数
+            $rootScope.$emit('hideLoading');
+            if (response.statusCode == 200) {                
                 deferred.resolve(response);
+            } if (response.statusCode == 403) {
+                alert(response.result);
             }
         }).error(function (data, status, headers, config) {
             $rootScope.$emit('hideLoading');

@@ -56,7 +56,11 @@
     </div>
 </div>
 
-<h4><a href="" ng-click="search={};searchText='';">显示全部</a>{{ searchText }}</h4>
+<h4>
+    <a href="" ng-click="search={};searchText='';">显示全部</a>
+    营养师过滤:<select ng-model="dietitians.selected" ng-options="option for option in dietitians.options" ng-change="filter(dietitians.selected,'Dietitian',false)"></select>
+    <a href="" ng-click="search= t.Unfinished.length>0 || t.Finishing.length>0 ;searchText='';">未完成任务</a>
+</h4>
 <table class="table table-bordered table-responsive">
     <thead>
         <tr>
@@ -64,8 +68,8 @@
             <th>卡类别</th>
             <th>客户分类</th>
             <th>营养顾问</th>
-            <th>本月VP数</th>
-            <th>累计VP数</th>
+            <th class="hide">本月VP数</th>
+            <th class="hide">累计VP数</th>
             <th>客户姓名</th>
             <th>生日</th>
             <th>地点</th>
@@ -93,8 +97,8 @@
             <td>{{ ['无','PC','SR'][item.c.CardType || 0] }}</td>
             <td>{{ ["普通","贵宾"][item.c.CategoryID || 0] }}</td>
             <td>{{ item.c.Dietitian }}</td>
-            <td>--</td>
-            <td>--</td>
+            <td class="hide">--</td>
+            <td class="hide">--</td>
             <td>{{ item.c.CName }}</td>
             <td>{{ item.c.Birthday | date:'yyyy.MM.dd' }}</td>
             <td class="addr" title="{{item.c.Addr}}">{{ item.c.Addr.length > 2 ?item.c.Addr.substring(0,2):item.c.Addr }}</td>
