@@ -89,3 +89,25 @@ D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Models\bin\Debu
 D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Models\obj\Debug\Models.dll
 D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Models\obj\Debug\Models.pdb
 D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Models\bin\Debug\Models.dll.config
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Models\bin\Debug\Models.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Models\bin\Debug\Models.pdb
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Models\bin\Debug\EntityFramework.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Models\bin\Debug\EntityFramework.SqlServer.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Models\bin\Debug\Microsoft.CSharp.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Models\bin\Debug\MySql.Data.Entity.EF6.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Models\bin\Debug\MySql.Web.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Models\bin\Debug\System.ComponentModel.DataAnnotations.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Models\bin\Debug\System.Data.DataSetExtensions.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Models\bin\Debug\System.Data.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Models\bin\Debug\System.Data.Entity.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Models\bin\Debug\System.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Models\bin\Debug\System.Runtime.Serialization.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Models\bin\Debug\System.Security.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Models\bin\Debug\System.Xml.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Models\bin\Debug\System.Xml.Linq.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Models\bin\Debug\EntityFramework.xml
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Models\bin\Debug\EntityFramework.SqlServer.xml
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Models\obj\Debug\Models.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Models\obj\Debug\Models.pdb

@@ -12,17 +12,12 @@ KBLApp.controller("User.RegisterController", ['$rootScope', '$scope', '$state', 
             //window.location.href = "#/customer/create";
             $state.go('create');
         }
-        //var role = UserService.role;
-        //role.Cid = $scope.customer.model.Cid;
-        //var roleSetting = UserService.roleSetting;
-        console.log($scope.role);
+
         if(!$scope.role){
             $scope.role = {
                 Cid:$scope.customer.model.Cid
             }
         }
-       
-        $scope.isShowRoleSaveAction = false;
         $scope.save = function () {            
             var model ={
                 Input0 : {

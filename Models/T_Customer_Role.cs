@@ -15,7 +15,7 @@ namespace Models
         /// <summary>
         /// 用户表示
         /// </summary>
-        public long CId { get; set; }
+        public long Cid { get; set; }
         /// <summary>
         /// 用户登录名
         /// </summary>
@@ -40,6 +40,10 @@ namespace Models
         /// 账户信息更改日期
         /// </summary>
         public long UpdateAccountDate { get; set; }
+        /// <summary>
+        /// 账户启用，禁用
+        /// </summary>
+        public bool Enabled { get; set; }
 
         [NotMapped]
         public virtual List<T_Customer_Role_Setting> settings { get; set; }

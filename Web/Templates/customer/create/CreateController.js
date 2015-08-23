@@ -35,7 +35,7 @@ KBLApp.controller("Customer.CreateController", ['$rootScope', '$scope', '$state'
             data.Input0.Customer.Gender = data.Input0.Customer.Gender.id;
             data.Input0.Customer.Married = data.Input0.Customer.Married.id;
             data.Input0.Customer.CardType = data.Input0.Customer.CardType.id;
-            data.Input0.Customer.Remark = angular.element('[name="customer.model.Remark"]').html();
+            //data.Input0.Customer.Remark = angular.element('[name="customer.model.remark"]').val();
             if (data.Input0.Customer) {
                 var promise = customer.save(data);
                 promise.then(

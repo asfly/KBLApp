@@ -39,7 +39,7 @@ namespace Web.Controllers.WebApi
             string s = string.Empty;
             //s = POSTJson.ResolveTJSON(model);
             //customer = JsonConvert.DeserializeObject<T_Customer>(s);
-            o = await T_Customer_BLL.GetCustomerRole(model.CId);
+            o = await T_Customer_BLL.GetCustomerRole(model.Cid);
             //}
             return Ok(new
             {

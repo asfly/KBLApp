@@ -34,3 +34,12 @@ D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Helper\bin\Debu
 D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Helper\obj\Debug\Helper.dll
 D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Helper\obj\Debug\Helper.pdb
 D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Helper\obj\Debug\Helper.csprojResolveAssemblyReference.cache
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Helper\bin\Debug\Helper.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Helper\bin\Debug\Helper.pdb
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Helper\bin\Debug\Newtonsoft.Json.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Helper\bin\Debug\System.Web.Mvc.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Helper\bin\Debug\Newtonsoft.Json.xml
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Helper\bin\Debug\System.Web.Mvc.xml
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Helper\obj\Debug\Helper.csprojResolveAssemblyReference.cache
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Helper\obj\Debug\Helper.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Helper\obj\Debug\Helper.pdb

@@ -62,3 +62,22 @@ D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\bin\Debug\N
 D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\obj\Debug\BLL.dll
 D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\BLL\obj\Debug\BLL.pdb
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\BLL\bin\Debug\BLL.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\BLL\bin\Debug\BLL.pdb
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\BLL\bin\Debug\LinqToEntities.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\BLL\bin\Debug\Models.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\BLL\bin\Debug\EntityFramework.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\BLL\bin\Debug\Helper.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\BLL\bin\Debug\MySql.Data.Entity.EF6.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\BLL\bin\Debug\System.Web.Mvc.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\BLL\bin\Debug\System.Web.Http.WebHost.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\BLL\bin\Debug\Newtonsoft.Json.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\BLL\bin\Debug\LinqToEntities.pdb
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\BLL\bin\Debug\Models.pdb
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\BLL\bin\Debug\EntityFramework.xml
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\BLL\bin\Debug\Helper.pdb
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\BLL\bin\Debug\System.Web.Mvc.xml
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\BLL\bin\Debug\Newtonsoft.Json.xml
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\BLL\obj\Debug\BLL.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\BLL\obj\Debug\BLL.pdb

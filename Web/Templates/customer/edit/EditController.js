@@ -18,10 +18,13 @@ KBLApp.controller("Customer.EditController", ['$rootScope', '$scope', '$state', 
                 $scope.customer.model.CardType = customer.utils.cards[data.result.CardType];
 
                 UserService.init(cid).then(function (response) {
-                    $scope.isShowSaveCustomer = true;                 
-                    $scope.role = response.result;
-                    console.log($scope.role);
-                    $state.go('edit.auth', { "cid": cid });
+                    $scope.isShowSaveCustomer = true;
+                    $state.go('edit.auth', { "cid": cid });                    
+                    if(response.result){
+                        $scope.role = response.result || UserService.role;
+                    }
+                    $scope.role.Cid = cid;
+                    $scope.isShowRoleSaveAction = false;
                 },
                 function (data, status, header, configs) {
                 });
@@ -44,23 +47,18 @@ KBLApp.controller("Customer.EditController", ['$rootScope', '$scope', '$state', 
             data.Input0.Customer.Gender = data.Input0.Customer.Gender.id;
             data.Input0.Customer.Married = data.Input0.Customer.Married.id;
             data.Input0.Customer.CardType = data.Input0.Customer.CardType.id;
-            data.Input0.Customer.Remark = angular.element('[name="customer.model.Remark"]').html();
+            //data.Input0.Customer.Remark = angular.element('[name="customer.model.Remark"]').val();
             customer.save(data).then(
                 function (response) {
                     if ($scope.role.UserName && $scope.role.Password) {
-                        var model = {};
-                        model.Cid = cid;
-                        model.UserName = $scope.role.UserName;
-                        model.Password = $scope.role.Password;
                         var param = {
                             Input0: {
-                                CustomerRole: model
+                                CustomerRole: $scope.role
                             },
                             S: Math.random()
                         }
                         UserService.submit(param).then(function (response) {
                             $state.go('customer');
-                            $scope.role = {};
                         }, function (data, status, header, configs) {
                             alert("修改登记用户名，密码时出错！请重试");
                         });

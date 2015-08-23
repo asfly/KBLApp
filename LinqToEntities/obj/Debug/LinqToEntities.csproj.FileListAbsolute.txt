@@ -46,3 +46,20 @@ D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\LinqToEntities\
 D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\LinqToEntities\obj\Debug\LinqToEntities.csprojResolveAssemblyReference.cache
 D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\LinqToEntities\obj\Debug\LinqToEntities.dll
 D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\LinqToEntities\obj\Debug\LinqToEntities.pdb
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\LinqToEntities\bin\Debug\LinqToEntities.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\LinqToEntities\bin\Debug\LinqToEntities.pdb
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\LinqToEntities\bin\Debug\EntityFramework.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\LinqToEntities\bin\Debug\Helper.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\LinqToEntities\bin\Debug\Models.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\LinqToEntities\bin\Debug\MySql.Data.Entity.EF6.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\LinqToEntities\bin\Debug\System.Web.Mvc.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\LinqToEntities\bin\Debug\System.Web.Http.WebHost.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\LinqToEntities\bin\Debug\Newtonsoft.Json.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\LinqToEntities\bin\Debug\EntityFramework.xml
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\LinqToEntities\bin\Debug\Helper.pdb
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\LinqToEntities\bin\Debug\Models.pdb
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\LinqToEntities\bin\Debug\System.Web.Mvc.xml
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\LinqToEntities\bin\Debug\Newtonsoft.Json.xml
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\LinqToEntities\obj\Debug\LinqToEntities.csprojResolveAssemblyReference.cache
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\LinqToEntities\obj\Debug\LinqToEntities.dll
+D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\LinqToEntities\obj\Debug\LinqToEntities.pdb

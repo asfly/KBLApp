@@ -21,7 +21,7 @@ namespace LinqToEntities
             using (db = new KBLDataContext())
             {
                 var entity = from r in db.CustomerRoles
-                             where r.CId == cid
+                             where r.Cid == cid
                              select r;
                 return await entity.FirstOrDefaultAsync();
             }
@@ -76,7 +76,7 @@ namespace LinqToEntities
             using (db = new KBLDataContext())
             {
                 var entity = from r in db.CustomerRoles
-                             where r.CId == model.CId
+                             where r.Rid == model.Rid
                              select r;
                 T_Customer_Role role = await entity.FirstOrDefaultAsync();
 
@@ -90,7 +90,7 @@ namespace LinqToEntities
                 {
                     role.UserName = model.UserName;
                     role.Password = model.Password;
-                    role.Rid = model.Rid;
+                    role.Cid = model.Cid;
                     role.UpdateAccountDate = Helper.Comm.GetIntFromTime(DateTime.Now);
                     db.Entry(role).State = EntityState.Modified;
                 }
@@ -107,7 +107,7 @@ namespace LinqToEntities
             using (db = new KBLDataContext())
             {
                 var entity = from r in db.CustomerRoles
-                             where r.CId == cid
+                             where r.Cid == cid
                              select r;
                 T_Customer_Role _prodcut = await entity.FirstOrDefaultAsync();
                 if (_prodcut != null)

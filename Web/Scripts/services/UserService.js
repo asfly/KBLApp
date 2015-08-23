@@ -2,17 +2,18 @@
 * create by daniel.zuo on 2015.4.19
 */
 KBLApp.service('UserService', ["$rootScope", "ApiService", function ($rootScope, ApiService) {
+    var now = Date.parse(new Date())/1000;
     var service = {
-        //role:{
-        //    "Cid": 0,
-        //    "UserName": "",
-        //    "Password": "",
-        //    "CreateDate": new Date().getTime(),
-        //    "LastSigninDate": new Date().getTime(),
-        //    "SignInCount": 1,
-        //    "UpdateAccountDate": new Date().getTime(),
-        //    "Rid":0
-        //},
+        role: {
+            "rid":0,
+            "cid": 0,
+            "username": "",
+            "password": "",
+            "createdate": now,
+            "lastsignindate": now,
+            "signincount": 1,
+            "updateaccountdate": now            
+        },
         roleSetting:{
             "Rid": "",
             "ParentCid": 0,
