@@ -8,19 +8,16 @@ KBLApp.controller("User.RegisterController", ['$rootScope', '$scope', '$state', 
             
         //});
 
-        if (!$scope.customer.model.Cid) {
-            $state.go('create', {});
+        if (!$scope.customer.model.Cid && !$stateParams.cid) {
+            //window.location.href = "#/customer/create";
+            $state.go('create');
         }
-        //var role = UserService.role;
-        //role.Cid = $scope.customer.model.Cid;
-        //var roleSetting = UserService.roleSetting;
+
         if(!$scope.role){
             $scope.role = {
                 Cid:$scope.customer.model.Cid
-            }            
+            }
         }
-        $scope.isShowSaveAction = true;
-        $scope.isShowRoleSaveAction = true;
         $scope.save = function () {            
             var model ={
                 Input0 : {
@@ -31,7 +28,7 @@ KBLApp.controller("User.RegisterController", ['$rootScope', '$scope', '$state', 
             var param = JSON.stringify(model);
             UserService.submit(param).then(function (response) {
                 if (response.result > 0) {
-                    $scope.isShowSaveAction = false;
+                    $scope.isShowRoleSaveAction = false;
                     $state.go('customer', {});
                 } else {
                     alert("收录失败！！请联系开发人员");

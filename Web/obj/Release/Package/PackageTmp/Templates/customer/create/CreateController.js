@@ -20,9 +20,9 @@ KBLApp.controller("Customer.CreateController", ['$rootScope', '$scope', '$state'
                     "Married": customer.utils.married[0]
                 }, sections: customer.utils
         };
-        console.log($state);
         $scope.isShowSaveAction = $state.current.name != "create.auth";
         $scope.isShowSaveCustomer = $state.current.name != "create.auth";
+        $scope.isShowRoleSaveAction = false;
         $scope.save = function () {
             var data = {
                 Input0: {
@@ -35,12 +35,14 @@ KBLApp.controller("Customer.CreateController", ['$rootScope', '$scope', '$state'
             data.Input0.Customer.Gender = data.Input0.Customer.Gender.id;
             data.Input0.Customer.Married = data.Input0.Customer.Married.id;
             data.Input0.Customer.CardType = data.Input0.Customer.CardType.id;
+            //data.Input0.Customer.Remark = angular.element('[name="customer.model.remark"]').val();
             if (data.Input0.Customer) {
                 var promise = customer.save(data);
                 promise.then(
                     function (response) {
                         if (confirm("是否收录客户的登录名和密码信息？")) {
                             $scope.isShowSaveCustomer = false;
+                            $scope.isShowRoleSaveAction = true;
                             model = response.result.model;
                             $scope.customer.model = model;
                             $scope.customer.model.Gender = customer.utils.gender[model.Gender];

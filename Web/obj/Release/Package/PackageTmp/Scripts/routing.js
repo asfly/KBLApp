@@ -18,12 +18,12 @@ KBLApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     })
     .state('customer', {
         url: "/customer",
-        templateUrl: '/Templates/customer.list.html?' + Math.random(),
+        templateUrl: '/Templates/customer/list/customer.list.html?' + Math.random(),
         controller: 'Customer.ListController'
     })
     .state('create', {
         url: "/customer/create",
-        templateUrl: '/Templates/customer.create.html?' + Math.random(),
+        templateUrl: '/Templates/customer/create/customer.create.html?' + Math.random(),
         controller: 'Customer.CreateController'
     })
 
@@ -34,7 +34,7 @@ KBLApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     })
     .state('edit', {
         url: '/customer/edit/:cid',
-        templateUrl: '/Templates/customer.create.html?' + Math.random(),
+        templateUrl: '/Templates/customer/create/customer.create.html?' + Math.random(),
         controller: 'Customer.EditController'
     })
     .state('edit.auth', {
@@ -44,31 +44,31 @@ KBLApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     })
     .state('track', {
         url: '/customer/:cid',
-        templateUrl: '/Templates/customer.track.html?' + Math.random(),
+        templateUrl: '/Templates/track/task/main/customer.track.html?' + Math.random(),
         controller: 'Customer.TaskController'
     })
     .state('track.task', {
         url: '/task/list',
-        templateUrl: '/Templates/customer.track.task.list.html?' + Math.random(),
+        templateUrl: '/Templates/track/task/list/customer.track.task.list.html?' + Math.random(),
         controller: 'Customer.Task.ListController'
     })
     .state('track.task-create', {
         url: '/task/create',
-        templateUrl: '/Templates/customer.track.task.create.html?' + Math.random(),
+        templateUrl: '/Templates/track/task/create/customer.track.task.create.html?' + Math.random(),
         controller: 'Customer.Task.CreateController'
     })
     .state('track.task-edit', {
         url: '/task/edit/:taskId',
-        templateUrl: '/Templates/customer.track.task.create.html?' + Math.random(),
+        templateUrl: '/Templates/track/task/create/customer.track.task.create.html?' + Math.random(),
         controller: 'Customer.Task.EditController'
     })
     .state('track.schedule', {
         url: '/schedule',
-        templateUrl: '/Templates/customer.schedule.list.html?' + Math.random()
+        templateUrl: '/Templates/track/schedule/list/customer.schedule.list.html?' + Math.random()
     })
     .state('track.vip', {
         url: '/vip',
-        templateUrl: '/Templates/customer.track.task.list.html?' + Math.random()
+        templateUrl: '/Templates/track/task/list/customer.track.task.list.html?' + Math.random()
     })
     .state('track.return-a-visit', {
         url: '/retuen-a-visit',

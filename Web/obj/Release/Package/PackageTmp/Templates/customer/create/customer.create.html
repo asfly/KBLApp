@@ -1,7 +1,5 @@
 ﻿<div class="container">
-    <h2 class="text-center">客户信息{{actionName}}</h2>
-    <div ui-view></div>
-    <hr />
+    <h2 class="text-center">客户信息{{actionName}}</h2>    
     <form class="form-horizontal" ng-if="isShowSaveCustomer">
         <div class="form-group" ng-hide="true">
             <label for="CID" class="col-sm-2 control-label">序号</label>
@@ -110,11 +108,20 @@
                 <input type="text" id="Contact" class="form-control" ng-model="customer.model.Contact" placeholder="请输入联系方式，电话号码" />
             </div>
         </div>
-        <div class="form-group" ng-if="isShowSaveAction">
-            <div class="col-sm-offset-2 col-sm-9">
-                <a href="javascript:;" class="btn btn-primary col-sm-6" ng-click="save()">保存</a>
-                <a href="#/customer" class="btn btn-default col-sm-6">取消</a>
+        <div class="form-group">
+            <label for="Contact" class="col-sm-2 control-label">备注信息（最大100字）</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" name="customer.model.remark" ng-model="customer.model.Remark" placeholder="请输入选填信息，比如是客户习惯等信息" ></textarea>
             </div>
+        </div>        
+    </form>
+    <hr />
+    <div ui-view></div>
+    <hr />
+    <div class="form-group" ng-if="isShowSaveCustomer">
+        <div class="col-sm-offset-2 col-sm-9">
+            <a href="javascript:;" class="btn btn-primary col-sm-6" ng-click="save()">保存</a>
+            <a href="#/customer" class="btn btn-default col-sm-6">取消</a>
         </div>
-    </form>    
+    </div>
 </div>
