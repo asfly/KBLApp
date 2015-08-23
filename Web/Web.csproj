@@ -563,7 +563,10 @@
     <Content Include="public\libs\select\js\standalone\selectize.min.js" />
     <Content Include="public\libs\select\js\utils.js" />
     <Content Include="public\libs\select\ranks.js" />
+    <Content Include="Templates\track\plan\customer-plan.html" />
+    <Content Include="Templates\track\product\customer.product.list.html" />
     <Content Include="Templates\track\task\create\CreateController.js" />
+    <Content Include="Templates\track\task\customer.track.list.html" />
     <Content Include="Templates\track\task\edit\EditController.js" />
     <Content Include="Templates\track\task\main\TaskController.js" />
     <Content Include="Templates\customer\create\CreateController.js" />
