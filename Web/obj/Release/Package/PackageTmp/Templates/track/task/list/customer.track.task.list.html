@@ -12,7 +12,7 @@
             <th>性别</th>
             <th>年龄</th>
             <th>身高</th>
-            <th>原始体重（KG）</th>
+            <th>原始体重</th>
             <th>联系方式</th>
             <th>备注</th>
         </tr>
@@ -21,7 +21,7 @@
         <tr>
             <td>{{customer.model.CustomerNo}}</td>
             <td>{{ ['无','PC','SR','7天卡'][item.c.CardType || 0] }}</td>
-            <td>{{["普通","贵宾"][customer.model.CategoryID || 0]}}</td>
+            <td>{{["普通","贵宾","已归档"][customer.model.CategoryID || 0]}}</td>
             <td>{{customer.model.Dietitian}}</td>
             <td>{{customer.model.CName}}</td>
             <td>{{['未婚','已婚'][customer.model.Marriged || 0]}}</td>            

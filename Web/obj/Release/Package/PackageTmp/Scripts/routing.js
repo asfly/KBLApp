@@ -18,6 +18,11 @@ KBLApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     })
     .state('customer', {
         url: "/customer",
+        templateUrl: '/Templates/customer/Main/customer.html?' + Math.random(),
+        controller: 'Customer.MainController'
+    })
+    .state('customer.type', {
+        url: "/:type?:s",
         templateUrl: '/Templates/customer/list/customer.list.html?' + Math.random(),
         controller: 'Customer.ListController'
     })

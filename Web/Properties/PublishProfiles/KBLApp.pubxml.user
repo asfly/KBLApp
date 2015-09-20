@@ -13,7 +13,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/02/2015 19:33:51</publishTime>
     </File>
     <File Include="bin/BLL.dll">
-      <publishTime>08/23/2015 21:00:18</publishTime>
+      <publishTime>09/20/2015 15:02:35</publishTime>
     </File>
     <File Include="bin/de/Microsoft.Data.Edm.resources.dll">
       <publishTime>04/03/2015 16:19:47</publishTime>
@@ -67,7 +67,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/03/2015 16:19:46</publishTime>
     </File>
     <File Include="bin/Helper.dll">
-      <publishTime>08/23/2015 21:00:14</publishTime>
+      <publishTime>09/20/2015 15:02:31</publishTime>
     </File>
     <File Include="bin/it/Microsoft.Data.Edm.resources.dll">
       <publishTime>04/03/2015 16:19:47</publishTime>
@@ -97,7 +97,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/03/2015 16:19:46</publishTime>
     </File>
     <File Include="bin/LinqToEntities.dll">
-      <publishTime>08/23/2015 21:00:17</publishTime>
+      <publishTime>09/20/2015 15:02:33</publishTime>
     </File>
     <File Include="bin/Microsoft.CSharp.dll">
       <publishTime>09/26/2012 03:16:08</publishTime>
@@ -121,7 +121,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/03/2015 16:07:52</publishTime>
     </File>
     <File Include="bin/Models.dll">
-      <publishTime>08/23/2015 21:00:15</publishTime>
+      <publishTime>09/20/2015 15:02:32</publishTime>
     </File>
     <File Include="bin/Mono.Math.dll">
       <publishTime>04/03/2015 16:22:47</publishTime>
@@ -265,7 +265,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/26/2012 03:16:08</publishTime>
     </File>
     <File Include="bin/Web.dll">
-      <publishTime>08/23/2015 21:28:44</publishTime>
+      <publishTime>09/20/2015 15:25:00</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>04/02/2015 19:33:52</publishTime>
@@ -1459,19 +1459,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/05/2015 22:46:19</publishTime>
     </File>
     <File Include="Scripts/routing.js">
-      <publishTime>08/22/2015 22:31:43</publishTime>
+      <publishTime>09/20/2015 14:03:59</publishTime>
     </File>
     <File Include="Scripts/services/ApiService.js">
       <publishTime>08/22/2015 01:09:21</publishTime>
     </File>
     <File Include="Scripts/services/CommService.js">
-      <publishTime>07/25/2015 23:08:57</publishTime>
+      <publishTime>09/20/2015 13:13:11</publishTime>
     </File>
     <File Include="Scripts/services/CustomerRoleService.js">
       <publishTime>08/16/2015 14:08:07</publishTime>
     </File>
     <File Include="Scripts/services/CustomerService.js">
-      <publishTime>08/23/2015 20:51:24</publishTime>
+      <publishTime>09/20/2015 14:46:05</publishTime>
     </File>
     <File Include="Scripts/services/CustomerTaskService.js">
       <publishTime>08/11/2015 23:25:04</publishTime>
@@ -1528,7 +1528,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/23/2015 20:51:24</publishTime>
     </File>
     <File Include="Templates/customer/create/customer.create.html">
-      <publishTime>08/23/2015 20:51:24</publishTime>
+      <publishTime>08/23/2015 22:01:40</publishTime>
     </File>
     <File Include="Templates/customer/edit/EditController.js">
       <publishTime>08/23/2015 20:51:24</publishTime>
@@ -1537,10 +1537,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/22/2015 22:05:00</publishTime>
     </File>
     <File Include="Templates/customer/list/customer.list.html">
-      <publishTime>08/22/2015 23:55:30</publishTime>
+      <publishTime>09/20/2015 13:51:39</publishTime>
     </File>
     <File Include="Templates/customer/list/ListController.js">
-      <publishTime>08/22/2015 23:56:14</publishTime>
+      <publishTime>09/20/2015 14:47:27</publishTime>
+    </File>
+    <File Include="Templates/customer/main/customer.html">
+      <publishTime>09/20/2015 14:05:15</publishTime>
+    </File>
+    <File Include="Templates/customer/main/MainController.js">
+      <publishTime>09/20/2015 14:57:46</publishTime>
     </File>
     <File Include="Templates/Error.html">
       <publishTime>07/04/2015 11:31:28</publishTime>
@@ -1579,7 +1585,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/17/2015 00:04:40</publishTime>
     </File>
     <File Include="Templates/track/task/list/customer.track.task.list.html">
-      <publishTime>08/22/2015 22:04:54</publishTime>
+      <publishTime>08/23/2015 22:00:31</publishTime>
     </File>
     <File Include="Templates/track/task/list/ListController.js">
       <publishTime>08/11/2015 23:30:52</publishTime>
@@ -1603,7 +1609,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/22/2015 01:15:12</publishTime>
     </File>
     <File Include="Templates/users/signin/SignInController.js">
-      <publishTime>08/22/2015 01:15:26</publishTime>
+      <publishTime>08/23/2015 21:59:09</publishTime>
     </File>
     <File Include="Views/Account/ExternalLoginConfirmation.cshtml">
       <publishTime>04/21/2015 00:31:48</publishTime>
@@ -1654,7 +1660,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/02/2015 19:33:03</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>08/22/2015 22:28:28</publishTime>
+      <publishTime>09/20/2015 14:07:40</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>05/06/2015 23:53:01</publishTime>

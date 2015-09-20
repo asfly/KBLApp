@@ -10,18 +10,20 @@ namespace LinqToEntities
     public class T_Customer_Entities : IDisposable
     {
         KBLDataContext db = null;
-        public async Task<object> List(string[] cids)
+        public async Task<object> List(CustomerParams param)
         {
             using (db = new KBLDataContext())
             {
                 var entities = from c in db.Customers  
                                join t in db.CustomerTasks on c.Cid equals t.CId into ct
                                from lct in ct.DefaultIfEmpty()
+                               where (c.CategoryID == param.CategoryId && !string.IsNullOrEmpty(param.CategoryId) || string.IsNullOrEmpty(param.CategoryId))
                                group lct by c into gct
                                select gct;
                 var data = await entities.ToListAsync();
 
                 var json = from gct in data
+                           orderby gct.Key.Cid descending
                            select new
                            {
                                c = gct.Key,

@@ -17,10 +17,11 @@ namespace Web.Controllers.WebApi
         [Route("gets")]
         [HttpPost]
         [HttpGet]
-        public async Task<object> GetRoles()
+        public async Task<object> GetRoles(CustomerParams param)
         {
-            string[] cids = new string[] { };
-            var data = await T_Customer_BLL.GetCustomers(cids);
+            param.CategoryId = "0";
+            param.Cids = new string[] { };
+            var data = await T_Customer_BLL.GetCustomers(param);
             return Ok(new
             {
                 statusCode = 200,

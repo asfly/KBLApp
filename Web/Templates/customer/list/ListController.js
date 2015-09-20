@@ -4,8 +4,22 @@
 
 KBLApp.controller("Customer.ListController", ['$rootScope', '$scope', '$state', '$stateParams', '$location', 'ApiService', 'CommService','CustomerService',
     function ($rootScope, $scope, $state, $stateParams, $location, ApiService, CommService, CustomerService) {
+        var s = CommService.base64encode(JSON.stringify(Math.random()));
+
+        var types = CustomerService.utils.types;
+
+        
+        //function getCategoryId(categoryName) {
+        //    for (var i in types) {
+        //        if (types[i][type]) {
+        //            return types[i][type];
+        //        }
+        //    }
+        //    return 1;
+        //}
 
         $scope.customer = { items: [] };
+
         var customer = CustomerService.biz;
 
         var dietitians = {
@@ -13,19 +27,27 @@ KBLApp.controller("Customer.ListController", ['$rootScope', '$scope', '$state', 
             selected: {}
         };
 
-        var promise = customer.list(); // 同步调用，获得承诺接口
-        promise.then(function (response) {  // 调用承诺API获取数据 .resolve  
-            $scope.customer.items = response.result;
-            angular.forEach(response.result, function (model, i) {
-                customer.utils.names.push(model.c.CName);
-                if (dietitians.options.indexOf(model.c.Dietitian) < 0 && (model.c.Dietitian || '').length > 0) {
-                    dietitians.options.push(model.c.Dietitian);
-                }                
+        var categoryId = types.indexOf($stateParams.type);
+        var params = {
+            categoryId:categoryId
+        }
+        loadData(params);
+
+        function loadData() {
+            customer.list(params).then(function (response) {  // 调用承诺API获取数据 .resolve  
+                $scope.customer.items = response.result;
+                angular.forEach(response.result, function (model, i) {
+                    customer.utils.names.push(model.c.CName);
+                    if (dietitians.options.indexOf(model.c.Dietitian) < 0 && (model.c.Dietitian || '').length > 0) {
+                        dietitians.options.push(model.c.Dietitian);
+                    }
+                });
+                $scope.dietitians = dietitians;
+                //$state.
+            }, function (data) {  // 处理错误 .reject  
+                console.log(data);
             });
-            $scope.dietitians = dietitians;
-        }, function(data) {  // 处理错误 .reject  
-            console.log(data);
-        });
+        };
 
         $scope.redirect = function (cid) {
             CommService.customerId = cid;

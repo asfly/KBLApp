@@ -1,5 +1,5 @@
 ﻿<h4>{{'客户筛选'}}</h4>
-<div class="panel panel-primary col-xs-3">
+<div class="panel panel-primary col-xs-3 " ng-if="false">
     <div class="panel-heading">
         <h3 class="panel-title" id="panel-title">
             性别
@@ -13,7 +13,7 @@
         <a href="" class="list-group-item" ng-click="filter('gender','Gender', 1)">女</a>
     </div>
 </div>
-<div class="panel panel-primary col-xs-3">
+<div class="panel panel-primary col-xs-3" ng-if="false">
     <div class="panel-heading">
         <h3 class="panel-title" id="panel-title">
             客户分类
@@ -27,7 +27,7 @@
         <a href="" class="list-group-item" ng-click="filter('categories','CategoryID',1)">贵宾</a>
     </div>
 </div>
-<div class="panel panel-primary col-xs-3">
+<div class="panel panel-primary col-xs-3" ng-if="false">
     <div class="panel-heading">
         <h3 class="panel-title" id="panel-title">
             卡分类
@@ -41,7 +41,7 @@
         <a href="" class="list-group-item">--</a>
     </div>
 </div>
-<div class="panel panel-primary col-xs-3">
+<div class="panel panel-primary col-xs-3" ng-if="false">
     <div class="panel-heading">
         <h3 class="panel-title" id="panel-title">
             客户姓名
@@ -55,12 +55,12 @@
         <a href="" class="list-group-item" ng-click="search={ item.c.CategoryID: 1}">--</a>
     </div>
 </div>
-
 <h4>
     <a href="" ng-click="search={};searchText='';">显示全部</a>
     营养师过滤:<select ng-model="dietitians.selected" ng-options="option for option in dietitians.options" ng-change="filter(dietitians.selected,'Dietitian',false)"></select>
     <a href="" ng-click="search= t.Unfinished.length>0 || t.Finishing.length>0 ;searchText='';">未完成任务</a>
 </h4>
+
 <table class="table table-bordered table-responsive">
     <thead>
         <tr>
@@ -81,7 +81,7 @@
             <th>上次联系时间</th>
             <th>下次联系时间</th>
             <th>今天回访提示</th>
-            <th>减肥是否成功</th>            
+            <th>减肥是否成功</th>
             <th>跟踪服务</th>
             <th class="hide">服务记录</th>
             <th>备注</th>
@@ -108,13 +108,13 @@
             <td>{{ item.c.Weight }}</td>
             <td>{{ item.c.Contact }}</td>
             <td class="text-right" ng-class="{danger:item.t.Prev!=null && !item.t.Prev.ReviewStatus ,success:item.t.Prev.ReviewStatus}">
-				<h4>{{ item.t.Prev.StartDate || '--' | date:'yyyy-MM-dd' }}</h4>
-				<h6 ng-repeat="o in item.t.Unfinished">待处理:{{ o.StartDate | date:'yyyy-MM-dd' }}</h6>				
-			</td> <!--item.t.Prev ? (item.t.Prev.ReviewStatus?'是'：'否'):'-'-->
+                <h4>{{ item.t.Prev.StartDate || '--' | date:'yyyy-MM-dd' }}</h4>
+                <h6 ng-repeat="o in item.t.Unfinished">待处理:{{ o.StartDate | date:'yyyy-MM-dd' }}</h6>
+            </td> <!--item.t.Prev ? (item.t.Prev.ReviewStatus?'是'：'否'):'-'-->
             <td ng-class="{danger:item.t.Prev!=null && !item.t.Next.ReviewStatus,success:item.t.Next.ReviewStatus}">{{ item.t.Next.StartDate || '--' | date:'yyyy-MM-dd' }}</td> <!--item.t.Next ? (item.t.Next.ReviewStatus?'是'：'否'):'-'-->
             <td class="text-right" ng-class="{danger:item.t.Prev!=null && !item.t.Today.ReviewStatus,success:item.t.Today.ReviewStatus}">
-				<h4>{{ item.t.Today.StartDate || '--' | date:'yyyy-MM-dd' }}</h4>
-				<h6 ng-repeat="o in item.t.Finishing">待完成:{{ o.StartDate | date:'yyyy-MM-dd' }}</h6>
+                <h4>{{ item.t.Today.StartDate || '--' | date:'yyyy-MM-dd' }}</h4>
+                <h6 ng-repeat="o in item.t.Finishing">待完成:{{ o.StartDate | date:'yyyy-MM-dd' }}</h6>
             <td>{{ '--' }}</td>
             <td><a ui-sref="track.task({cid:item.c.Cid})" tooltip-placement="left" tooltip="查看客户（{{ item.c.CName}}）跟踪记录">跟踪记录</a></td>
             <td class="hide"><a ui-sref="track.service({cid:item.c.Cid})" tooltip-placement="left" tooltip="查看客户（{{ item.c.CName}}）服务记录">服务记录</a></td>

@@ -46,4 +46,10 @@ namespace Models
         [NotMapped]
         public T_Customer_Role Role { get; set; }
     }
+
+    public partial class CustomerParams
+    {
+        public string[] Cids { get; set; } 
+        public string CategoryId { get; set; }
+    }
 }

@@ -28,11 +28,11 @@ namespace BLL
             }
         }
 
-        public static async Task<object> GetCustomers(string[] cids)
+        public static async Task<object> GetCustomers(CustomerParams param)
         {
             using (T_Customer_Entities entity = new T_Customer_Entities())
             {
-                return await entity.List(cids);
+                return await entity.List(param);
             }
         }
 

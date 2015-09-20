@@ -5,14 +5,13 @@ KBLApp.controller("User.SignInController", ['$rootScope', '$scope', '$state', '$
     function ($rootScope, $scope, $state, $stateParams, ApiService, CommService, UserService) {
 
         var loginModel = {
-            "UserName": "18620305716",
-            "Password": "1314521",
+            //"UserName": "18620305716",
+            //"Password": "1314521",
             "RemerberMe": true
         };
 
         $scope.loginModel = loginModel;
         $scope.signIn = function () {
-            console.log($scope.loginModel);
             var promise = UserService.signIn($scope.loginModel);
             promise.then(
                 function (response) {

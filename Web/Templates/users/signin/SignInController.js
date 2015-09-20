@@ -15,7 +15,8 @@ KBLApp.controller("User.SignInController", ['$rootScope', '$scope', '$state', '$
             var promise = UserService.signIn($scope.loginModel);
             promise.then(
                 function (response) {
-                    $state.go('customer');
+                    var s = CommService.base64encode(JSON.stringify(Math.random()));
+                    $state.go('customer.type', { type:'general',s:s });
                 },
                 function (error) {
                     alert("用户名或密码错误！");

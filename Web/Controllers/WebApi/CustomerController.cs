@@ -25,15 +25,14 @@ namespace Web.Controllers.WebApi
                 return (T_Customer_Role)HttpContext.Current.Session["User"];
             }
         }
-        // GET api/<controller>
+        // Post api/<controller>
         [Route("customer/gets")]
         [HttpPost]
-        [HttpGet]
-        public async Task<object> GetCustomers()
+        public async Task<object> GetCustomers(CustomerParams param)
         {
             string[] str = new string[] { };
 
-            var data = await T_Customer_BLL.GetCustomers(str);
+            var data = await T_Customer_BLL.GetCustomers(param);
             return Ok(new
             {
                 statusCode = 200,
