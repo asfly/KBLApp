@@ -1,0 +1,6 @@
+﻿<ul class="nav nav-tabs">
+    <li ng-class="{ active: $stateParams.type.includes('general') }"><a href="" ng-click="tab('general')">准客户</a></li>
+    <li ng-class="{ active: $stateParams.type.includes('vip') }"><a href="" ng-click="tab('vip')">贵宾客户</a></li>
+    <li ng-class="{ active: $stateParams.type.includes('archive') }"><a href="" ng-click="tab('archive')">归档客户回访</a></li>
+</ul>
+<div ui-view></div>
