@@ -27,7 +27,7 @@ KBLApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
         controller: 'Customer.ListController'
     })
     .state('create', {
-        url: "/customer/create",
+        url: "/new-customer",
         templateUrl: '/Templates/customer/create/customer.create.html?' + Math.random(),
         controller: 'Customer.CreateController'
     })

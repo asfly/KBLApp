@@ -1,0 +1,52 @@
+﻿<form class="form-horizontal container">
+    <div class="form-group">
+        <label for="product.name" class="col-sm-2 control-label">名称</label>
+        <div class="col-sm-10">            
+            <input type="text" class="form-control" id="product.name" ng-model="product.model.Name" placeholder="名称">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="product.quantity" class="col-sm-2 control-label">数量</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" id="product.quantity" ng-model="product.model.Quantity" placeholder="数量">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="product.price" class="col-sm-2 control-label">单价</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" id="product.price" ng-model="product.model.Price" placeholder="单价">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="product.saleAmount" class="col-sm-2 control-label">售金额</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" id="product.saleAmount" ng-model="product.model.SaleAmount" placeholder="VP点数">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="product.vp" class="col-sm-2 control-label">VP点数销</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" id="product.vp" ng-model="product.model.Vp" placeholder="销售金额">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="product.purchasingDate" class="col-sm-2 control-label">购买日期</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" date-time auto-close="true" id="product.purchasingDate" ng-model="product.model.PurchasingDate" required="" min-view="date" max-view="year" placeholder="购买日期" format="yyyy-MM-dd">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="product.generatintVpDate" class="col-sm-2 control-label">产生VP月份</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" date-time auto-close="true" id="product.generatintVpDate" ng-model="product.model.GeneratintVpDate" required="" min-view="date" max-view="year" placeholder="购买日期" format="yyyy-MM">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-4">
+            <a ui-sref="track.product.list" class="btn btn-default form-control">取消</a>
+        </div>
+        <div class="col-sm-offset-2 col-sm-4">
+            <a href="" class="btn btn-default form-control btn-success" ng-click="product.save()">保存</a>
+        </div>
+    </div>
+</form>

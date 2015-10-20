@@ -23,9 +23,9 @@ namespace Models
         // Vp点数
         public decimal? Vp { get; set; }
         // 购买日期
-        public DateTime PurchasingDate { get; set; }
+        public long? PurchasingDate { get; set; }
         // 生产Vp的月数
-        public DateTime GeneratintVpDate { get; set; }
+        public long? GeneratintVpDate { get; set; }
 
         [NotMapped]
         public T_Customer_Role Role { get; set; }

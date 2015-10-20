@@ -52,7 +52,7 @@ KBLApp.controller("Customer.CreateController", ['$rootScope', '$scope', '$state'
                             $state.go('create.auth');
                         }
                         else {
-                            $state.go('customer')
+                            $state.go('customer.type', { type: customer.utils.types[response.result.model.CategoryID], s: response.result.model.Cid });
                         }
                     },
                     function (error) {

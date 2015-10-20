@@ -119,9 +119,11 @@
     <div ui-view></div>
     <hr />
     <div class="form-group" ng-if="isShowSaveCustomer">
-        <div class="col-sm-offset-2 col-sm-9">
-            <a href="javascript:;" class="btn btn-primary col-sm-6" ng-click="save()">保存</a>
-            <a href="#/customer" class="btn btn-default col-sm-6">取消</a>
+        <div class="col-sm-offset-2 col-sm-4">
+            <a href="javascript:;" class="btn btn-primary form-control" ng-click="save()">保存</a>            
+        </div>
+        <div class="col-sm-offset-2 col-sm-4">
+            <a href="#/customer/general" class="btn btn-default form-control">取消</a>
         </div>
     </div>
 </div>

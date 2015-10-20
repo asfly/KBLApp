@@ -29,7 +29,7 @@ KBLApp.controller("User.RegisterController", ['$rootScope', '$scope', '$state', 
             UserService.submit(param).then(function (response) {
                 if (response.result > 0) {
                     $scope.isShowRoleSaveAction = false;
-                    $state.go('customer', {});
+                    $state.go('customer.type', { type:'general',s:$scope.role.cid});
                 } else {
                     alert("收录失败！！请联系开发人员");
                 }

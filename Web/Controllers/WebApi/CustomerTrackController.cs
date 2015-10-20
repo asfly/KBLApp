@@ -11,7 +11,7 @@ namespace Web.Controllers.WebApi
 {
     [FormAuth]
     [RoutePrefix("api/customer")]
-    public class CustomerTaskController : ApiController
+    public class CustomerTrackController : ApiController
     {
         // post api/<controller>
         [Route("{cid:long}/task/list")]
@@ -74,6 +74,54 @@ namespace Web.Controllers.WebApi
             {
                 statusCode = 200,
                 result = effects
+            });
+        }
+
+        // post api/<controller>
+        [Route("{cid:long}/product/get/{pid:long}")]
+        [HttpGet]
+        public async Task<object> GetProduct(long pid)
+        {
+            var data = await T_Customer_BLL.GetCustomerProduct(pid);
+            return Ok(new
+            {
+                statusCode = 200,
+                result = data
+            });
+        }
+
+        [Route("{cid:long}/product/list")]
+        [HttpGet]
+        public async Task<object> ProductList(long cid)
+        {
+            object data = await T_Customer_BLL.GetCustomerProducts(cid);
+            return Ok(new {
+                statusCode = 200,
+                result = data
+            });
+        }
+
+        [Route("{cid:long}/product/save")]
+        [HttpPost]
+        public async Task<object> ProductSave(T_Customer_Product model)
+        {
+            object data = await T_Customer_BLL.SaveCustomerProduct(model);
+            return Ok(new
+            {
+                statusCode = 200,
+                result = data
+            });
+        }
+
+        [Route("{cid:long}/product/remove")]
+        [HttpPost]
+        public async Task<object> ProductRemove(long pId)
+        {
+            object data = await T_Customer_BLL.RemoveCustomerProduct(pId);
+            return Ok(new
+            {
+                statusCode = 200,
+                result = data
             });
         }
     }

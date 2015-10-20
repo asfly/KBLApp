@@ -1459,7 +1459,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/05/2015 22:46:19</publishTime>
     </File>
     <File Include="Scripts/routing.js">
-      <publishTime>09/20/2015 14:03:59</publishTime>
+      <publishTime>09/20/2015 16:28:21</publishTime>
     </File>
     <File Include="Scripts/services/ApiService.js">
       <publishTime>08/22/2015 01:09:21</publishTime>
@@ -1525,7 +1525,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/21/2015 00:04:52</publishTime>
     </File>
     <File Include="Templates/customer/create/CreateController.js">
-      <publishTime>08/23/2015 20:51:24</publishTime>
+      <publishTime>09/20/2015 16:43:37</publishTime>
     </File>
     <File Include="Templates/customer/create/customer.create.html">
       <publishTime>08/23/2015 22:01:40</publishTime>
@@ -1546,7 +1546,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/20/2015 14:05:15</publishTime>
     </File>
     <File Include="Templates/customer/main/MainController.js">
-      <publishTime>09/20/2015 14:57:46</publishTime>
+      <publishTime>09/20/2015 16:21:52</publishTime>
     </File>
     <File Include="Templates/Error.html">
       <publishTime>07/04/2015 11:31:28</publishTime>
@@ -1603,13 +1603,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/21/2015 23:10:59</publishTime>
     </File>
     <File Include="Templates/users/register/RegisterController.js">
-      <publishTime>08/23/2015 20:51:24</publishTime>
+      <publishTime>09/20/2015 16:26:01</publishTime>
     </File>
     <File Include="Templates/users/signin/signin.html">
       <publishTime>08/22/2015 01:15:12</publishTime>
     </File>
     <File Include="Templates/users/signin/SignInController.js">
-      <publishTime>08/23/2015 21:59:09</publishTime>
+      <publishTime>09/20/2015 15:44:58</publishTime>
     </File>
     <File Include="Views/Account/ExternalLoginConfirmation.cshtml">
       <publishTime>04/21/2015 00:31:48</publishTime>
@@ -1642,7 +1642,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/25/2015 23:17:37</publishTime>
     </File>
     <File Include="Views/Customer/Index.cshtml">
-      <publishTime>08/18/2015 23:45:04</publishTime>
+      <publishTime>09/20/2015 15:47:41</publishTime>
     </File>
     <File Include="Views/Customer/List.cshtml">
       <publishTime>04/23/2015 22:13:46</publishTime>

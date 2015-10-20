@@ -51,8 +51,8 @@ namespace LinqToEntities
                     _prodcut.Quantity = model.Quantity;
                     _prodcut.SaleAmount = model.SaleAmount;
                     _prodcut.Vp = model.Vp;
-                    _prodcut.PurchasingDate = DateTime.Now;
-                    _prodcut.GeneratintVpDate = DateTime.Now;
+                    _prodcut.PurchasingDate = model.PurchasingDate;
+                    _prodcut.GeneratintVpDate = model.GeneratintVpDate;
                     db.Entry(_prodcut).State = EntityState.Modified;
                 }
                 return await db.SaveChangesAsync();

@@ -1,0 +1,28 @@
+﻿<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>名称</th>
+            <th>数量</th>
+            <th>单价</th>
+            <th>销售金额</th>
+            <th>VP点数</th>
+            <th>购买日期</th>
+            <th>产生VP月份</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="product in prodcut.list">
+            <td>{{product.Name}}</td>
+            <td>{{product.Quantity}}</td>
+            <td>{{product.Price}}</td>
+            <td>{{product.SaleAmount}}</td>
+            <td>{{product.Vp}}</td>
+            <td>{{product.PurchasingDate * 1000 | date:'yyyy-MM-dd'}}</td>
+            <td>{{product.GeneratintVpDate * 1000 | date:'yyyy-MM'}}</td>
+            <td><a ui-sref="track.product.edit({pid: product.Pid})">更新</a></td>
+            <td><a href="" ng-click="product.remove(product.Pid)"></a></td>
+        </tr>
+    </tbody>
+</table>
