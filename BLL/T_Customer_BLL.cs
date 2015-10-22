@@ -155,7 +155,11 @@ namespace BLL
                 return await dao.Find(id);
             }
         }
-
+        /// <summary>
+        /// 保存客户产品模型
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         public static async Task<int> SaveCustomerProduct(T_Customer_Product model)
         {
             using (T_Customer_Product_Entities dao = new T_Customer_Product_Entities())
@@ -163,7 +167,11 @@ namespace BLL
                 return await dao.Save(model);
             }
         }
-
+        /// <summary>
+        /// 删除客户产品模型（操作不可逆）
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns></returns>
         public static async Task<int> RemoveCustomerProduct(long Id)
         {
             using (T_Customer_Product_Entities dao = new T_Customer_Product_Entities())
@@ -201,6 +209,57 @@ namespace BLL
             using (T_Customer_Schedule_Entities dao = new T_Customer_Schedule_Entities())
             {
                 return await dao.Remove(Id);
+            }
+        }
+        #endregion
+
+        #region 产品管理
+        /// <summary>
+        /// 获取客户计划列表
+        /// </summary>
+        /// <param name="pid"></param>
+        /// <returns></returns>
+        public static async Task<object> GetProducts()
+        {
+            using (T_Product_Entities dao = new T_Product_Entities())
+            {
+                return await dao.GetProducts();
+            }
+        }
+        /// <summary>
+        /// 获取产品模型
+        /// </summary>
+        /// <param name="pid"></param>
+        /// <returns></returns>
+        public static async Task<object> GetProduct(long pid)
+        {
+            using (T_Product_Entities dao = new T_Product_Entities())
+            {
+                return await dao.Find(pid);
+            }
+        }
+        /// <summary>
+        /// 保存修改产品模型
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public static async Task<int> SaveProduct(T_Product model)
+        {
+            using (T_Product_Entities dao = new T_Product_Entities())
+            {
+                return await dao.Save(model);
+            }
+        }
+        /// <summary>
+        /// 删除产品模型，操作不可恢复
+        /// </summary>
+        /// <param name="pId"></param>
+        /// <returns></returns>
+        public static async Task<int> RemoveProduct(long pId)
+        {
+            using (T_Product_Entities dao = new T_Product_Entities())
+            {
+                return await dao.remove(pId);
             }
         }
         #endregion

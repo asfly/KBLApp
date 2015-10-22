@@ -282,6 +282,7 @@
     <Compile Include="Controllers\WebApi\CustomerController.cs" />
     <Compile Include="Controllers\WebApi\CustomerRoleController.cs" />
     <Compile Include="Controllers\WebApi\CustomerTrackController.cs" />
+    <Compile Include="Controllers\WebApi\ProductController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

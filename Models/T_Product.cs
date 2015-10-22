@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    [Table("T_Product")]
+    [Table("T_Products")]
     public partial class T_Product
     {        
         [Key]
@@ -19,7 +19,7 @@ namespace Models
         // 价格
         public string Price { get; set; }
         // vp点数
-        public decimal? VP { get; set; }
+        public decimal? Vp { get; set; }
 
         [NotMapped]
         public T_Customer_Role Role { get; set; }

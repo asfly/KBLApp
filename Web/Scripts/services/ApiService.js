@@ -58,7 +58,7 @@ KBLApp.factory('ApiService', ['$rootScope', "$state", "$q", "$window", "$http", 
         // 客户产品新建,修改
         saveProduct: "api/customer/{cid}/product/save",
         // 客户产品删除
-        removeroduct: "api/customer/{cid}/product/remove",
+        removeProduct: "api/customer/{cid}/product/remove",
         // 客户产品列表
         getProductList: "api/customer/{cid}/product/list",
         // 查找客户产品

@@ -50,23 +50,27 @@ KBLApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('track', {
         url: '/customer/:cid',
         templateUrl: '/Templates/track/task/main/customer.track.html?' + Math.random(),
-        controller: 'Customer.TaskController'
+        controller: 'customer.trackController'
     })
+        //  客户任务route
     .state('track.task', {
         url: '/task/list',
         templateUrl: '/Templates/track/task/list/customer.track.task.list.html?' + Math.random(),
         controller: 'Customer.Task.ListController'
     })
+        // 客户任务创建
     .state('track.task-create', {
         url: '/task/create',
         templateUrl: '/Templates/track/task/create/customer.track.task.create.html?' + Math.random(),
         controller: 'Customer.Task.CreateController'
     })
+        //客户任务编辑
     .state('track.task-edit', {
         url: '/task/edit/:taskId',
         templateUrl: '/Templates/track/task/create/customer.track.task.create.html?' + Math.random(),
         controller: 'Customer.Task.EditController'
     })
+        //客户任务计划列表
     .state('track.schedule', {
         url: '/schedule',
         templateUrl: '/Templates/track/schedule/list/customer.schedule.list.html?' + Math.random()
@@ -79,8 +83,35 @@ KBLApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
         url: '/retuen-a-visit',
         templateUrl: '/Templates/customer.track.task.list.html?' + Math.random()
     })
+    // 顾客产品route
     .state('track.product', {
         url: '/product',
-        templateUrl: '/Templates/customer.track.product.list.html?' + Math.random()
+        templateUrl: '/Templates/track/product/customer.product.html?' + Math.random(),
+        controller: function ($state) {
+            $state.go('track.product.list');
+        }
+    })
+    //客户产品创建
+    .state('track.product.create', {
+        url: '/create',
+        templateUrl: '/Templates/track/product/create/customer.product.create.html?' + Math.random(),
+        controller: 'Customer.Product.SaveController'
+    })
+    //客户产品编辑
+    .state('track.product.edit', {
+        url: '/edit/:pid',
+        templateUrl: '/Templates/track/product/create/customer.product.create.html?' + Math.random(),
+        controller: 'Customer.Product.SaveController'
+    })
+    //客户产品列表
+    .state('track.product.list', {
+        url: '/list',
+        templateUrl: '/Templates/track/product/list/customer.product.list.html?' + Math.random(),
+        controller: 'Customer.Product.ListController'
+    })
+    //产品库存表
+    .state('product.list', {
+        url: '/list',
+        templateUrl: '/Templates/track/product/product.list.html?' + Math.random()
     })
 });

@@ -4,26 +4,27 @@
 KBLApp.controller("Customer.Product.ListController", ['$scope', '$state', '$stateParams', 'ApiService', 'CommService', 'CustomerTrackService',
     function ($scope, $state, $stateParams, ApiService, CommService, CustomerTrackService) {
         var productService = CustomerTrackService.product;
-        var prodcut = $scope.prodcut = {
+        var product = $scope.product = {
             customerId: $stateParams.cid,
             list: [],
             asyncData: function () {
-                productService.list(prodcut.customerId).then(function (response) {
+                productService.list(product.customerId).then(function (response) {
                     console.log(response.result);
-                    $scope.prodcut.list = response.result;
+                    $scope.product.list = response.result;
                 },
                 function (response) {
 
                 });
             },
             remove: function (pid) {
-                productService.remove(prodcut.customerId, {pid:pid}).then(function (response) {
-                    console.log(response.result);
-                    $scope.prodcut.list = response.result;
-                },
-                function (response) {
-                });
+                if(confirm('确定要删除这条记录吗，删除之后将不可恢复？')){
+                    productService.remove(product.customerId, pid).then(function (response) {
+                        product.asyncData();
+                    },
+                    function (response) {
+                    });
+                }                
             }
         }
-        prodcut.asyncData();
+        product.asyncData();
 }]);

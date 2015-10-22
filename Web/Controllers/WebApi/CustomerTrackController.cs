@@ -15,7 +15,6 @@ namespace Web.Controllers.WebApi
     {
         // post api/<controller>
         [Route("{cid:long}/task/list")]
-        [HttpPost]
         [HttpGet]
         public async Task<object> List(long cid)
         {
@@ -29,7 +28,6 @@ namespace Web.Controllers.WebApi
 
         // post api/<controller>
         [Route("{cid:long}/task/{taskId:long}/get")]
-        [HttpPost]
         [HttpGet]
         public async Task<object> Find(long taskId)
         {
@@ -44,7 +42,6 @@ namespace Web.Controllers.WebApi
         // post api/<controller>
         [Route("{cid:long}/task/save")]
         [HttpPost]
-        [HttpGet]
         public async Task<object> Save(T_JSON model)
         {
             object effects = 0;
@@ -65,7 +62,6 @@ namespace Web.Controllers.WebApi
 
         [Route("{cid:long}/task/{taskId:long}/remove")]
         [HttpPost]
-        [HttpGet]
         public async Task<object> Remove(long taskId)
         {
             string s = string.Empty;
@@ -115,9 +111,9 @@ namespace Web.Controllers.WebApi
 
         [Route("{cid:long}/product/remove")]
         [HttpPost]
-        public async Task<object> ProductRemove(long pId)
+        public async Task<object> ProductRemove(dynamic pid)
         {
-            object data = await T_Customer_BLL.RemoveCustomerProduct(pId);
+            object data = await T_Customer_BLL.RemoveCustomerProduct(pid);
             return Ok(new
             {
                 statusCode = 200,

@@ -53,9 +53,16 @@ KBLApp.factory('ApiService', ['$rootScope', "$state", "$q", "$window", "$http", 
 
         // 客户登录信息更新
         saveRole: "api/customer/role/submit",
-
         // 用户登录
-        signIn: "api/account/signin"
+        signIn: "api/account/signin",
+        // 客户产品新建,修改
+        saveProduct: "api/customer/{cid}/product/save",
+        // 客户产品删除
+        removeProduct: "api/customer/{cid}/product/remove",
+        // 客户产品列表
+        getProductList: "api/customer/{cid}/product/list",
+        // 查找客户产品
+        getProduct: "api/customer/{cid}/product/get/{pid}"
     };
 
     //调用Get方法
@@ -91,7 +98,7 @@ KBLApp.factory('ApiService', ['$rootScope', "$state", "$q", "$window", "$http", 
             //成功直接回调成功函数
             if (response.statusCode == 200) {
                 $rootScope.$emit('hideLoading');
-                deferred.resolve(data, status, headers, config);
+                deferred.resolve(response, status, headers, config);
             }
         }).error(function (data, status, headers, config) {
             $rootScope.$emit('hideLoading');
