@@ -97,6 +97,12 @@ KBLApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
         templateUrl: '/Templates/track/product/create/customer.product.create.html?' + Math.random(),
         controller: 'Customer.Product.SaveController'
     })
+    //产品列表
+    .state('track.product.create.list', {
+        url: '/@items',
+        templateUrl: '/Templates/track/product/create/product.list.html?' + Math.random(),
+        controller: 'Product.ListController'
+    })
     //客户产品编辑
     .state('track.product.edit', {
         url: '/edit/:pid',

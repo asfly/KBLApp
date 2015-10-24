@@ -62,7 +62,9 @@ KBLApp.factory('ApiService', ['$rootScope', "$state", "$q", "$window", "$http", 
         // 客户产品列表
         getProductList: "api/customer/{cid}/product/list",
         // 查找客户产品
-        getProduct: "api/customer/{cid}/product/get/{pid}"
+        getProduct: "api/customer/{cid}/product/get/{pid}",
+        // 获取产品
+        getAllProduct: "api/product"
     };
 
     //调用Get方法

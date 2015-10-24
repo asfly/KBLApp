@@ -110,3 +110,4 @@ D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Models\bin\Debug\EntityF
 D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
 D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Models\obj\Debug\Models.dll
 D:\Users\daniel.zuo\Documents\GitHubVisualStudio\KBLApp\Models\obj\Debug\Models.pdb
+D:\Users\Daniel.Zuo\Documents\Visual Studio 2015\Projects\kblapp\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache

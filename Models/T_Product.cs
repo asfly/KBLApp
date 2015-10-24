@@ -17,7 +17,7 @@ namespace Models
         // 产品名称
         public string PCName { get; set; }
         // 价格
-        public string Price { get; set; }
+        public decimal? Price { get; set; }
         // vp点数
         public decimal? Vp { get; set; }
 

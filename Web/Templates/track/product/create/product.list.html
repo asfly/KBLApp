@@ -1,0 +1,9 @@
+﻿<input type="text" class="form-control" ng-model="filterCName" />
+<div class="list-group selected-product">
+  <div class="list-group-item" ng-repeat="product in products.list | filter:filterCName">
+    <input type="checkbox" id="checkbox-product-{{product.Pid}}" class="checkbox" ng-click="products.getProduct($event,product)" />
+    <label for="checkbox-product-{{product.Pid}}">
+        <span>{{product.PCName}}</span>
+    </label>
+  </div>
+</div>
